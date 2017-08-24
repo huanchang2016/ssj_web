@@ -10,8 +10,13 @@
 
 
 /* 选中当前路由的样式 */
-.am-active{background: #242736;}
-.am-active a, .am-active{color: #fff!important;}
+/*********
+主导航样式类名:am-active
+公司主页导航样式类名:com-active
+**********/
+.am-active, .am-active:hover{background: #242736!important;}
+.com-active, .am-active:hover{background: #3b82a5!important;}
+.am-active a, .com-active a, .am-active, .com-active{color: #fff!important;text-decoration: none;}
 .ant-menu-horizontal,.ant-menu-horizontal > .ant-menu-item, .ant-menu-horizontal > .ant-menu-submenu{
     border-bottom: 1px solid #009cff;
 }

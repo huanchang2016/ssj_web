@@ -1,0 +1,49 @@
+.company-box{ background: #fff;padding-top: 30px;padding-left: 10px;}
+.company-box .company{margin-bottom: 30px; min-height: 20px;height: auto!important; height: 20px;border-top: 1px solid #ccc;}
+.company>h4{ width: 100px;height: 40px;line-height: 40px;margin-top:-20px;font-size: 16px;background: #fff; }
+.product_list{ height: 201px;padding-bottom: 20px;margin-top: 20px;border-bottom: 1px dashed #999;}
+.product_list:last-child{ border-bottom: 0;}
+.product_img { width: 300px;height: 180px;overflow: hidden;}
+.product_img img{ width: 100%;height: 100%; border:0; }
+.product_des{ margin-left: 10px; width: calc(100% - 350px);}
+.product_des h6{ font-size: 16px; color: #333;margin-bottom: 10px;}
+.product_class{ margin-bottom: 20px;}
+.product_des .product_class span{ padding: 3px 5px; border-radius: 15px;background: #dcd7d7; margin-right: 10px;}
+.product_des_content{ font-size: 14px;color: #666;}
+
+.com-intro-content{ padding: 20px 0;font-size: 14px;}
+
+/* 公司主页==>公司介绍==》幻灯 */
+:host ::ng-deep .slick-list,
+:host ::ng-deep .slick-track,
+:host ::ng-deep .slick-slide,
+:host ::ng-deep .slick-slide img{
+    height: 300px!important;
+    width: 100%;
+    overflow: hidden;
+}
+:host ::ng-deep .ant-carousel .slick-list{width: 500px!important;margin: 0 auto;}
+
+/* 公司 发展历程 */
+.development-content{ padding-left: 30px; padding-bottom: 30px; }
+.dev-list li{clear:both; position: relative;left: 0; top: 0;margin-bottom: 20px; z-index: 30; width: 100%;}
+.dev-list li:after{content:"."; height:0; visibility:hidden; display:block; clear:both; }
+.dev-date{ width: 80px;font-size: 16px;}
+.dev-icon{ width: 50px;height: 50px; font-size: 50px; line-height: 50px; color: #666;margin: 0 10px;}
+.dev-des{ max-width: 600px;}
+.dev-des h5{font-size: 16px;color:#222;}
+.dev-des p{ font-size:14px;color:#666;}
+.dev-link-line { display: block;width: 1px; height:calc(100% - 30px);background: #000; position: absolute;left: 115px; top: 50px;z-index: 29;}
+.dev-list li:last-child .dev-link-line{ display: none;}
+
+/* 高德地图引入 */
+.map-box, .map-site{ height: 500px;}
+.map-box{ width: 500px;border: 1px solid #ccc;}
+.map-site { width: 200px; background: #fff;padding: 0 10px;border-right: 1px solid #ccc;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+.company-site{ line-height: 30px; border-bottom: #999;}
+.company-site:last-child{ border-bottom: 0;}
+.company-number, .company-addr{ padding: 2px 8px;border-radius: 3px;}
+.company-number{background: #00b38a;margin-right: 10px;color:#fff;}
+.company-addr{ font-size: 16px;color:#000;}
+.com-addr-des{ font-size: 14px;padding-left: 20px; color: #666; line-height: 20px;}
+

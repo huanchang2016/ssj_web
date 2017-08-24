@@ -11,18 +11,15 @@ export class CompanyComponent implements OnInit {
 
   public companyHomePageNav = {
     menu:[
-      { title: "首页", link: "/home"},
-      { title: "招聘", link: '/zhaopin'},
-      { title: "子菜单", childrenNav: [
-            {childTitle: "子栏目1", childLink: "/xxx"},
-            {childTitle: "子栏目2", childLink: "/zhaopin"},
-          ]
-      },
-      { title: "other Link", link: '/xxx'}
+      { title: "公司主页", link: "./home"},
+      { title: "招聘职位", link: './jobs'},
+      { title: "校招职位", link: "./recruit"},
+      { title: "公司问答", link: './ask'}
     ],
     css:[
       { _selector:'com-nav .nav-list', _attr: "background", _value: "#ccc"}
-    ]
+    ],
+    routerActiveClass: 'com-active'
   };
 
   constructor() { }

@@ -21,6 +21,11 @@ import { HeadMiddleComponent } from './modules/header/head-middle/head-middle.co
 import { HeadNavComponent } from './modules/header/head-nav/head-nav.component';
 import { JobsDetailComponent } from './user/zhaopin/jobs-detail/jobs-detail.component';
 import { CompanyComponent } from './user/zhaopin/company/company.component';
+import { CompanyHomeComponent } from './user/zhaopin/company/company-home/company-home.component';
+import { CompanyJobsComponent } from './user/zhaopin/company/company-jobs/company-jobs.component';
+import { SchoolRecruitComponent } from './user/zhaopin/company/school-recruit/school-recruit.component';
+import { CompanyAskComponent } from './user/zhaopin/company/company-ask/company-ask.component';
+import { GmapComponent } from './modules/gmap/gmap.component';
 
 
 @NgModule({
@@ -40,7 +45,12 @@ import { CompanyComponent } from './user/zhaopin/company/company.component';
     HeadMiddleComponent,
     HeadNavComponent,
     JobsDetailComponent,
-    CompanyComponent
+    CompanyComponent,
+    CompanyHomeComponent,
+    CompanyJobsComponent,
+    SchoolRecruitComponent,
+    CompanyAskComponent,
+    GmapComponent
   ],
   imports: [
     BrowserModule,
