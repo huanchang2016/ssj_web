@@ -1,0 +1,21 @@
+/* 职位列表-start */
+.jobs{margin: 30px 0;}
+.jobs a, .jobs{ font-size:14px;}
+.job-list>li{height:120px;padding: 10px;line-height: 30px;background: #f1f1f1; border:1px solid #ccc;
+    margin-top: 20px;
+    background: #fff;
+    position: relative;left:0;top:0;
+}
+.job-list-r{position: absolute;right:10px;top:20px;}
+.job-list-l{ width:500px;}
+.job-list-m{width: 400px;}
+.job-list-r{ width: 100px;}
+
+.company-features>span{margin-right: 5px;padding:3px 5px; border:1px solid #ccc;border-radius: 3px;}
+.company-slogan{text-align: center;}
+
+.job-list-salary{color: red; margin-right:10px;}
+.company-logo{height: 60px;overflow: hidden;}
+.company-logo-img{height: 100%;width:100px;}
+
+/* 职位列表-end */

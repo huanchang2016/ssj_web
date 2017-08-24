@@ -1,0 +1,36 @@
+<div nz-row class="company-top">
+  <div nz-col [nzSpan]="24">
+    <div class="company-logoImg fl">
+      <img src="./../../../../../assets/lib/images/company-home-logo-image.png" alt="公司主页logo图片">
+    </div>
+    <div class="company-info fl">
+      <div class="com-title">
+        <h2 class="fl">天府新区人力资源开发服务有限公司</h2>
+        <span class="fl" *ngIf="!companyIsChecked" style="background: #fff;"><i class="anticon anticon-check-square-o"></i>未认证</span>
+        <span class="fl" *ngIf="companyIsChecked" style="background: green;color: #fff;"><i class="anticon anticon-check-square-o"></i>已认证</span>
+        <p class="com-slogen clear">公司愿景：打造成都天府新区人力资源第一品牌服务供应商！</p>
+      </div>
+      <div class="com-condition">
+        <ul>
+          <li class="fl"><h4>3个</h4><p>招聘职位</p></li>
+          <li class="fl"><h4>暂无</h4><p>简历及时处理</p></li>
+          <li class="fl"><h4>3个</h4><p>招聘职位</p></li>
+          <li class="fl"><h4>暂无</h4><p>简历及时处理</p></li>
+          <li class="fl"><h4>3个</h4><p>招聘职位</p></li>
+          <li class="fl"><h4>暂无</h4><p>简历及时处理</p></li>
+        </ul>
+      </div>
+    </div>
+    <div nz-col [nzSpan]="24" class="com-nav">
+      <!-- 公司主页导航 -->
+      <header-nav [headerNav]="[companyHomePageNav]"></header-nav>
+      <!-- 公司主页导航 -->
+    </div>
+  </div>
+</div>
+
+<div nz-row>
+  <div nz-col [nzSpan]="18">18</div>
+
+  <div nz-col [nzSpan]="6" class="tx-right">6</div>
+</div>

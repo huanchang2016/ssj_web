@@ -1,0 +1,46 @@
+<ul class="job-list">
+    <li *ngFor="let jobList of jobsListDetails; let j = index;">
+      <div class="fl job-list-l">
+        <div class="job-title"><a [routerLink]="['/jobsDetails', jobList.jobId]">
+          <span>{{jobList.jobTitle}}</span>
+          <span>[{{jobList.jobAddress}}]</span>
+          <span>&nbsp;&nbsp; {{jobList.releaseDate}}</span>
+        </a></div>
+        <div class="job-detail">
+          <span class="job-list-salary">{{jobList.jobSalary}}</span>
+          <span>经验{{jobList.jobExp}}</span>/
+          <span>{{jobList.releaseCollage}}</span>
+        </div>
+      </div>
+      <div class="fl job-list-m">
+        <div class="company-title"><a [routerLink]="['/company', jobList.companyId]">
+          <span>{{jobList.companyName}}</span>
+        </a></div>
+        <div class="company-detail">
+          <span *ngFor="let comFin of jobList.companyFinancing">
+            {{comFin}}
+          </span>/
+          <span>{{jobList.companyClass}}({{jobList.companyIsFinace}})</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="job-list-bot">
+        <div class="company-features fl job-list-l">
+          <span *ngFor="let features of jobList.companyFeatures">
+            {{features}}
+          </span>
+        </div>
+        <div class="company-slogan fl  job-list-m">
+          <span>{{jobList.companySlogan}}</span>
+        </div>
+      </div>
+      <div class="job-list-r">
+        <div class="company-logo"><a href="{{jobList.companyLogoImgUrl}}" target="_blank">
+          <img class="company-logo-img" src="{{jobList.companyLogoImgSrc}}" alt="{{jobList.companyLogoImgAlt}}">
+        </a></div>
+      </div>
+    </li>
+  </ul>
+  <div class="page" style="text-align:center;margin-top: 30px;">
+      <nz-pagination [nzPageIndex]="3" [nzTotal]="500" nzShowSizeChanger [nzPageSize]="40"></nz-pagination>
+  </div>

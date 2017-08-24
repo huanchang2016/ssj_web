@@ -1,0 +1,13 @@
+.company-top{ height: 220px;margin-top: 10px;}
+.company-logoImg{ width: 170px;height:170px;overflow: hidden;}
+.company-logoImg img{ height: 100%;width: 100%; border: 0;}
+
+.company-info { height: 170px;width: calc(100% - 180px); padding-top: 10px; padding-left: 20px;position: relative;left:0;top:0;}
+.com-title{ height: 30px;line-height: 30px;}
+.com-title h2{ font-size: 18px;}
+.com-title h2:hover{ color: #009cff;}
+.com-title span { font-size: 16px; line-height: 30px;margin-left: 10px; padding: 0 10px; border-radius: 5px;}
+.com-slogen{ margin-top: 20px;font-size: 16px;}
+.com-condition{ position: absolute;left: 20px; bottom: 0;}
+.com-condition ul li{ width: 100px;height: 60px;background: #fff;border-right: 1px solid #f1f1f1;display: flex;flex-direction: column; text-align: center;justify-content: center;}
+.com-condition ul li h4{ font-size: 16px;}

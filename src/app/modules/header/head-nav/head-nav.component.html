@@ -1,0 +1,11 @@
+<ul class="nav-list">
+    <li routerLinkActive="am-active" *ngFor="let navMenu of navBox">
+      <a [routerLink]="[navMenu.link]" *ngIf="!navMenu.childrenNav">{{navMenu.title}}</a>
+      <a href="javascript:;" *ngIf="navMenu.childrenNav">{{navMenu.title}}</a>
+      <ul class="childMenu" *ngIf="navMenu.childrenNav">
+          <li *ngFor="let subMenu of navMenu.childrenNav">
+            <a [routerLink]="[subMenu.childLink]">{{subMenu.childTitle}}</a>
+          </li>
+      </ul>
+    </li>
+</ul>

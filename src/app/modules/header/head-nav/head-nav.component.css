@@ -1,0 +1,18 @@
+.nav-list{height: 50px;}
+.nav-list>li { float: left;margin-right: 10px;line-height: 50px; position: relative;left: 0;top: 0;}
+.nav-list>li>a{ padding: 0 20px;font-size: 16px; color: #000;}
+.nav-list>li:hover {background: #ccc;}
+.childMenu{ display: none; position: absolute;left: 0; top: 50px;z-index: 100;}
+.nav-list li:hover .childMenu{display: block;}
+.childMenu li{ width: 100px; padding-left: 20px;border-bottom: 1px dashed #f1f1f1;background: #333;}
+.childMenu li:last-child{ border-bottom: 0;}
+.childMenu li a{font-size: 14px;color:#fff;}
+
+
+/* 选中当前路由的样式 */
+.am-active{background: #242736;}
+.am-active a, .am-active{color: #fff!important;}
+.ant-menu-horizontal,.ant-menu-horizontal > .ant-menu-item, .ant-menu-horizontal > .ant-menu-submenu{
+    border-bottom: 1px solid #009cff;
+}
+/* .ant-menu-submenu-title>span{color:#000;} */

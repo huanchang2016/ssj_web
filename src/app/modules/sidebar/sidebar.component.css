@@ -1,0 +1,10 @@
+/*级联选择  */
+.bl-box>ul li{padding: 0;height:50px;line-height: 50px;}
+.jobs-class{clear:both;padding-right: 10px;}
+.jobs_menu{position: relative;left:0;top:0;box-sizing: border-box;}
+li.jobs_menu:hover{border-right:0;}
+.jobs-list{position:absolute;z-index: 100;background: #ddd;width: 500px;display: none;}
+.jobs-list-content{margin-top:0px;}
+.jobs-list-content li {float:left;padding: 5px 10px;margin-right: 20px;}
+.jobs-list-content li a{}
+/*级联选择  */

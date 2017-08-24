@@ -1,0 +1,20 @@
+/* 职位搜索分类 */
+.searchClass { width: 500px;margin: 30px auto 0;height: 40px;}
+.ant-select{height: 40px;}
+
+.search-active{background: #009cff;color: #fff;border-radius: 5px;}
+.search-box{ margin-top: 20px;}
+.search-menu{background:#fff;border:1px solid #fff;}
+.search-list{ margin-bottom: 20px;}
+.search-list>li{font-size:14px;line-height: 30px;min-height: 30px;height: auto!important;height: 30px;margin-top:  10px;}
+.sm-title{width: 100px;margin-right: 20px;text-align: right;font-weight: 600;}
+.sm-list{ width: calc(100% - 120px);}
+.sm-list>div, .search-sort{padding:0 10px;}
+.sm-choese span{padding: 0 10px;margin: 0 5px; border:1px solid #ccc;}
+
+/* 模拟单选框样式 */
+.ant-radio-button-wrapper{padding: 0 10px;}
+.define-radio-group>div{ margin-right: 5px;margin-bottom: 10px;}
+.ant-radio-button-wrapper-checked:first-child {background:#108ee9;color: #fff;}
+
+/* 模拟单选框样式 */

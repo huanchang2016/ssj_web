@@ -1,0 +1,16 @@
+<div class="bl-box">
+  <ul class="am-list am-list-static am-list-border">
+    <li class="jobs_menu" *ngFor="let jobs of jobsList" (mouseover)="jobListShow()">
+      <div class="jobs-class">
+        <span class="am-fl">{{jobs.jobClass}}</span>
+        <span class="am-fr am-icon-angle-right"></span>
+      </div>
+      <div class="jobs-list">
+        <div class="jobs-list-title">{{jobs.jobClass}}</div>
+        <ul class="jobs-list-content">
+          <li *ngFor="let job of jobs.jobList"><a href="#">{{job}}</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>

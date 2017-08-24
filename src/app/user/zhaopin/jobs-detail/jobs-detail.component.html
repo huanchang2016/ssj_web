@@ -1,0 +1,118 @@
+<div nz-row>
+  <div nz-col [nzSpan]="24">
+    <div class="dHead">
+      <div class="jobDetailL fl">
+        <h5 class="company">{{jobDetail.companyName}}</h5>
+        <h3 class="jobTitle">{{jobDetail.jobTitle}}</h3>
+        <div class="treatment">
+            <span class="red">{{jobDetail.jobSalary}}</span> /
+            <span>{{jobDetail.jobAddress}}</span> / 
+            <span>{{jobDetail.jobExp}}</span> /
+            <span>{{jobDetail.releaseCollage}}</span> /
+            <span>{{jobDetail.workType}}</span>
+        </div>
+        <div class="features">
+          <span *ngFor="let features of jobDetail.companyFeatures">{{features}}</span>
+        </div>
+        <div class="releaseDate"><span>{{jobDetail.releaseDate}}</span> &nbsp;&nbsp; 发布于拉勾网</div>
+      </div>
+      <div class="jobDetailR fr">
+        <div class="jobDetailR-top">
+          <button nz-button [nzType]="'primary'" [nzSize]="'large'"
+                  (click)="collect($event)">
+            <i class="anticon anticon-star-o"></i>
+            <span>收藏</span>
+          </button>
+          <button nz-button [nzType]="'primary'" [nzSize]="'large'">
+            <span>投递简历</span>
+          </button>
+        </div>
+        <div class="jobDetailR-bot">
+          <a href="#">完善简历</a>
+          <a href="#">上传简历附件</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div nz-row>
+  <div nz-col [nzSpan]="18" class="jobInfoLeft">
+    <div class="jobInfo">
+      <div class="infoTitle">职位诱惑:</div>
+      <div class="infoConten">
+        <span *ngFor="let comAttract of jobDetail.companyAttract;let i=index;">
+          {{comAttract}}<span *ngIf="i + 1 != jobDetail.companyAttract.length">，</span>
+        </span>
+      </div>
+    </div>
+    <div class="jobInfo">
+      <div class="infoTitle">职位描述:</div>
+      <div class="infoConten">
+        <p *ngFor="let jobDes of jobDetail.jobsDescription; let i = index;">（{{i + 1}}）{{jobDes}}</p>
+      </div>
+    </div>
+    <div class="jobInfo">
+      <div class="infoTitle">岗位要求:</div>
+      <div class="infoConten">
+        <p *ngFor="let jobReq of jobDetail.jobsRequire; let i = index;">（{{i + 1}}）{{jobReq}}</p>
+      </div>
+    </div>
+    <div class="jobInfo">
+      <div class="infoTitle">部门介绍:</div>
+      <div class="infoConten">
+          <p *ngFor="let comDes of jobDetail.companyDescription; let i = index;">（{{i + 1}}）{{comDes}}</p>    
+      </div>
+    </div>
+    <div class="jobInfo">
+      <div class="infoTitle">工作地址:</div>
+      <div class="infoConten">
+        <a href="#">{{jobDetail.companyAddress.province}}</a> -
+        <a href="#">{{jobDetail.companyAddress.city}}</a> -
+        <a href="#">{{jobDetail.companyAddress.area}}</a> -
+        <span>{{jobDetail.companyAddress.street}}</span>
+        <a href="#" class="fr">查看地图</a>
+      </div>
+    </div>
+    <div class="otherInformation" style="font-size: 16px;height: 100px;">
+      <div >相关资讯</div>
+    </div>
+  </div>
+  <div nz-col [nzSpan]="6" class="companyInfoRight">
+    <div class="companyInfo">
+      <div class="comInfoTitle">
+        <img src="{{jobDetail.companyLogoImgSrc}}" alt="{{jobDetail.companyLogoImgAlt}}" />
+        <p>{{jobDetail.companyName}}</p>
+      </div>
+      <p class="comInfo">
+        <i class="anticon anticon-appstore-o"></i>{{jobDetail.companyIndustry}}
+      </p>
+      <p class="comInfo">
+          <i class="anticon anticon-area-chart"></i>{{jobDetail.companyIsFinace}}
+      </p>
+      <p class="comInfo">
+          <i class="anticon anticon-user"></i>{{jobDetail.companyUser}}
+      </p>
+      <p class="comInfo">
+          <i class="anticon anticon-home"></i>{{jobDetail.companyWebsite}}
+      </p>
+    </div>
+    <div class="similarJobs">
+      <div class="similarJobsTitle">相似职位</div>
+      <div class="similarJobsList">
+          <div class="sJobs clear"
+               *ngFor="let sJobs of similarJobList">
+            <a [routerLink]="['/jobsDetails', sJobs.jobId]" target="_blank">
+              <div class="sJobsImgBox fl">
+                  <img src="{{sJobs.companyLogoImgSrc}}" alt="{{sJobs.companyLogoImgAlt}}">
+              </div>
+              <div class="sJobsDes fl">
+                <p class="sJobsDesTitle">{{sJobs.jobTitle}}</p>
+                <p class="red">{{sJobs.jobSalary}}</p>
+                <p class="sJobsDesAddr">{{sJobs.companyNameAbb}}[{{sJobs.companyAddress.city}}·{{sJobs.companyAddress.area}}]</p>
+              </div>
+            </a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

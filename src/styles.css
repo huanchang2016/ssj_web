@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+a{ text-decoration: none;}
+.clear {clear:both;}
+.fl{float: left;}
+.fr{float: right;}
+.red{color:red;}
+.tx-right{text-align: right;}
+
+/* 招聘下的搜索框样式调整 */
+.searchClass .ant-select-selection--single{height: 40px;}
+.searchClass .ant-select-selection__rendered{line-height: 40px;}
