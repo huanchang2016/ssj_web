@@ -30,7 +30,7 @@ export class GmapComponent implements OnInit {
             zoomToAccuracy: true,    //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
             GeoLocationFirst: true   //为true的时候可以调整PC端为优先使用浏览器定位，失败后使用IP定位
         });
-        map.addControl(geolocation);
+        // map.addControl(geolocation);
     });
   }
 

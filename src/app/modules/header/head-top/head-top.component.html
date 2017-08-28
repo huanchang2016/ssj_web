@@ -1,10 +1,11 @@
+<div nz-col [nzSpan]="8" class="head-l">
+  <span>客服：{{phoneNumber}}</span>
+  <span><a href="javascript:;">设为主页</a></span>
+  <span><a href="#">加入收藏</a></span>
+</div>
+<div nz-col [nzSpan]="8" [nzPush]="8" class='tx-right head-r'>
+  <span (click)="showModalForLoginComponent()">登录</span> |
+  <span (click)="showModalForRegisterComponent()">注册</span>
+  <!-- <a href="./modules/register/register.component.html">注册</a> -->
 
-<div nz-col [nzSpan]="8">
-    <span>客服：{{phoneNumber}}</span>
-    <span><a href="#">设为主页</a></span>
-    <span><a href="#">加入收藏</a></span>
-  </div>
-  <div nz-col [nzSpan]="8" [nzPush]="8" class='tx-right'>
-    <span>登录</span>|
-    <span>注册</span>
-  </div>
+</div>

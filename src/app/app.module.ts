@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
@@ -26,6 +26,10 @@ import { CompanyJobsComponent } from './user/zhaopin/company/company-jobs/compan
 import { SchoolRecruitComponent } from './user/zhaopin/company/school-recruit/school-recruit.component';
 import { CompanyAskComponent } from './user/zhaopin/company/company-ask/company-ask.component';
 import { GmapComponent } from './modules/gmap/gmap.component';
+import { LoginComponent } from './modules/login/login.component';
+import { LoginService }   from './service/login.service';
+import { RegisterComponent } from './modules/register/register.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -50,16 +54,22 @@ import { GmapComponent } from './modules/gmap/gmap.component';
     CompanyJobsComponent,
     SchoolRecruitComponent,
     CompanyAskComponent,
-    GmapComponent
+    GmapComponent,
+    LoginComponent,
+    RegisterComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     NgZorroAntdModule.forRoot()
   ],
+  providers: [ LoginService ],
+  entryComponents: [ LoginComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
