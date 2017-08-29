@@ -1,3 +1,83 @@
-<p>
-  register works!
-</p>
+<div class="header">
+  <header><a [routerLink]="['/user_index']">
+    <img src="./../../assets/lib/images/logoin_logo.png" alt="网站logo">
+  </a></header>
+</div>
+<section class="content">
+  <div class="reg-form">
+    <h2 class="user-reg">用户注册</h2>
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="_submitForm()">
+      <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSm]="6" [nzXs]="24">
+          <label nz-form-item-required>注册类型</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback [nzValidateStatus]="getFormControl('select')">
+          <nz-select formControlName="select" [nzSize]="'large'">
+            <nz-option [nzLabel]="'个人用户'" [nzValue]="'person'"></nz-option>
+            <nz-option [nzLabel]="'单位用户'" [nzValue]="'company'"></nz-option>
+          </nz-select>
+        </div>
+      </div>
+      <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSm]="6" [nzXs]="24">
+          <label nz-form-item-required>用户名</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback [nzValidateStatus]="getFormControl('userName')">
+          <nz-input formControlName="userName" [nzPlaceHolder]="'用户名/手机号/邮箱'" [nzSize]="'large'">
+          </nz-input>
+          <div nz-form-explain *ngIf="validateForm.controls.userName.dirty&&validateForm.controls.userName.hasError('required')">请输入注册账号</div>
+        </div>
+      </div>
+      <div nz-form-item nz-row>
+          <div nz-form-label nz-col [nzSm]="6" [nzXs]="24">
+            <label for="phoneNumber" nz-form-item-required>手机号</label>
+          </div>
+          <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback [nzValidateStatus]="getFormControl('phoneNumber')">
+            <nz-input [nzSize]="'large'" formControlName="phoneNumber" [nzId]="'phoneNumber'"></nz-input>
+            <div nz-form-explain *ngIf="getFormControl('phoneNumber').dirty&&getFormControl('phoneNumber').hasError('required')">请输入您的手机号码</div>
+          </div>
+        </div>
+      <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSm]="6" [nzXs]="24">
+          <label for="email" nz-form-item-required>邮箱</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback [nzValidateStatus]="getFormControl('email')">
+          <nz-input [nzSize]="'large'" formControlName="email" [nzId]="'email'"></nz-input>
+          <div nz-form-explain *ngIf="getFormControl('email').dirty&&getFormControl('email').hasError('email')">请输入您的电子邮箱</div>
+        </div>
+      </div>
+      <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSm]="6" [nzXs]="24">
+          <label for="password" nz-form-item-required>密码</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback [nzValidateStatus]="getFormControl('password')">
+          <nz-input [nzSize]="'large'" formControlName="password" [nzType]="'password'" [nzId]="'password'" (ngModelChange)="updateConfirmValidator()"></nz-input>
+          <div nz-form-explain *ngIf="getFormControl('password').dirty&&getFormControl('password').hasError('required')">请输入您的密码</div>
+        </div>
+      </div>
+      <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSm]="6" [nzXs]="24">
+          <label for="checkPassword" nz-form-item-required>确认密码</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback [nzValidateStatus]="getFormControl('checkPassword')">
+          <nz-input [nzSize]="'large'" formControlName="checkPassword" [nzType]="'password'" [nzId]="'checkPassword'"></nz-input>
+          <div nz-form-explain *ngIf="getFormControl('checkPassword').dirty&&getFormControl('checkPassword').hasError('required')">请输入确认密码</div>
+          <div nz-form-explain *ngIf="getFormControl('checkPassword').dirty&&getFormControl('checkPassword').hasError('confirm')">您两次的输入密码不一致</div>
+        </div>
+      </div>
+      <div nz-form-item nz-row style="margin-bottom:8px;">
+        <div nz-form-control nz-col [nzSpan]="14" [nzOffset]="6">
+          <label nz-checkbox formControlName="agree">
+                <span>我已阅读并同意 <a>《网站用户告知书》</a></span>
+              </label>
+        </div>
+      </div>
+      <div nz-form-item nz-row style="margin-bottom:8px;">
+        <div nz-form-control nz-col [nzSpan]="14" [nzOffset]="6">
+          <button nz-button [nzSize]="'large'" [nzType]="'primary'">注册</button>
+          <a [routerLink]="['/user_index']" style="float:right;">返回网站首页</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

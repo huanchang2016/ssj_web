@@ -1,0 +1,13 @@
+.header{
+    height: 380px;
+    width: 100%;
+    background: #14352D;
+    overflow: hidden;
+    z-index: 1;
+}
+.header header{ width: 500px; margin: 50px auto;}
+.header header img { border: 0; height: 50px;}
+
+.content{ width: 100%; background: #fff;height: 400px;z-index: 10;}
+.reg-form{ width: 500px;margin: 0px auto; border: 1px solid #666; background: #fff; position: relative;left: 0;top: -250px;padding: 10px 8px;}
+.user-reg{ margin-bottom: 20px;}

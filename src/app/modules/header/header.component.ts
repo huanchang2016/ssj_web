@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
       { title: "首页", link: "./home"},
       { title: "招聘", link: './zhaopin'},
       { title: "子菜单", childrenNav: [
-            {childTitle: "子栏目1", childLink: "./xxx"},
+            {childTitle: "注册", childLink: "/register"},
             {childTitle: "子栏目2", childLink: "./xxx"},
           ]
       },

@@ -1,9 +1,8 @@
 <div>
-  <p>{{_name}}</p>
   <div class="form">
-    <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="_submitForm($event, validateForm.value)">
+    <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="_submitForm()">
       <div nz-form-item>
-        <div nz-form-control nzHasFeedback [nzValidateStatus]="validateForm.controls.userName">
+        <div nz-form-control [nzValidateStatus]="validateForm.controls.userName">
           <nz-input formControlName="userName" [nzPlaceHolder]="'Username'" [nzSize]="'large'">
             <ng-template #prefix>
               <i class="anticon anticon-user"></i>
@@ -13,7 +12,7 @@
         </div>
       </div>
       <div nz-form-item>
-        <div nz-form-control nzHasFeedback [nzValidateStatus]="validateForm.controls.password">
+        <div nz-form-control [nzValidateStatus]="validateForm.controls.password">
           <nz-input formControlName="password" [nzType]="'password'" [nzPlaceHolder]="'Password'" [nzSize]="'large'">
             <ng-template #prefix>
               <i class="anticon anticon-lock"></i>
@@ -29,7 +28,7 @@
           </label>
           <a class="login-form-forgot">忘记密码?</a>
           <button class="login-form-button" nz-button [nzType]="'primary'" [nzSize]="'large'">登录</button>
-          <a class="login-form-register">注册账号</a>
+          <a class="login-form-register" [routerLink]="['/register']">注册账号</a>
         </div>
       </div>
     </form>

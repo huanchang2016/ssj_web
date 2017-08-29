@@ -23,7 +23,14 @@
     </div>
     <div nz-col [nzSpan]="24" class="com-nav">
       <!-- 公司主页导航 -->
-      <header-nav [headerNav]="[companyHomePageNav]"></header-nav>
+      <ul class="nav-list">
+          <li routerLinkActive="com-active">
+            <a [routerLink]="['./home']">公司主页</a>
+          </li>
+          <li routerLinkActive="com-active">
+            <a [routerLink]="['./jobs']">招聘职位</a>
+          </li>
+      </ul>
       <!-- 公司主页导航 -->
     </div>
   </div>

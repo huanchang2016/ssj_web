@@ -1,3 +1,10 @@
+.nav-list{height: 36px; background: #666!important;}
+.nav-list>li { float: left;margin-right: 10px;line-height: 36px; position: relative;left: 0;top: 0;}
+.nav-list>li>a{ padding: 0 20px;font-size: 16px; color: #000;}
+.nav-list>li:hover {background: #fff;}
+.com-active{ background: #009cff; color:#f1f1f1;}
+
+
 .company-top{ height: 220px;margin-top: 10px;}
 .company-logoImg{ width: 170px;height:170px;overflow: hidden;}
 .company-logoImg img{ height: 100%;width: 100%; border: 0;}

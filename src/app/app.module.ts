@@ -29,7 +29,11 @@ import { GmapComponent } from './modules/gmap/gmap.component';
 import { LoginComponent } from './modules/login/login.component';
 import { LoginService }   from './service/login.service';
 import { RegisterComponent } from './modules/register/register.component';
-import { UserComponent } from './user/user.component';
+import { CompanyAdminComponent } from './user/zhaopin/company-admin/company-admin.component';
+import { BaseInfoComponent } from './user/zhaopin/company-admin/base-info/base-info.component';
+import { CompanyLogoComponent } from './user/zhaopin/company-admin/company-logo/company-logo.component';
+import { CompanyMapComponent } from './user/zhaopin/company-admin/company-map/company-map.component';
+import { CascaderComponent } from './modules/cascader/cascader.component';
 
 
 @NgModule({
@@ -57,7 +61,11 @@ import { UserComponent } from './user/user.component';
     GmapComponent,
     LoginComponent,
     RegisterComponent,
-    UserComponent
+    CompanyAdminComponent,
+    BaseInfoComponent,
+    CompanyLogoComponent,
+    CompanyMapComponent,
+    CascaderComponent
   ],
   imports: [
     BrowserModule,

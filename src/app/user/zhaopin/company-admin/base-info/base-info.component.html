@@ -1,0 +1,111 @@
+<div class="base-info">
+  <form nz-form [formGroup]="registForm" (ngSubmit)="_submitRegistForm()">
+    <div nz-form-item nz-row>
+      <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
+        <label for="companyName" nz-form-item-required>单位名称</label>
+      </div>
+      <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('companyName')">
+        <nz-input [nzSize]="'large'" formControlName="companyName" [nzPlaceHolder]="'成都天府新区人力资源开发服务有限公司'" [nzId]="'companyName'"></nz-input>
+        <div nz-form-explain *ngIf="getFormControl('companyName').dirty&&getFormControl('companyName').hasError('required')">输入单位全称</div>
+      </div>
+    </div>
+    <div nz-form-item nz-row>
+      <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
+        <label nz-form-item-required>单位行业</label>
+      </div>
+      <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('companyClass')">
+        <nz-select formControlName="companyClass" [nzSize]="'large'">
+          <nz-option [nzLabel]="'计算机/互联网'" [nzValue]="'computer'"></nz-option>
+          <nz-option [nzLabel]="'机械/设备/技工'" [nzValue]="'tech'"></nz-option>
+        </nz-select>
+      </div>
+    </div>
+    <div nz-form-item nz-row>
+      <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
+        <label nz-form-item-required>单位性质</label>
+      </div>
+      <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('companyNature')">
+        <nz-select formControlName="companyNature" [nzSize]="'large'">
+          <nz-option [nzLabel]="'政府单位'" [nzValue]="'government'"></nz-option>
+          <nz-option [nzLabel]="'国企、事业单位'" [nzValue]="'nationalized'"></nz-option>
+          <nz-option [nzLabel]="'民营企业'" [nzValue]="'nationalized'"></nz-option>
+          <nz-option [nzLabel]="'外资企业'" [nzValue]="'foreign'"></nz-option>
+          <nz-option [nzLabel]="'合资企业'" [nzValue]="'jointCapital'"></nz-option>
+        </nz-select>
+      </div>
+    </div>
+    <div nz-form-item nz-row>
+      <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
+        <label for="comNickname" nz-form-item-required>单位简称 </label>
+      </div>
+      <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('comNickname')">
+        <nz-input [nzSize]="'large'" formControlName="comNickname" [nzPlaceHolder]="'天投人资'" [nzId]="'comNickname'"></nz-input>
+        <div nz-form-explain *ngIf="getFormControl('comNickname').dirty&&getFormControl('comNickname').hasError('required')">请输入单位简称</div>
+      </div>
+    </div>
+    <div nz-form-item nz-row>
+      <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
+        <label for="phoneNumber" nz-form-item-required>单位联系电话</label>
+      </div>
+      <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('phoneNumber')">
+          <nz-input [nzSize]="'large'" formControlName="phoneNumber" [nzPlaceHolder]="'02880518071或者13333333333'" [nzId]="'phoneNumber'"></nz-input>
+          <div nz-form-explain *ngIf="getFormControl('phoneNumber').dirty&&getFormControl('phoneNumber').hasError('required')">输入单位联系人电话</div>
+        </div>
+    </div>
+    <div nz-form-item nz-row>
+      <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
+        <label for="location" nz-form-item-required>所在地</label>
+      </div>
+      <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('address')">
+        <cascader></cascader>
+      </div>
+    </div>
+    <div nz-form-item nz-row>
+      <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
+        <label for="address" nz-form-item-required>单位地址</label>
+      </div>
+      <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('address')">
+        <nz-input [nzSize]="'large'" formControlName="address" [nzPlaceHolder]="'四川省成都市天府新区天府大道南段2018号'" [nzId]="'address'"></nz-input>
+        <div nz-form-explain *ngIf="getFormControl('address').dirty&&getFormControl('address').hasError('required')">请输入单位地址</div>
+      </div>
+    </div>
+    <div nz-form-item nz-row>
+      <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
+        <label for="website">单位网址</label>
+      </div>
+      <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('website')">
+        <nz-input [nzSize]="'large'" formControlName="website" [nzPlaceHolder]="'http://www.cdtfhr.com'" [nzId]="'website'"></nz-input>
+        <div nz-form-explain *ngIf="getFormControl('website').dirty&&getFormControl('website').hasError('required')">请输入单位网址</div>
+      </div>
+    </div>
+    <div nz-form-item nz-row>
+      <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
+        <label nz-form-item-required>招聘邮箱</label>
+      </div>
+      <div nz-col [nzSm]="14" [nzXs]="20" nz-form-control [nzValidateStatus]="getFormControl('companyEmail')" nzHasFeedback>
+        <nz-input formControlName="companyEmail" [nzPlaceHolder]="'请输入招聘邮箱'" [nzType]="'companyEmail'" [nzSize]="'large'">
+        </nz-input>
+        <div nz-form-explain *ngIf="getFormControl('companyEmail').dirty&&getFormControl('companyEmail').hasError('companyEmail')">The input is not valid E-mail!</div>
+        <div nz-form-explain *ngIf="getFormControl('companyEmail').dirty&&getFormControl('companyEmail').hasError('required')">请输入单位的招聘邮箱</div>
+      </div>
+    </div>
+
+    <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
+          <label for="comOrganization" nz-form-item-required>上传组织机构代码证</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('comOrganization')">
+          <nz-input [nzType]="'file'" [nzSize]="'large'"
+             formControlName="comOrganization"
+             [nzId]="'comOrganization'"></nz-input>
+          <div nz-form-explain *ngIf="getFormControl('comOrganization').dirty&&getFormControl('comOrganization').hasError('required')">上传组织机构代码证</div>
+        </div>
+      </div>
+
+    <div nz-form-item nz-row style="margin-bottom:8px;">
+      <div nz-form-control nz-col [nzSpan]="14" [nzOffset]="6">
+        <button nz-button [nzSize]="'large'" [nzType]="'primary'">更新单位信息</button>
+      </div>
+    </div>
+  </form>
+</div>

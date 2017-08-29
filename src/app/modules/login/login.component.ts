@@ -9,6 +9,7 @@ import { FormGroup, FormBuilder , Validators} from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
     public validateForm: FormGroup;
+    
   
     constructor(
       private fb: FormBuilder,
@@ -21,28 +22,27 @@ export class LoginComponent implements OnInit {
   
   
   _name: string;
-  _age :string;
   
     @Input()
     // set name(){} 方法，指向父组件(head-top.component.ts)中 componentParams的配置的参数；
     //     如： set age(){} ,就是对应到componentParams的属性为age的参数
-    set _title(value: string) {
+    set name(value: string) {
       this._name = value;
     }
 
     ngOnInit() {
       this.validateForm = this.fb.group({
-        userName: [ '用户名', [ Validators.required ] ],//Validators.pattern('^...+$')自定义正则验证;
+        userName: [ null, [ Validators.required ] ],
         password: [ null, [ Validators.required ] ],
-        remember: [ true ],
+        remember: [ true ]
       });
     }
-    _submitForm($event, value) {
-      $event.preventDefault();//阻止表单元素的默认事件
+    _submitForm() {
       for (const i in this.validateForm.controls) {
         this.validateForm.controls[ i ].markAsDirty();
+        // console.log(this.validateForm.controls[ i ].value);//各个表单内容的值
       }
-      console.log(value);//表单元素的各个值
     }
+
 
 }

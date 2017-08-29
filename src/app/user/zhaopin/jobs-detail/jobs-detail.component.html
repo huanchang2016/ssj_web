@@ -101,7 +101,7 @@
       <div class="similarJobsList">
           <div class="sJobs clear"
                *ngFor="let sJobs of similarJobList">
-            <a [routerLink]="['/jobsDetails', sJobs.jobId]" target="_blank">
+            <a [routerLink]="['/user_index/jobsDetails', sJobs.jobId]" target="_blank">
               <div class="sJobsImgBox fl">
                   <img src="{{sJobs.companyLogoImgSrc}}" alt="{{sJobs.companyLogoImgAlt}}">
               </div>
