@@ -5,7 +5,8 @@
 </div>
 <div nz-col [nzSpan]="8" [nzPush]="8" class='tx-right head-r'>
   <span (click)="showModalForLoginComponent()">登录</span> |
-  <span (click)="showModalForRegisterComponent()">注册</span>
+  <!-- <span (click)="showModalForRegisterComponent()">注册</span> -->
+  <a [routerLink]="['/register']">注册</a>
   <!-- <a href="./modules/register/register.component.html">注册</a> -->
 
 </div>

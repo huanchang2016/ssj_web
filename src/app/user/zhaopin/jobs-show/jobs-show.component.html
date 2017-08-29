@@ -1,7 +1,7 @@
 <ul class="job-list">
     <li *ngFor="let jobList of jobsListDetails; let j = index;">
       <div class="fl job-list-l">
-        <div class="job-title"><a [routerLink]="['/jobsDetails', jobList.jobId]">
+        <div class="job-title"><a [routerLink]="['./jobsDetails', jobList.jobId]">
           <span>{{jobList.jobTitle}}</span>
           <span>[{{jobList.jobAddress}}]</span>
           <span>&nbsp;&nbsp; {{jobList.releaseDate}}</span>
@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="fl job-list-m">
-        <div class="company-title"><a [routerLink]="['/company', jobList.companyId]">
+        <div class="company-title"><a [routerLink]="['./company', jobList.companyId]">
           <span>{{jobList.companyName}}</span>
         </a></div>
         <div class="company-detail">
