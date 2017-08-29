@@ -3,6 +3,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { CommonModule }     from '@angular/common';
+// 文件上传
+import { FileUploadModule } from 'ng2-file-upload';
+// 文件上传
 import { AppRoutingModule } from './app-routing.module';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { AppComponent } from './app.component';
@@ -72,6 +76,8 @@ import { CascaderComponent } from './modules/cascader/cascader.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    CommonModule,
+    FileUploadModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     NgZorroAntdModule.forRoot()

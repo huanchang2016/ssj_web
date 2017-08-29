@@ -94,11 +94,9 @@
         <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
           <label for="comOrganization" nz-form-item-required>上传组织机构代码证</label>
         </div>
-        <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('comOrganization')">
-          <nz-input [nzType]="'file'" [nzSize]="'large'"
-             formControlName="comOrganization"
-             [nzId]="'comOrganization'"></nz-input>
-          <div nz-form-explain *ngIf="getFormControl('comOrganization').dirty&&getFormControl('comOrganization').hasError('required')">上传组织机构代码证</div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="20">
+          <input type="file" ng2FileSelect formControlName="comOrganization" id="comOrganization" [uploader]="uploader" (change)="selectedFileOnChanged($event)" />
+          <div *ngIf="isNotUpFile" class="red">上传组织机构代码证</div>
         </div>
       </div>
 

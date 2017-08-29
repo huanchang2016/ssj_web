@@ -24,6 +24,7 @@
     "core-js": "^2.4.1",
     "jquery": "^3.2.1",
     "ng-zorro-antd": "^0.5.0-rc.0",
+    "ng2-file-upload": "^1.2.1",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },

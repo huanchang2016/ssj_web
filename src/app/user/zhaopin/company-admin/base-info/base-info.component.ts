@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
+import { FileUploader } from 'ng2-file-upload';
 
 @Component({
   selector: 'app-base-info',
@@ -10,7 +11,15 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 export class BaseInfoComponent implements OnInit {
 
   registForm: FormGroup;
+  // 文件上传初始化
+  public uploader: FileUploader = new FileUploader({
+    url: "http://localhost:4200/uploadFile",
+    method: "POST"
+  });
+  // 判断是否上传文件
+  public isNotUpFile: Boolean;
 
+  
   constructor(private fb: FormBuilder) {
   }
 
@@ -31,6 +40,14 @@ export class BaseInfoComponent implements OnInit {
 
   _submitRegistForm() {
     console.log(this.registForm['_value']);//表单所有的数据都在this.registForm['_value']这个对象中
+
+    //单独判断图片是否已经上传
+    if(!this.registForm['_value'].comOrganization){
+      this.isNotUpFile = true;
+    }else{ 
+      this.isNotUpFile = false;
+    }
+
     for (const i in this.registForm.controls) {
       this.registForm.controls[i].markAsDirty();
     }
@@ -55,5 +72,8 @@ export class BaseInfoComponent implements OnInit {
   }
 
   // 检查上传文件
-  upFile(){}
+  selectedFileOnChanged($event){
+    this.registForm['_value'].comOrganization = $event.target.value;
+    console.log(this.registForm['_value'].comOrganization);
+  }
 }
