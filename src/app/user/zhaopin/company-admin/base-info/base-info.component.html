@@ -18,6 +18,7 @@
           <nz-option [nzLabel]="'计算机/互联网'" [nzValue]="'computer'"></nz-option>
           <nz-option [nzLabel]="'机械/设备/技工'" [nzValue]="'tech'"></nz-option>
         </nz-select>
+          <div nz-form-explain *ngIf="getFormControl('companyClass').dirty&&getFormControl('companyClass').hasError('required')">单位行业</div>
       </div>
     </div>
     <div nz-form-item nz-row>
@@ -32,6 +33,7 @@
           <nz-option [nzLabel]="'外资企业'" [nzValue]="'foreign'"></nz-option>
           <nz-option [nzLabel]="'合资企业'" [nzValue]="'jointCapital'"></nz-option>
         </nz-select>
+        <div nz-form-explain *ngIf="getFormControl('companyNature').dirty&&getFormControl('companyNature').hasError('required')">单位行业</div>
       </div>
     </div>
     <div nz-form-item nz-row>
@@ -54,10 +56,12 @@
     </div>
     <div nz-form-item nz-row>
       <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
-        <label for="location" nz-form-item-required>所在地</label>
+        <label for="location" nz-form-item-required>单位所在地</label>
       </div>
-      <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('address')">
-        <cascader></cascader>
+      <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('location')">
+        <cascader (companyLocation)="getCompanyLocation($event)"></cascader>
+        <nz-input [nzSize]="'large'" [(ngModel)]="location" formControlName="location" [nzId]="'location'" style="display:none;"></nz-input>
+        <div nz-form-explain *ngIf="getFormControl('location').dirty&&getFormControl('location').hasError('required')">请选择单位所在地</div>
       </div>
     </div>
     <div nz-form-item nz-row>
@@ -71,22 +75,36 @@
     </div>
     <div nz-form-item nz-row>
       <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
-        <label for="website">单位网址</label>
-      </div>
-      <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('website')">
-        <nz-input [nzSize]="'large'" formControlName="website" [nzPlaceHolder]="'http://www.cdtfhr.com'" [nzId]="'website'"></nz-input>
-        <div nz-form-explain *ngIf="getFormControl('website').dirty&&getFormControl('website').hasError('required')">请输入单位网址</div>
-      </div>
-    </div>
-    <div nz-form-item nz-row>
-      <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
         <label nz-form-item-required>招聘邮箱</label>
       </div>
       <div nz-col [nzSm]="14" [nzXs]="20" nz-form-control [nzValidateStatus]="getFormControl('companyEmail')" nzHasFeedback>
         <nz-input formControlName="companyEmail" [nzPlaceHolder]="'请输入招聘邮箱'" [nzType]="'companyEmail'" [nzSize]="'large'">
         </nz-input>
-        <div nz-form-explain *ngIf="getFormControl('companyEmail').dirty&&getFormControl('companyEmail').hasError('companyEmail')">The input is not valid E-mail!</div>
-        <div nz-form-explain *ngIf="getFormControl('companyEmail').dirty&&getFormControl('companyEmail').hasError('required')">请输入单位的招聘邮箱</div>
+        <div nz-form-explain *ngIf="getFormControl('companyEmail').dirty&&getFormControl('companyEmail').hasError('required')">请正确输入单位的招聘邮箱</div>
+      </div>
+    </div>
+
+    <div nz-form-item nz-row>
+      <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
+        <label for="businessLicense" nz-form-item-required>上传工商营业执照</label>
+      </div>
+      <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('businessLicense')">
+        <input type="file" ng2FileSelect [uploader]="uploadLicense" (change)="selectedFileOnChanged($event, 'businessLicense')" />
+        <nz-input [nzSize]="'large'" [nzType]="'file'" formControlName="businessLicense" [nzId]="'businessLicense'" style="display:none;"></nz-input>
+        <div nz-form-explain *ngIf="getFormControl('businessLicense').dirty&&getFormControl('businessLicense').hasError('required')">上传工商营业执照</div>
+
+      </div>
+    </div>
+
+    <div nz-form-item nz-row>
+      <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
+        <label for="LegalIdentityCard" nz-form-item-required>上传法人身份证</label>
+      </div>
+      <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('LegalIdentityCard')">
+        <input type="file" ng2FileSelect [uploader]="uploadIdcard" (change)="selectedFileOnChanged($event, 'LegalIdentityCard')" />
+        <nz-input [nzSize]="'large'" [nzType]="'file'" formControlName="LegalIdentityCard" [nzId]="'LegalIdentityCard'" style="display:none;"></nz-input>
+        <div nz-form-explain *ngIf="getFormControl('LegalIdentityCard').dirty&&getFormControl('LegalIdentityCard').hasError('required')">上传法人身份证</div>
+
       </div>
     </div>
 
@@ -94,9 +112,24 @@
         <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
           <label for="comOrganization" nz-form-item-required>上传组织机构代码证</label>
         </div>
-        <div nz-form-control nz-col [nzSm]="14" [nzXs]="20">
-          <input type="file" ng2FileSelect formControlName="comOrganization" id="comOrganization" [uploader]="uploader" (change)="selectedFileOnChanged($event)" />
-          <div *ngIf="isNotUpFile" class="red">上传组织机构代码证</div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('comOrganization')">
+          <!-- <input type="file" ng2FileSelect formControlName="comOrganization" id="comOrganization" [uploader]="uploader" (change)="selectedFileOnChanged($event)" />
+          <div *ngIf="isNotUpFile" class="red">上传组织机构代码证</div> -->
+
+          <input type="file" ng2FileSelect [uploader]="uploadOrg" (change)="selectedFileOnChanged($event, 'comOrganization')" />
+          <nz-input [nzSize]="'large'" [nzType]="'file'" formControlName="comOrganization" [nzId]="'comOrganization'" style="display:none;"></nz-input>
+          <div nz-form-explain *ngIf="getFormControl('comOrganization').dirty&&getFormControl('comOrganization').hasError('required')">上传组织机构代码证</div>
+  
+        </div>
+      </div>
+
+      <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
+          <label for="website">单位网址</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('website')">
+          <nz-input [nzSize]="'large'" formControlName="website" [nzPlaceHolder]="'http://www.cdtfhr.com'" [nzId]="'website'"></nz-input>
+          <div nz-form-explain *ngIf="getFormControl('website').dirty&&getFormControl('website').hasError('required')">请输入单位网址</div>
         </div>
       </div>
 

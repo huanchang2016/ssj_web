@@ -16,10 +16,11 @@ import { CompanyAdminComponent } from './user/zhaopin/company-admin/company-admi
 import { BaseInfoComponent } from './user/zhaopin/company-admin/base-info/base-info.component';
 import { CompanyLogoComponent } from './user/zhaopin/company-admin/company-logo/company-logo.component';
 import { CompanyMapComponent } from './user/zhaopin/company-admin/company-map/company-map.component';
+import { JobAddComponent } from './user/zhaopin/company-admin/job-add/job-add.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'register', pathMatch: 'full' },
+  { path: '', redirectTo: 'companyAdmin', pathMatch: 'full' },
   { path: 'register', component: RegisterComponent, data: { title: '天府菁英网' } },
   {
     path: "companyAdmin", component: CompanyAdminComponent, data: { title: '单位主页'},
@@ -28,7 +29,8 @@ const routes: Routes = [
       { path: '', component: BaseInfoComponent },
       { path: 'com-info', component: BaseInfoComponent },
       { path: 'com-logo', component: CompanyLogoComponent },
-      { path: 'com-map', component: CompanyMapComponent }
+      { path: 'com-map', component: CompanyMapComponent },
+      { path: 'com-jobadd', component: JobAddComponent }
     ]
   },
   {

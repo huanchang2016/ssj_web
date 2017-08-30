@@ -1,3 +1,19 @@
-<p>
-  company-logo works!
-</p>
+<div nz-row>
+  <div nz-col [nzSpan]="8" class="upComLogo">
+    <form nz-form [formGroup]="companyLogoForm" (ngSubmit)="_upLoadCompanyLogo()">
+      <div nz-form-item nz-row>
+        <!-- <input type="file" ng2FileSelect [uploader]="comImguploader" (change)="getCompanyLogo($event)" /> -->
+        <input type="file" ng2FileSelect [uploader]="comImguploader" (change)="getCompanyLogo($event)" />
+        
+      </div>
+      <div nz-form-item nz-row>
+        <div nz-form-control nz-col>
+          <button nz-button [nzSize]="'large'" [nzType]="'primary'">确认上传</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div nz-col [nzSpan]="16" class="companyLogoShow">
+    <img src="assets/com-images/14793403843.JPG" alt="上传企业logo">
+  </div>
+</div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 const options = [{
   value: '四川',
@@ -19,7 +20,7 @@ const options = [{
       ],
     }
   ],
-},{
+    },{
   value: '浙江',
   label: '浙江',
   children: [{
@@ -31,7 +32,7 @@ const options = [{
       isLeaf: true
     }],
   }],
-}, {
+  }, {
   value: '江苏',
   label: '江苏',
   children: [{
@@ -52,6 +53,9 @@ const options = [{
 })
 export class CascaderComponent implements OnInit {
 
+  @Output('companyLocation')
+  locationAddress: EventEmitter<any> = new EventEmitter();
+
   // 省市级联
   _options = options;
   _value: any[] = null;
@@ -61,8 +65,12 @@ export class CascaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  _console(value) {
-    console.log(value);
+  sendCompanyAddredd(value) {
+    this.locationAddress.emit(value);
+  }
+
+  _console($event){
+    console.log($event);
   }
 
 }

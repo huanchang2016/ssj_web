@@ -21,4 +21,7 @@
 .list-title{ width: 240px; height: 30px;line-height: 30px;background: #456dab;}
 .list-title> h3{ color:#fff;text-indent: 15px;font-size: 16px;}
 .handle-list a{ font-size: 14px;}
-.handleActive a{ color: #456dab;}
+.subMenu-title{font-size: 16px!important;}
+.handleActive a{ color: #456CAB;}
+
+.company-view{ padding-top: 30px;}
