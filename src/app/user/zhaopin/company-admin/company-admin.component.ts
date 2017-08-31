@@ -12,22 +12,22 @@ export class CompanyAdminComponent implements OnInit {
   ngOnInit() {
   }
 // 如果需要点击后所有列表都展开，请将下面的代码注释
-  isOpenOne = true;
-  isOpenTwo = false;
-  isOpenThree = false;
+  // isOpenOne = true;
+  // isOpenTwo = false;
+  // isOpenThree = false;
 
-  openChange(value) {
-    if (value === 'one') {
-      this.isOpenTwo = false;
-      this.isOpenThree = false;
-    } else if (value === 'two') {
-      this.isOpenOne = false;
-      this.isOpenThree = false;
-    } else if (value === 'three') {
-      this.isOpenOne = false;
-      this.isOpenTwo = false;
-    }
-  }
+  // openChange(value) {
+  //   if (value === 'one') {
+  //     this.isOpenTwo = false;
+  //     this.isOpenThree = false;
+  //   } else if (value === 'two') {
+  //     this.isOpenOne = false;
+  //     this.isOpenThree = false;
+  //   } else if (value === 'three') {
+  //     this.isOpenOne = false;
+  //     this.isOpenTwo = false;
+  //   }
+  // }
   // 如果需要点击后所有列表都展开，请将上面的代码注释
 
 }

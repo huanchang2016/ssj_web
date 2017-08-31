@@ -21,7 +21,7 @@
             <div nz-col [nzSpan]="6">
                 <div class="list-title"><h3>快捷操作</h3></div>
                 <ul nz-menu [nzMode]="'inline'" class="handle-list" style="width: 240px;">
-                    <li nz-submenu [(nzOpen)]="isOpenOne" (nzOpenChange)="openChange('one')">
+                    <li nz-submenu>
                       <span title class="subMenu-title">单位资料</span>
                       <ul>
                           <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['./com-info']">单位基本资料</a></li>
@@ -29,23 +29,23 @@
                           <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['./com-map']">单位地图</a></li>
                       </ul>
                     </li>
-                    <li nz-submenu [(nzOpen)]="isOpenTwo" (nzOpenChange)="openChange('two')">
+                    <li nz-submenu>
                       <span title class="subMenu-title"> 招聘管理</span>
                       <ul>
-                        <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['com-jobadd']">发布新职位</a></li>
-                        <!-- <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">招聘中的职位</a></li>
-                        <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">待审核职位</a></li>
+                        <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['./com-jobadd']">发布新职位</a></li>
+                        <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['./recruit']">招聘中的职位</a></li>
+                        <!-- <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">待审核职位</a></li>
                         <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">未通过职位</a></li>
                         <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">过期职位</a></li>
                         <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">已暂停职位</a></li>
                         <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">招聘会记录</a></li> -->
                       </ul>
                     </li>
-                    <li nz-submenu [(nzOpen)]="isOpenThree" (nzOpenChange)="openChange('three')">
+                    <li nz-submenu>
                       <span title class="subMenu-title"> 人才管理</span>
                       <ul>
-                        <!-- <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">搜索人才</a></li>
-                        <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">收到的简历</a></li>
+                        <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['./seekers']">搜索人才</a></li>
+                        <!-- <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">收到的简历</a></li>
                         <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">已下载的简历</a></li>
                         <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">已通知面试</a></li>
                         <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">被浏览的职位</a></li>

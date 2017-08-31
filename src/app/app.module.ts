@@ -39,6 +39,8 @@ import { CompanyLogoComponent } from './user/zhaopin/company-admin/company-logo/
 import { CompanyMapComponent } from './user/zhaopin/company-admin/company-map/company-map.component';
 import { CascaderComponent } from './modules/cascader/cascader.component';
 import { JobAddComponent } from './user/zhaopin/company-admin/job-add/job-add.component';
+import { InRecruitComponent } from './user/zhaopin/company-admin/in-recruit/in-recruit.component';
+import { JobSeekersComponent } from './user/zhaopin/company-admin/job-seekers/job-seekers.component';
 
 
 @NgModule({
@@ -71,7 +73,9 @@ import { JobAddComponent } from './user/zhaopin/company-admin/job-add/job-add.co
     CompanyLogoComponent,
     CompanyMapComponent,
     CascaderComponent,
-    JobAddComponent
+    JobAddComponent,
+    InRecruitComponent,
+    JobSeekersComponent
   ],
   imports: [
     BrowserModule,

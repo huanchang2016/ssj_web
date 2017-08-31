@@ -1,0 +1,53 @@
+<div class="recruiting">
+  <div class="jobs-conditions">
+    <div class="fl">
+      <h4>招聘中的职位</h4>
+    </div>
+    <div class="fr">
+      <nz-input id="jobs-search" [nzType]="'search'" [nzPlaceHolder]="'输入查询条件'" [(ngModel)]="searchConditions" style="width: 200px;"></nz-input>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="jobs-list">
+    <ul>
+        <li *ngFor="let _check of _checkBox">
+          <div class="jobsInfo fl">
+            <div class="jobsInfo-title">
+              <h3 class="fl">
+                <label class="fl" [(ngModel)]="_check.checked" nz-checkbox (ngModelChange)="addCheckedJobs($event)"></label>
+                <a href="javascript:;">（合约管理部）土建造价管理工程师</a>
+              </h3>
+              <div class="clear"></div>
+            </div>
+            <div class="jobsInfo-des">
+              <span class="jobs-des-list">简历总数： 10</span>
+              <span class="jobs-des-list">浏览数：100</span>
+              <span class="jobs-des-list">招聘状态：招聘中 <a href="javascript:;">[暂停]</a></span>
+              <br>
+              <span class="jobs-des-list">截止日期: 2017-09-01 <a href="javascript:;">延期</a></span>
+              <span class="jobs-des-list">更新时间：2017-08-31</span>
+            </div>
+          </div>
+          <div class="jobsOper fr">
+            <span><a href="javascript:;">修改</a></span>
+            <span><a href="javascript:;">预览</a></span>
+            <span><a href="javascript:;">刷新</a></span>
+            <span><a href="javascript:;">删除</a></span>
+          </div>
+        </li>
+       
+        <li style="border: 0;">
+          <div class="operAll">
+              <label class="fl" nz-checkbox [(ngModel)]="checkedAll" (ngModelChange)="checkedAllJobs($event)"></label>
+              <span>批量延长有效期</span>
+              <span>批量自动刷新</span>
+              <span>批量刷新职位</span>
+              <span>一键暂停招聘</span>
+            </div>
+        </li>
+    </ul>
+    <div class="page">
+      <nz-pagination [nzPageIndex]="2" [nzTotal]="500" [nzPageSize]="10" nzShowQuickJumper></nz-pagination>
+    </div>
+  </div>
+</div>

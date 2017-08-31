@@ -17,6 +17,8 @@ import { BaseInfoComponent } from './user/zhaopin/company-admin/base-info/base-i
 import { CompanyLogoComponent } from './user/zhaopin/company-admin/company-logo/company-logo.component';
 import { CompanyMapComponent } from './user/zhaopin/company-admin/company-map/company-map.component';
 import { JobAddComponent } from './user/zhaopin/company-admin/job-add/job-add.component';
+import { InRecruitComponent } from './user/zhaopin/company-admin/in-recruit/in-recruit.component';
+import { JobSeekersComponent } from './user/zhaopin/company-admin/job-seekers/job-seekers.component';
 
 
 const routes: Routes = [
@@ -30,7 +32,9 @@ const routes: Routes = [
       { path: 'com-info', component: BaseInfoComponent },
       { path: 'com-logo', component: CompanyLogoComponent },
       { path: 'com-map', component: CompanyMapComponent },
-      { path: 'com-jobadd', component: JobAddComponent }
+      { path: 'com-jobadd', component: JobAddComponent },
+      { path: 'recruit', component: InRecruitComponent },
+      { path: 'seekers', component: JobSeekersComponent }
     ]
   },
   {

@@ -1,0 +1,24 @@
+.jobsInfo{ width: 500px;}
+.jobs-list{ margin-top: 30px; clear:both;}
+.jobs-list ul li{ padding: 5px;border:1px solid #ccc;margin-bottom:10px;}
+/* 解决父容器不能高度自适应 的问题 */
+.jobs-list ul li:after{
+    content: ".";
+    display: block;
+    width: 0;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    clear: both;
+}
+.jobsInfo-des{margin-top: 5px;}
+.jobsInfo-des span{line-height: 30px; padding: 0 10px;}
+
+.jobsOper { width: 100px;margin-right: 100px;}
+.jobsOper span{ display: block; width:50%;float:left;line-height: 30px;text-align: center;}
+.jobsOper::after{content:".";display:block;width: 0;height:100%;visibility: hidden;overflow: hidden;clear:both;}
+/* 全选操作 */
+.operAll span{ padding: 3px 5px; margin: 0 5px; color: #fff;background: #108ee9;cursor: pointer;}
+
+/* 分页 */
+.page{ margin: 20px 0;}

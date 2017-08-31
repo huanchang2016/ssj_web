@@ -53,21 +53,23 @@ export class JobAddComponent implements OnInit {
       // 补充信息(其它内容)
       jobIndustry: [null, [Validators.required]],//从事行业
       personNumber: [ null, [ Validators.required ]],//招聘人数
-      workExp: [ null, [Validators]],//工作经验
+      workExp: [ null, [Validators.required]],//工作经验
       ageRange: [null, [Validators.required]],//年龄要求
       minDegree: [null, [Validators.required]],//学历要求
-      jobNatrue: [ null ],// 工作性质
-      arrivalTime : [ null ],//  到岗时间
-      sexGender: [ null ],//  性别要求
-      maritalStatus: [ null ],// 婚姻状况
-      language: [ null ],//要求语种
+      jobNatrue: [ null, [Validators.required] ],// 工作性质
+      arrivalTime : [ null, [Validators.required] ],//  到岗时间
+      sexGender: [ null, [Validators.required] ],//  性别要求
+      maritalStatus: [ null, [Validators.required] ],// 婚姻状况
+      language: [ null, [Validators.required] ],//要求语种
       workWelfare: [ null, [Validators.required]],//福利待遇，如五险一金
       // 联系方式(个人填写(默认单位))
-      linkPhone: [ null ],
-      acceptResumeEmail : [null, [Validators.required, Validators.pattern('^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$')]],
+      linkPhone1: [ '13333333333', [ Validators.pattern('^0?(13|14|15|18)[0-9]{9}$')] ],
+      linkPhone2: [ '028-80518071', [ Validators.pattern('[0-9-()（）]{7,18}')] ],
+      acceptResumeEmail1 : ['admin@cdtfhr.com', [ Validators.pattern('^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$')]],
+      acceptResumeEmail2 : [null, [ Validators.pattern('^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$')]],
     });
   }
-  sendNewJob() {
+  setNewJob() {
     console.log(this.jobAddForm['_value']);
     for (const i in this.jobAddForm.controls) {
       this.jobAddForm.controls[i].markAsDirty();
@@ -89,16 +91,22 @@ export class JobAddComponent implements OnInit {
   }
 
   // 职位过期时间，日历组件
-  disabledDate = function (current) {
+  _disabledDate = function (current) {
     return current && current.getTime() < Date.now();
   };
 // 语言要求方法
   _logCheckbox(value){
-    console.log(value);
+    var chechedLanguage = [];
+    value.forEach(el => {
+      if(el.checked){
+        chechedLanguage.push(el);
+      }
+    });
+    this.jobAddForm['_value'].language = chechedLanguage;
   }
 
   // 福利待遇
   _logWorkWelfareBox(value){
-    console.log(value);
+    // console.log(value);
   }
 }

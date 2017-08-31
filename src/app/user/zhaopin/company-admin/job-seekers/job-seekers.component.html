@@ -1,0 +1,119 @@
+<div class="seekers-box">
+  <div class="search-conditions">
+    <form nz-form [formGroup]="seekersForm" (ngSubmit)="searchSeekers()">
+      <div nz-form-item class="w250 fl mr20">
+        <div nz-form-label class="fl">
+          <label>职位类别</label>
+        </div>
+        <div nz-form-control class="fr w150">
+          <nz-select formControlName="jobClass" [nzSize]="'large'">
+            <nz-option [nzLabel]="'计算机/互联网'" [nzValue]="'computer'"></nz-option>
+            <nz-option [nzLabel]="'机械/设备/技工'" [nzValue]="'tech'"></nz-option>
+          </nz-select>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div nz-form-item class="w250 fl mr20">
+        <div nz-form-label class="fl">
+          <label for="workAddress">工作地点</label>
+        </div>
+        <div nz-form-control class="fr w150">
+          <cascader (companyLocation)="getJobWorkAddress($event)"></cascader>
+          <nz-input [nzSize]="'large'" [(ngModel)]="workAddress" formControlName="workAddress" [nzId]="'workAddress'" style="display:none;"></nz-input>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div nz-form-item class="w250 fl mr20">
+        <div nz-form-label class="fl">
+          <label>薪资待遇</label>
+        </div>
+        <div nz-form-control class="fr w150">
+          <nz-select formControlName="jobSalary" [nzSize]="'large'">
+            <nz-option [nzLabel]="'面议'" [nzValue]="'面议'"></nz-option>
+            <nz-option [nzLabel]="'2k-4k'" [nzValue]="'2k-4k'"></nz-option>
+            <nz-option [nzLabel]="'4k-6k'" [nzValue]="'4k-6k'"></nz-option>
+            <nz-option [nzLabel]="'6k-8k'" [nzValue]="'6k-8k'"></nz-option>
+            <nz-option [nzLabel]="'8k-10k'" [nzValue]="'8k-10k'"></nz-option>
+            <nz-option [nzLabel]="'10k-15k'" [nzValue]="'10k-15k'"></nz-option>
+            <nz-option [nzLabel]="'15k-25k'" [nzValue]="'15k-25k'"></nz-option>
+            <nz-option [nzLabel]="'25k-50k'" [nzValue]="'25k-50k'"></nz-option>
+            <nz-option [nzLabel]="'50k以上'" [nzValue]="'50k以上'"></nz-option>
+          </nz-select>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div nz-form-item class="w250 fl mr20">
+        <div nz-form-label class="fl">
+          <label for="jobPosted">简历更新时间</label>
+        </div>
+        <div nz-form-control class="fr w150">
+          <nz-datepicker formControlName="jobPosted" [nzPlaceHolder]="'选择职位过期时间'" [nzDisabledDate]="_disabledDate"></nz-datepicker>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div nz-form-item class="w250 fl mr20">
+        <div nz-form-label class="fl">
+          <label>工作经验</label>
+        </div>
+        <div nz-form-control class="fr w150">
+          <nz-select formControlName="workExp" [nzSize]="'large'">
+            <nz-option [nzLabel]="'无要求'" [nzValue]="'无要求'"></nz-option>
+            <nz-option [nzLabel]="'1年以下'" [nzValue]="'1年以下'"></nz-option>
+            <nz-option [nzLabel]="'1-3年'" [nzValue]="'1-3年'"></nz-option>
+            <nz-option [nzLabel]="'3-5年'" [nzValue]="'3-5年'"></nz-option>
+            <nz-option [nzLabel]="'5-8年'" [nzValue]="'5-8年'"></nz-option>
+            <nz-option [nzLabel]="'8年以上'" [nzValue]="'8年以上'"></nz-option>
+            <nz-option [nzLabel]="'详见职位描述'" [nzValue]="'详见职位描述'"></nz-option>
+          </nz-select>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div nz-form-item class="w250 fl mr20">
+        <div nz-form-label class="fl">
+          <label>性别要求</label>
+        </div>
+        <div nz-form-control class="fr w150">
+          <nz-select formControlName="sexGender" [nzSize]="'large'">
+            <nz-option [nzLabel]="'男'" [nzValue]="'男'"></nz-option>
+            <nz-option [nzLabel]="'女'" [nzValue]="'女'"></nz-option>
+            <nz-option [nzLabel]="'无要求'" [nzValue]="'无要求'"></nz-option>
+          </nz-select>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div nz-form-item class="w250 fl mr20">
+        <div nz-form-label class="fl">
+          <label for="minDegree">学历要求</label>
+        </div>
+        <div nz-form-control class="fr w150">
+          <nz-select formControlName="minDegree" [nzSize]="'large'">
+            <nz-option [nzLabel]="'高中、中专'" [nzValue]="'高中及以下'"></nz-option>
+            <nz-option [nzLabel]="'大专'" [nzValue]="'大专'"></nz-option>
+            <nz-option [nzLabel]="'本科'" [nzValue]="'28岁以上'"></nz-option>
+            <nz-option [nzLabel]="'硕士'" [nzValue]="'30岁以上'"></nz-option>
+            <nz-option [nzLabel]="'博士'" [nzValue]="'40岁以上'"></nz-option>
+            <nz-option [nzLabel]="'无要求'" [nzValue]="'无要求'"></nz-option>
+          </nz-select>
+        </div>
+      </div>
+
+      <div nz-form-item class="w250 fl" style="margin-bottom:8px;">
+        <div nz-form-control>
+          <button nz-button [nzSize]="'large'" [nzType]="'primary'">搜索</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="seekers clear">
+    <ul>
+      <li>
+        <span class="seeker-title col1">姓名</span>
+        <span class="seeker-title col2">职位意向</span>
+        <span class="seeker-title col3">工作经验</span>
+        <span class="seeker-title col4">学历</span>
+        <span class="seeker-title col5">地区</span>
+        <span class="seeker-title col6">更新时间</span>
+      </li>
+    </ul>
+  </div>
+</div>
