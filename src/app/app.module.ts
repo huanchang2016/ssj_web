@@ -33,15 +33,23 @@ import { GmapComponent } from './modules/gmap/gmap.component';
 import { LoginComponent } from './modules/login/login.component';
 import { LoginService }   from './service/login.service';
 import { RegisterComponent } from './modules/register/register.component';
-import { CompanyAdminComponent } from './user/zhaopin/company-admin/company-admin.component';
-import { BaseInfoComponent } from './user/zhaopin/company-admin/base-info/base-info.component';
-import { CompanyLogoComponent } from './user/zhaopin/company-admin/company-logo/company-logo.component';
-import { CompanyMapComponent } from './user/zhaopin/company-admin/company-map/company-map.component';
+import { CompanyAdminComponent } from './user/zhaopin/admin/company-admin/company-admin.component';
+import { BaseInfoComponent } from './user/zhaopin/admin/company-admin/base-info/base-info.component';
+import { CompanyLogoComponent } from './user/zhaopin/admin/company-admin/company-logo/company-logo.component';
+import { CompanyMapComponent } from './user/zhaopin/admin/company-admin/company-map/company-map.component';
 import { CascaderComponent } from './modules/cascader/cascader.component';
-import { JobAddComponent } from './user/zhaopin/company-admin/job-add/job-add.component';
-import { InRecruitComponent } from './user/zhaopin/company-admin/in-recruit/in-recruit.component';
-import { JobSeekersComponent } from './user/zhaopin/company-admin/job-seekers/job-seekers.component';
-
+import { JobAddComponent } from './user/zhaopin/admin/company-admin/job-add/job-add.component';
+import { InRecruitComponent } from './user/zhaopin/admin/company-admin/in-recruit/in-recruit.component';
+import { JobSeekersComponent } from './user/zhaopin/admin/company-admin/job-seekers/job-seekers.component';
+import { JobFairComponent } from './user/zhaopin/admin/company-admin/job-fair/job-fair.component';
+import { HomePageComponent } from './user/zhaopin/admin/company-admin/home-page/home-page.component';
+//密码修改
+import { ChangePwdComponent } from './modules/change-pwd/change-pwd.component';
+import { PwdManagerComponent } from './user/zhaopin/admin/company-admin/pwd-manager/pwd-manager.component';
+//个人用户个人管理中心
+import { UserAdminComponent } from './user/zhaopin/admin/user-admin/user-admin.component';
+import { UserHomePageComponent} from './user/zhaopin/admin/user-admin/home-page/home-page.component';
+import { UserInfoComponent } from './user/zhaopin/admin/user-admin/user-info/user-info.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +83,14 @@ import { JobSeekersComponent } from './user/zhaopin/company-admin/job-seekers/jo
     CascaderComponent,
     JobAddComponent,
     InRecruitComponent,
-    JobSeekersComponent
+    JobSeekersComponent,
+    JobFairComponent,
+    HomePageComponent,
+    UserAdminComponent,
+    ChangePwdComponent,
+    PwdManagerComponent,
+    UserHomePageComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,

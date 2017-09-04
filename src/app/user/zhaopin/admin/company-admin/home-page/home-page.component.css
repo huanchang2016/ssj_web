@@ -1,0 +1,46 @@
+.com-top{ position: relative;left:0;top:0;}
+.com-top:after{ content: "."; display: block; height: 0; visibility: hidden; clear:both;}
+.com-top>div{ float:left;}
+.com-title{ line-height: 40px; margin-left: 15px;}
+.com-title h3{ font-size: 18px; font-weight: 600; }
+.editor, .look-over{ font-size:14px; margin: 0 10px;}
+.com-setting{ width: 100px;height: 80px; position: absolute;right:10px;top:10px}
+.com-setting>a{ display: block; font-size: 14px;text-align: center; line-height: 30px; width: 100%;height: 30px;color:#fff;}
+.com-setting>a:nth-child(1){background:#456dab;}
+.com-setting>a:nth-last-child(1){ background:#f60;margin-top:20px;}
+
+.con-content{ margin-top: 30px;}
+.con-list{
+    border: 1px solid #e0dddd;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.list-title{
+    line-height: 30px;
+    font-size: 16px;
+    border-bottom: 1px solid #e0dddd;
+    text-indent: 20px;
+    background: #f1f1f1;
+}
+.list-content:after{ content: "."; display: block; height: 0; visibility: hidden; clear:both;}
+.list-con-box{ width: 33.3%;text-align: center; border-right: 1px solid #efeded;}
+.list-con-box:nth-last-child(1){border:0;}
+.list-con-box h4{ font-size: 16px; color:#000;}
+.list-con-box p{ line-height: 50px;line-height: 50px;font-size: 14px;}
+.list-con-box .list-count{ font-size: 22px;color: #456dab;}
+.list-con-box>div{ line-height: 30px; font-size:14px; background: #f1f1f1;}
+
+/* 简历管理 */
+.resume-box{ padding: 10px 0;}
+.resume-list li{
+    width: 32%;
+    margin: 5px 5px;
+    float:left;
+    border: 1px solid #e0dddd;
+    height: 80px;
+    padding: 5px;
+}
+.resume-list li:after, .resume-list:after{ content: "."; display: block; height: 0; visibility: hidden; clear:both;}
+.resume-l{ margin-right: 10px;}
+.resume-l img{ width: 70px; height: 70px; border: 0; }
+.resume-r , .resume-r a{ font-size: 14px;}

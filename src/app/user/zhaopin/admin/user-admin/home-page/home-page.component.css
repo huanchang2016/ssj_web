@@ -1,0 +1,33 @@
+.user-home{ padding: 20px 0;}
+.user-top{ border-bottom: 1px solid #e1e1e1;}
+.user-photo{ margin-right: 10px;}
+.user-photo img{ width: 80px;height:100px;}
+.info-title{ font-size: 16px; color:#000;}
+.info-card, .info-change{ margin-top: 10px;}
+.info-card>div{ margin-right: 10px;font-size: 14px;}
+.info-change>div{ margin-right: 20px; font-size: 14px;}
+
+/* 求职信息==》列表 */
+.home-list{ margin-top: 30px;}
+.info-list{ border: 1px solid #ddd;margin-bottom: 30px;}
+.list-title{ text-indent: 20px; font-size: 16px;line-height:40px;font-weight: 600;color:#666;border-bottom: 1px solid #b8b2b2;}
+.jobInfo-intro:after{content:"."; display: block; height: 0; visibility: hidden;overflow: hidden;clear:both;}
+.jobInfo-intro li{ width:25%; float:left;padding: 20px 0;border-right: 1px solid #dfd4d4;}
+.jobInfo-intro li:nth-last-child(1){border: 0;}
+.jobInfo-intro li p{text-align: center;}
+.jobs-count{ color:#fd9800; font-size: 20px;line-height: 40px;}
+.jobs-des{ line-height: 30px; font-size:14px;}
+.jobs-des a{ color:#333;}
+
+/* 简历信息 */
+.resume-info, .resume-info a{ font-size:14px; line-height: 30px;}
+.resume-info{ margin-left: 30px;position: relative;left:0;top:0;}
+.resume-oper{position: absolute;right: 20px; top: 10px;}
+.resume-oper a{ padding: 4px 10px; color: #fff; background: #79a6cf; margin-right: 10px;}
+
+/* 合适的工作 */
+.r-job-list li{ float:left; width: 25%;padding: 10px;overflow: hidden;height:100px;border:1px solid #f1f1f1;}
+.r-job-list li:hover{ background:#e1e1e1;}
+.r-job-list li>p a{ font-size: 14px;}
+.r-job-salary{font-size:14px; color:#ff8d26; font-weight: 600;}
+.r-job-company a{ color:#333;}

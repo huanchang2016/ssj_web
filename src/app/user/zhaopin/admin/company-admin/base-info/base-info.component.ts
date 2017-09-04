@@ -75,13 +75,6 @@ export class BaseInfoComponent implements OnInit {
   }
 
 
-  updateConfirmValidator() {
-    /** wait for refresh value */
-    setTimeout(_ => {
-      this.registForm.controls['checkPassword'].updateValueAndValidity();
-    });
-  }
-
   getCaptcha(e: MouseEvent) {
     e.preventDefault();
   }
