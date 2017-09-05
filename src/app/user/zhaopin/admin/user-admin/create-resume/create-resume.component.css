@@ -2,7 +2,8 @@
 .w250{width: 250px;}
 .w100, .w250{float:left;}
 
-.resume-form>form{ width: 400px;margin-bottom: 30px;}
+.resume-form>form{margin-bottom: 30px;}
 div.row:after{content:'.';display: block;height:0;visibility: hidden; clear:both;}
 
-.resume-refer{ line-height: 30px; font-size: 18px; font-weight: 600;}
+.resume-refer{ line-height: 30px; font-size: 18px; font-weight: 600;margin-bottom: 30px;}
+.title h3{ font-size: 18px; line-height: 30px; background: #f1f1f1;text-indent: 20px;}

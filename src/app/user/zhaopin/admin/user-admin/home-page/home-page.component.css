@@ -15,7 +15,7 @@
 .jobInfo-intro li{ width:25%; float:left;padding: 20px 0;border-right: 1px solid #dfd4d4;}
 .jobInfo-intro li:nth-last-child(1){border: 0;}
 .jobInfo-intro li p{text-align: center;}
-.jobs-count{ color:#fd9800; font-size: 20px;line-height: 40px;}
+.jobs-count{ color:#fd9800; font-size: 26px;line-height: 40px;}
 .jobs-des{ line-height: 30px; font-size:14px;}
 .jobs-des a{ color:#333;}
 

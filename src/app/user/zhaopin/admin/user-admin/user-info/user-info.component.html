@@ -26,7 +26,7 @@
         <label for="userBirthday" nz-form-item-required>出生年月</label>
       </div>
       <div class="w250" nz-form-control nzHasFeedback [nzValidateStatus]="getFormControl('userBirthday')">
-        <nz-datepicker formControlName="userBirthday" [nzPlaceHolder]="'选择职位过期时间'" [nzDisabledDate]="_disabledDate"></nz-datepicker>
+        <nz-datepicker formControlName="userBirthday" [nzFormat]="'YYYY-MM-DD'" [nzPlaceHolder]="'请选择出生日期'" [nzDisabledDate]="_disabledDate"></nz-datepicker>
         <div nz-form-explain *ngIf="getFormControl('userBirthday').dirty&&getFormControl('userBirthday').hasError('required')">请选择出生日期</div>
       </div>
     </div>
@@ -35,7 +35,7 @@
         <label for="userIdcard" nz-form-item-required>身份证号码 </label>
       </div>
       <div nz-form-control class="w250" nzHasFeedback [nzValidateStatus]="getFormControl('userIdcard')">
-        <nz-input [nzSize]="'large'" formControlName="userIdcard" [nzPlaceHolder]="'天投人资'" [nzId]="'userIdcard'"></nz-input>
+        <nz-input [nzSize]="'large'" formControlName="userIdcard" [nzPlaceHolder]="'身份证号码'" [nzId]="'userIdcard'"></nz-input>
         <div nz-form-explain *ngIf="getFormControl('userIdcard').dirty&&getFormControl('userIdcard').hasError('required')">请输入身份证号码</div>
       </div>
     </div>
@@ -45,14 +45,13 @@
       </div>
       <div class="w250" nz-form-control nzHasFeedback [nzValidateStatus]="getFormControl('maxDegree')">
         <nz-select formControlName="maxDegree" [nzSize]="'large'">
-          <nz-option [nzLabel]="'高中、中专'" [nzValue]="'高中及以下'"></nz-option>
+          <nz-option [nzLabel]="'高中、中专'" [nzValue]="'高中、中专'"></nz-option>
           <nz-option [nzLabel]="'大专'" [nzValue]="'大专'"></nz-option>
-          <nz-option [nzLabel]="'本科'" [nzValue]="'28岁以上'"></nz-option>
-          <nz-option [nzLabel]="'硕士'" [nzValue]="'30岁以上'"></nz-option>
-          <nz-option [nzLabel]="'博士'" [nzValue]="'40岁以上'"></nz-option>
-          <nz-option [nzLabel]="'无要求'" [nzValue]="'无要求'"></nz-option>
+          <nz-option [nzLabel]="'本科'" [nzValue]="'本科'"></nz-option>
+          <nz-option [nzLabel]="'硕士'" [nzValue]="'硕士'"></nz-option>
+          <nz-option [nzLabel]="'博士'" [nzValue]="'博士'"></nz-option>
         </nz-select>
-        <div nz-form-explain *ngIf="getFormControl('maxDegree').dirty&&getFormControl('maxDegree').hasError('required')">请选择最低学历</div>
+        <div nz-form-explain *ngIf="getFormControl('maxDegree').dirty&&getFormControl('maxDegree').hasError('required')">请选择最高学历</div>
       </div>
     </div>
     <div nz-form-item class="row">
@@ -61,15 +60,13 @@
       </div>
       <div class="w250" nz-form-control nzHasFeedback [nzValidateStatus]="getFormControl('workExp')">
         <nz-select formControlName="workExp" [nzSize]="'large'">
-          <nz-option [nzLabel]="'无要求'" [nzValue]="'无要求'"></nz-option>
           <nz-option [nzLabel]="'1年以下'" [nzValue]="'1年以下'"></nz-option>
           <nz-option [nzLabel]="'1-3年'" [nzValue]="'1-3年'"></nz-option>
           <nz-option [nzLabel]="'3-5年'" [nzValue]="'3-5年'"></nz-option>
           <nz-option [nzLabel]="'5-8年'" [nzValue]="'5-8年'"></nz-option>
           <nz-option [nzLabel]="'8年以上'" [nzValue]="'8年以上'"></nz-option>
-          <nz-option [nzLabel]="'详见职位描述'" [nzValue]="'详见职位描述'"></nz-option>
         </nz-select>
-        <div nz-form-explain *ngIf="getFormControl('workExp').dirty&&getFormControl('workExp').hasError('required')">单位行业</div>
+        <div nz-form-explain *ngIf="getFormControl('workExp').dirty&&getFormControl('workExp').hasError('required')">请选择工作经验</div>
       </div>
     </div>
 
@@ -78,14 +75,14 @@
         <label for="phoneNumber" nz-form-item-required>手机号码</label>
       </div>
       <div nz-form-control class="w250" nzHasFeedback [nzValidateStatus]="getFormControl('phoneNumber')">
-        <nz-input [nzSize]="'large'" formControlName="phoneNumber" [nzPlaceHolder]="'02880518071或者13333333333'" [nzId]="'phoneNumber'"></nz-input>
+        <nz-input [nzSize]="'large'" formControlName="phoneNumber" [nzPlaceHolder]="'如：13333333333'" [nzId]="'phoneNumber'"></nz-input>
         <div nz-form-explain *ngIf="getFormControl('phoneNumber').dirty&&getFormControl('phoneNumber').hasError('required')">输入手机号码</div>
       </div>
     </div>
 
     <div nz-form-item class="row">
       <div nz-form-label class="w100">
-        <label nz-form-item-required>招聘邮箱</label>
+        <label nz-form-item-required>电子邮箱</label>
       </div>
       <div class="w250" nz-form-control [nzValidateStatus]="getFormControl('userEmail')" nzHasFeedback>
         <nz-input formControlName="userEmail" [nzPlaceHolder]="'请输入电子邮箱'" [nzType]="'userEmail'" [nzSize]="'large'">
@@ -98,7 +95,7 @@
         <label for="liveAddress" nz-form-item-required>现居住地</label>
       </div>
       <div nz-form-control class="w250" nzHasFeedback [nzValidateStatus]="getFormControl('liveAddress')">
-        <nz-input [nzSize]="'large'" formControlName="liveAddress" [nzPlaceHolder]="'四川省成都市天府新区天府大道南段2018号'" [nzId]="'liveAddress'"></nz-input>
+        <nz-input [nzSize]="'large'" formControlName="liveAddress" [nzPlaceHolder]="'四川省成都市天府新区天府大道南段2028号'" [nzId]="'liveAddress'"></nz-input>
         <div nz-form-explain *ngIf="getFormControl('liveAddress').dirty&&getFormControl('liveAddress').hasError('required')">请输入您的居住地址</div>
       </div>
     </div>
@@ -119,7 +116,7 @@
         <label for="detailedAddress">详细住址</label>
       </div>
       <div nz-form-control class="w250">
-        <nz-input [nzSize]="'large'" formControlName="detailedAddress" [nzPlaceHolder]="'四川省成都市天府新区天府大道南段2018号'" [nzId]="'detailedAddress'"></nz-input>
+        <nz-input [nzSize]="'large'" formControlName="detailedAddress" [nzPlaceHolder]="'四川省成都市天府新区天府大道南段2028号'" [nzId]="'detailedAddress'"></nz-input>
       </div>
     </div>
     <div nz-form-item class="row">
@@ -127,7 +124,7 @@
         <label for="houseAddress">户籍所在地</label>
       </div>
       <div nz-form-control class="w250">
-        <nz-input [nzSize]="'large'" formControlName="houseAddress" [nzPlaceHolder]="'四川省成都市天府新区天府大道南段2018号'" [nzId]="'houseAddress'"></nz-input>
+        <nz-input [nzSize]="'large'" formControlName="houseAddress" [nzPlaceHolder]="'四川省成都市'" [nzId]="'houseAddress'"></nz-input>
       </div>
     </div>
     <div nz-form-item class="row">
