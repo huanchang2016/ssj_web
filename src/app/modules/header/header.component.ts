@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
       { title: "other Link", link: './xxx'}
     ],
     css:[
-      { _selector:'nav-list', _attr: "background", _value: "#009cff"}
+      { _selector:'nav-list', _attr: "background", _value: "#456dab"}
     ],
     routerActiveClass: 'am-active'
   }; 

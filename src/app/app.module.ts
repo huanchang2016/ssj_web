@@ -17,7 +17,7 @@ import { BannerComponent } from './modules/banner/banner.component';
 import { ModelBlockComponent } from './modules/model-block/model-block.component';
 import { ContentComponent } from './modules/content/content.component';
 import { ZhaopinComponent } from './user/zhaopin/zhaopin.component';
-import { HomeComponent } from './user/home/home.component';
+import { HomeComponent } from './user/index/home/home.component';
 import { SearchMenuComponent } from './user/zhaopin/search-menu/search-menu.component';
 import { JobsShowComponent } from './user/zhaopin/jobs-show/jobs-show.component';
 import { HeadTopComponent } from './modules/header/head-top/head-top.component';
@@ -50,6 +50,8 @@ import { PwdManagerComponent } from './user/zhaopin/admin/company-admin/pwd-mana
 import { UserAdminComponent } from './user/zhaopin/admin/user-admin/user-admin.component';
 import { UserHomePageComponent} from './user/zhaopin/admin/user-admin/home-page/home-page.component';
 import { UserInfoComponent } from './user/zhaopin/admin/user-admin/user-info/user-info.component';
+import { UserPwdManagerComponent } from './user/zhaopin/admin/user-admin/user-pwd-manager/user-pwd-manager.component';
+import { CreateResumeComponent } from './user/zhaopin/admin/user-admin/create-resume/create-resume.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +92,9 @@ import { UserInfoComponent } from './user/zhaopin/admin/user-admin/user-info/use
     ChangePwdComponent,
     PwdManagerComponent,
     UserHomePageComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    UserPwdManagerComponent,
+    CreateResumeComponent
   ],
   imports: [
     BrowserModule,

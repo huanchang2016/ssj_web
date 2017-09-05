@@ -1,10 +1,10 @@
 .nav-list{height: 50px;}
 .nav-list>li { float: left;margin-right: 10px;line-height: 50px; position: relative;left: 0;top: 0;}
-.nav-list>li>a{ padding: 0 20px;font-size: 16px; color: #000;}
+.nav-list>li>a{ padding: 0 20px;font-size: 16px; color: #fff;}
 .nav-list>li:hover {background: #ccc;}
 .childMenu{ display: none; position: absolute;left: 0; top: 50px;z-index: 100;}
 .nav-list li:hover .childMenu{display: block;}
-.childMenu li{ width: 100px; padding-left: 20px;border-bottom: 1px dashed #f1f1f1;background: #333;}
+.childMenu li{ width: 100px; padding-left: 20px;border-bottom: 1px dashed #f1f1f1;background: #456dab;}
 .childMenu li:last-child{ border-bottom: 0;}
 .childMenu li a{font-size: 14px;color:#fff;}
 
@@ -14,10 +14,10 @@
 主导航样式类名:am-active
 公司主页导航样式类名:com-active
 **********/
-.am-active, .am-active:hover{background: #242736!important;}
+.am-active, .am-active:hover{background: #276d9f!important;}
 .com-active, .am-active:hover{background: #3b82a5!important;}
 .am-active a, .com-active a, .am-active, .com-active{color: #fff!important;text-decoration: none;}
 .ant-menu-horizontal,.ant-menu-horizontal > .ant-menu-item, .ant-menu-horizontal > .ant-menu-submenu{
-    border-bottom: 1px solid #009cff;
+    border-bottom: 1px solid #456dab;
 }
 /* .ant-menu-submenu-title>span{color:#000;} */

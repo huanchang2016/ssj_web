@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './user/home/home.component';
+import { HomeComponent } from './user/index/home/home.component';
 import { ZhaopinComponent } from './user/zhaopin/zhaopin.component';
 import { JobsDetailComponent } from './user/zhaopin/jobs-detail/jobs-detail.component';
 import { CompanyComponent } from './user/zhaopin/company/company.component';
@@ -28,9 +28,12 @@ import { PwdManagerComponent } from './user/zhaopin/admin/company-admin/pwd-mana
 import { UserAdminComponent } from './user/zhaopin/admin/user-admin/user-admin.component';
 import { UserHomePageComponent} from './user/zhaopin/admin/user-admin/home-page/home-page.component';
 import { UserInfoComponent } from './user/zhaopin/admin/user-admin/user-info/user-info.component';
+// 密码管理
+import { UserPwdManagerComponent } from './user/zhaopin/admin/user-admin/user-pwd-manager/user-pwd-manager.component';
+import { CreateResumeComponent } from './user/zhaopin/admin/user-admin/create-resume/create-resume.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'companyAdmin', pathMatch: 'full' },
+  { path: '', redirectTo: 'userAdmin', pathMatch: 'full' },
   { path: 'register', component: RegisterComponent, data: { title: '天府菁英网' } },
   {
     path: "companyAdmin", component: CompanyAdminComponent, data: { title: '单位主页'},
@@ -56,9 +59,10 @@ const routes: Routes = [
       { path: 'user-home', component: UserHomePageComponent, data: { title: '个人中心'} },//管理首页
       { path: 'user-info', component: UserInfoComponent },//个人资料
       // { path: 'user-logo', component: CompanyLogoComponent },//个人logo上传
-      // { path: 'user-map', component: CompanyMapComponent },//个人地图
-      // { path: 'user-jobadd', component: JobAddComponent },//发布职位
+      { path: 'user-pwd', component: UserPwdManagerComponent },//个人用户密码管理
+      { path: 'resume', component: CreateResumeComponent },//创建简历
       // { path: 'recruit', component: InRecruitComponent },//招聘中的职位
+      // { path: 'user-map', component: CompanyMapComponent },//地图搜索职位
       // { path: 'jobFair', component: JobFairComponent },//招聘会
       // { path: 'seekers', component: JobSeekersComponent }//搜索人才
     ]
@@ -84,23 +88,6 @@ const routes: Routes = [
 
 ];
 
-// const routes: Routes = [
-//   { path: '', redirectTo: 'zhaopin', pathMatch: 'full'},
-//   { path: 'home', component: HomeComponent, data: { title: '天府菁英网' }},
-//   { path: 'zhaopin', component: ZhaopinComponent, data: { title: '天府新区管委会招聘信息-天府菁英网' } },
-//   { path: "jobsDetails/:jobId", component: JobsDetailComponent, data: {title: "个人简历详情-天府新区管委会招聘信息"}},
-//   { path: "company/:companyId", component: CompanyComponent, data: { title: "公司详情-天府新区管委会招聘信息"},
-//         children:[
-//           { path: '', component: CompanyHomeComponent},
-//           { path: 'home', component: CompanyHomeComponent, data: {title:"公司主页-公司详情-天府新区管委会招聘信息"}},
-//           { path: 'jobs', component: CompanyJobsComponent, data: {title:"公司主页-公司详情-天府新区管委会招聘信息"}},
-//           { path: 'recruit', component: SchoolRecruitComponent, data: {title:"公司主页-公司详情-天府新区管委会招聘信息"}},
-//           { path: 'ask', component: CompanyAskComponent, data: {title:"公司主页-公司详情-天府新区管委会招聘信息"}}
-
-//   ]},
-//   { path: "**", component: HomeComponent, data: { title: '天府菁英网-首页' } }
-
-// ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
