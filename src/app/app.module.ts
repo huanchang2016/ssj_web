@@ -53,6 +53,7 @@ import { UserInfoComponent } from './user/zhaopin/admin/user-admin/user-info/use
 import { UserPwdManagerComponent } from './user/zhaopin/admin/user-admin/user-pwd-manager/user-pwd-manager.component';
 import { CreateResumeComponent } from './user/zhaopin/admin/user-admin/create-resume/create-resume.component';
 import { AmendResumeComponent } from './user/zhaopin/admin/user-admin/amend-resume/amend-resume.component';
+import { DatePickerComponent } from './modules/date-picker/date-picker.component';
 
 @NgModule({
   declarations: [
@@ -96,7 +97,8 @@ import { AmendResumeComponent } from './user/zhaopin/admin/user-admin/amend-resu
     UserInfoComponent,
     UserPwdManagerComponent,
     CreateResumeComponent,
-    AmendResumeComponent
+    AmendResumeComponent,
+    DatePickerComponent
   ],
   imports: [
     BrowserModule,

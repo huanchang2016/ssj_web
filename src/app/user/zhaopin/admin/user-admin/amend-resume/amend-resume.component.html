@@ -17,64 +17,28 @@
     <nz-modal [nzVisible]="isAddWorksExp" [nzTitle]="'工作经历'" [nzContent]="modalContent" (nzOnCancel)="handleCancel($event)" (nzOnOk)="handleOk($event)" [nzConfirmLoading]="isConfirmLoading">
       <ng-template #modalContent>
         <div class="box">
-            <form nz-form [formGroup]="validateForm">
-              <div *ngFor="let control of controlArray;let i = index">
-                <h3 class="model_title" *ngIf="i !== 0"><i class="anticon anticon-minus-circle-o dynamic-delete-button" (click)="removeField(control,$event)"></i></h3>
-                <div nz-form-item>
-                  <div nz-form-label class="fl w100">
-                    <label [attr.for]="control.controlInstance">公司名称</label>
+            <form nz-form [formGroup]="workExpForm">
+              <div class="form-content">
+                  <div>
+                    <span class="content-title">公司名称</span>
+                    <input class="content-input" type="text" formControlName="companyName" />
                   </div>
-                  <div nz-form-control class="fl w250">
-                    <nz-input
-                      [nzSize]="'large'"
-                      [nzPlaceHolder]="'公司名称'"
-                      [formControlName]="control.controlInstance"
-                      [nzId]="control.controlInstance">
-                    </nz-input>
-                    <div nz-form-explain
-                      *ngIf="getFormControl(control.controlInstance)?.dirty&&getFormControl(control.controlInstance)?.hasError('required')">
-                      请填写公司名称
+                  <div>
+                    <span class="content-title">担任职位</span>
+                    <input class="content-input" type="text" formControlName="position" />
+                  </div>
+                  <div>
+                    <span class="content-title">工作时间</span>
+                    <div class="datePicker">
+                        <date-picker (workDate)="getWorkDate($event)"></date-picker>
                     </div>
                   </div>
-                  <div class="clear"></div>
-                </div>
-                
-                <div nz-form-item>
-                    <div nz-form-label class="fl w100">
-                      <label  [attr.for]="control.startDate">工作时间</label>
-                    </div>
-                    <div nz-form-control class="fl w250">
-                      <nz-input
-                        [nzSize]="'large'"
-                        [nzPlaceHolder]="'工作时间'"
-                        [formControlName]="control.startDate"
-                        [nzId]="control.startDate">
-                      </nz-input>
-                      <div nz-form-explain
-                        *ngIf="getFormControl(control.companyName)?.dirty&&getFormControl(control.companyName)?.hasError('required')">
-                        请填写工作时间
-                      </div>
-                    </div>
-                </div>
-                <div nz-form-item>
-                    <div nz-form-label class="fl w100">
-                      <label>工作内容</label>
-                    </div>
-                    <div nz-form-control class="fl w250">
-                        <nz-input
-                                [formControlName]="control.content"
-                                [nzType]="'textarea'" 
-                                [nzRows]="'4'" 
-                                [nzPlaceHolder]="'工作内容'">
-                        </nz-input>
-                      <div nz-form-explain
-                        *ngIf="getFormControl(control.content)?.dirty&&getFormControl(control.content)?.hasError('required')">
-                        请填写工作内容
-                      </div>
-                    </div>
-                </div>
+                  <div>
+                    <span class="content-title">工作内容</span>
+                    <textarea class="content-textarea" formControlName="content" name="content" cols="30" rows="6"></textarea>
+                  </div>
               </div>
-              </form>
+            </form>
             <div>
               <button nz-button [nzType]="'dashed'" [nzSize]="'large'" style="width:60%" (click)="addField($event)">
                 <i class="anticon anticon-plus"></i>

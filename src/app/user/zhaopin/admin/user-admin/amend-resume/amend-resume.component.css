@@ -21,4 +21,10 @@
     color: #999;
     transition: all .3s;
   }
-.model_title{text-align: right;margin-right:20px;}
+.form-content{ margin-bottom: 20px;}
+.form-content>div{ margin-bottom: 10px;}
+.form-content>div:after{content: '.';display: block;height: 0; visibility: hidden; clear:both;}
+.content-title{float:left; display: inline-block; width: 100px;font-size:16px;color:#768eb2;}
+.content-input{ float: left;width: 200px; }
+.datePicker{ float: left; width: 300px;}
+.content-textarea{ float:left; width: 350px;resize: none;}

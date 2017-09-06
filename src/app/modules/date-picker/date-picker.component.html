@@ -1,0 +1,14 @@
+<nz-datepicker style="width: 45%;" 
+    (ngModelChange)="_startDate=$event;_startValueChange()"
+    [ngModel]="_startDate" 
+    [nzDisabledDate]="_disabledStartDate" 
+    [nzShowTime]="true" 
+    [nzFormat]="'YYYY-MM-DD'" 
+    [nzPlaceHolder]="'Start date'"></nz-datepicker> - 
+<nz-datepicker style="width: 45%;" 
+    (ngModelChange)="_endDate=$event;_endValueChange()"
+    [ngModel]="_endDate" 
+    [nzDisabledDate]="_disabledEndDate" 
+    [nzShowTime]="_endTime" 
+    [nzFormat]="'YYYY-MM-DD'"
+    [nzPlaceHolder]="'End date'"></nz-datepicker>

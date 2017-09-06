@@ -10,7 +10,7 @@ export class AmendResumeComponent implements OnInit {
 
   public workExpForm: FormGroup;//工作经历表单
   public workExp = [];// 工作经历数组
-  validateForm: FormGroup;
+  
   controlArray = [];
   // 设置默认经历预览
   public deWorkExp = {
@@ -37,8 +37,13 @@ export class AmendResumeComponent implements OnInit {
       console.log(this.workExp);
     }
 
-    this.validateForm = this.fb.group({});
-    this.addField();
+    this.workExpForm = this.fb.group({
+      companyName: [null,[Validators.required]],
+      position: [ null],
+      startDate: [null],
+      endDate: [null],
+      content: [null]
+    });
   }
   isAddWorksExp = false;//如果添加工作经历，则模态框弹出
   isConfirmLoading = false;
@@ -67,43 +72,29 @@ export class AmendResumeComponent implements OnInit {
     if (e) {
       e.preventDefault();
     }
-    const id = (this.controlArray.length > 0) ? this.controlArray[this.controlArray.length - 1].id + 1 : 0;
-
-    //每个表单的内容
-    const _form = {
-      id,
-      controlInstance: `companyName${id}`,
-      position: `position${id}`,
-      startDate: `startDate${id}`,
-      endDate: `endDate${id}`,
-      content: `content${id}`
-      
-    };
-    const index = this.controlArray.push(_form);
-    // console.log(this.controlArray[this.controlArray.length - 1]);
-    console.log(this.controlArray);
-    this.validateForm.addControl(this.controlArray[index - 1].controlInstance, new FormControl(null, Validators.required));
+    console.log('addForm');
+    
   }
 
   removeField(i, e: MouseEvent) {
     e.preventDefault();
     if (this.controlArray.length > 1) {
-      const index = this.controlArray.indexOf(i);
-      this.controlArray.splice(index, 1);
-      console.log(this.controlArray);
-      this.validateForm.removeControl(i.controlInstance);
+      
     }
   }
 
   getFormControl(name) {
-    return this.validateForm.controls[name];
+    return this.workExpForm.controls[name];
   }
 
   _submitForm() {
-    for (const i in this.validateForm.controls) {
-      this.validateForm.controls[i].markAsDirty();
-    }
-    console.log(this.validateForm.value);
+    console.log(this.workExpForm['_value']);
+  }
+
+  // 处理起始时间的处理
+  getWorkDate(value){
+    this.workExpForm['_value'].startDate = value._startDate;
+    this.workExpForm['_value'].endDate = value._endDate;
   }
 
 }
