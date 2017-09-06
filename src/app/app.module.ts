@@ -52,6 +52,7 @@ import { UserHomePageComponent} from './user/zhaopin/admin/user-admin/home-page/
 import { UserInfoComponent } from './user/zhaopin/admin/user-admin/user-info/user-info.component';
 import { UserPwdManagerComponent } from './user/zhaopin/admin/user-admin/user-pwd-manager/user-pwd-manager.component';
 import { CreateResumeComponent } from './user/zhaopin/admin/user-admin/create-resume/create-resume.component';
+import { AmendResumeComponent } from './user/zhaopin/admin/user-admin/amend-resume/amend-resume.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +95,8 @@ import { CreateResumeComponent } from './user/zhaopin/admin/user-admin/create-re
     UserHomePageComponent,
     UserInfoComponent,
     UserPwdManagerComponent,
-    CreateResumeComponent
+    CreateResumeComponent,
+    AmendResumeComponent
   ],
   imports: [
     BrowserModule,

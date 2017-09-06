@@ -31,6 +31,7 @@ import { UserInfoComponent } from './user/zhaopin/admin/user-admin/user-info/use
 // 密码管理
 import { UserPwdManagerComponent } from './user/zhaopin/admin/user-admin/user-pwd-manager/user-pwd-manager.component';
 import { CreateResumeComponent } from './user/zhaopin/admin/user-admin/create-resume/create-resume.component';
+import { AmendResumeComponent } from './user/zhaopin/admin/user-admin/amend-resume/amend-resume.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'userAdmin', pathMatch: 'full' },
@@ -61,6 +62,7 @@ const routes: Routes = [
       // { path: 'user-logo', component: CompanyLogoComponent },//个人logo上传
       { path: 'user-pwd', component: UserPwdManagerComponent },//个人用户密码管理
       { path: 'resume', component: CreateResumeComponent },//创建简历
+      { path: 'complete-resume', component: AmendResumeComponent},// 完善简历 AmendResumeComponent
       // { path: 'recruit', component: InRecruitComponent },//招聘中的职位
       // { path: 'user-map', component: CompanyMapComponent },//地图搜索职位
       // { path: 'jobFair', component: JobFairComponent },//招聘会

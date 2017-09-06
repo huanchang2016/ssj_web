@@ -11,6 +11,8 @@ export class CreateResumeComponent implements OnInit {
     // 获取本地存储的个人基本信息
     public user_info :any;
 
+    // 获取时间
+    public _date:Date;
     // 期望城市
     public jobsAddr:any;//工作地点
   
@@ -19,8 +21,10 @@ export class CreateResumeComponent implements OnInit {
 
     ngOnInit() {
       var user_msg = JSON.parse(window.localStorage.getItem("user_info"));
+      this._date = user_msg.userBirthday;
       if(user_msg){
         console.log(user_msg);
+      console.log(this._date);
       }
       // 初始化表单
       this.userResumeForm = this.fb.group({

@@ -1,0 +1,24 @@
+.mr50{margin-right: 50px;}
+.w100{width:100px;}
+.w250{width:250px;}
+.editor:hover{ color:#768eb2;background: #f1f1f1;}
+
+.recreate{ margin-left: -20px;border:1px solid #768eb2; border-right: 0;}
+.info{ margin-bottom: 30px;font-size: 14px;}
+.title{ text-indent: 20px; line-height: 30px; font-size: 16px; color: #fff; background: #768eb2;}
+.content{ margin-top:10px;}
+.con_row:after{ content:'.'; height: 0;display: block;visibility: hidden;overflow: hidden;clear:both;}
+.con_left{ width: 150px;text-align: center;}
+.con_right{width: calc(100% - 150px); padding: 0 20px;}
+
+
+/* 工作经历表单 */
+.dynamic-delete-button {
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+    font-size: 24px;
+    color: #999;
+    transition: all .3s;
+  }
+.model_title{text-align: right;margin-right:20px;}

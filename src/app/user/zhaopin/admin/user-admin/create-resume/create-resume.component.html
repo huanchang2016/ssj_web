@@ -137,7 +137,7 @@
           <label for="userBirthday" nz-form-item-required>出生日期</label>
         </div>
         <div class="w250" nz-form-control nzHasFeedback [nzValidateStatus]="getFormControl('userBirthday')">
-          <nz-datepicker formControlName="userBirthday" [nzPlaceHolder]="'出生日期'" [nzDisabledDate]="_disabledDate"></nz-datepicker>
+          <nz-datepicker [(ngModel)]="_date" formControlName="userBirthday" [nzPlaceHolder]="'出生日期'" [nzDisabledDate]="_disabledDate"></nz-datepicker>
           <div nz-form-explain *ngIf="getFormControl('userBirthday').dirty&&getFormControl('userBirthday').hasError('required')">请选择出生日期</div>
         </div>
       </div>
