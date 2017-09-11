@@ -10,4 +10,6 @@
 .newsContent li:after{
     content: ".";display: block;height: 0; visibility: hidden;clear:both;
 }
-.newsContent li div, .newsContent a{font-size: 14px;line-height: 30px;}
+.newsContent li div, .newsContent a{font-size: 14px;line-height: 30px;text-align: center;}
+.newsContent li div:nth-child(1){ width: 150px;}
+.newsContent li div:nth-child(2){ width: 600px;}
