@@ -1,9 +1,12 @@
 <div class="bl-box">
+  <div class="bl-box-title">
+    <h3>职位分类 <a class="fr">更多>></a></h3>
+  </div>
   <ul class="am-list am-list-static am-list-border">
-    <li class="jobs_menu" *ngFor="let jobs of jobsList" (mouseover)="jobListShow()">
+    <li class="jobs_menu" *ngFor="let jobs of jobsList;let i=index;" (mouseover)="jobListShow()">
       <div class="jobs-class">
         <span class="am-fl">{{jobs.jobClass}}</span>
-        <span class="am-fr am-icon-angle-right"></span>
+        <span class="fr am-icon-angle-right">&gt;</span>
       </div>
       <div class="jobs-list">
         <div class="jobs-list-title">{{jobs.jobClass}}</div>

@@ -1,6 +1,22 @@
 .row{width:1200px; margin: 0 auto;}
-.header-top{height: 40px;line-height: 40px;background: #456dab; color: #fff;}
-.header-search{height:80px;line-height: 80px;}
-.header-nav{background: #456dab;}
-
-.header-nav{ line-height: 50px;}
+.header-top{height: 40px; font-size:14px;line-height: 40px;background: #1975b8; color: #fff;}
+.header-search{
+    height:245px;
+    line-height: 80px;
+    position: relative;
+    left:0;top:0;
+    background: url('/assets/lib/images/header-md-bg.jpg') left top;
+    background-size: cover;
+}
+.header-search-con { height: 245px;}
+.header-nav{
+    width: 100%;
+    height: 64px;
+    filter:alpha(opacity=90);
+    opacity:0.9;
+    -moz-opacity:0.9;-khtml-opacity: 0.9;
+    position: absolute;
+    left:0; bottom: 0;
+    background: #2f7bb7;
+    line-height: 64px;
+}

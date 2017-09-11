@@ -1,11 +1,44 @@
 <ul class="nav-list">
-    <li routerLinkActive="{{activeLinkClass}}" *ngFor="let navMenu of navBox">
-      <a [routerLink]="[navMenu.link]" *ngIf="!navMenu.childrenNav">{{navMenu.title}}</a>
-      <a href="javascript:;" *ngIf="navMenu.childrenNav">{{navMenu.title}}</a>
-      <ul class="childMenu" *ngIf="navMenu.childrenNav">
-          <li *ngFor="let subMenu of navMenu.childrenNav">
-            <a [routerLink]="[subMenu.childLink]">{{subMenu.childTitle}}</a>
-          </li>
-      </ul>
-    </li>
+  <li routerLinkActive="am-active">
+    <a [routerLink]="['./home']">
+      <span class="nav-icon nav-icon1"></span>
+      <span class="nav-t">首页</span>
+    </a>
+  </li>
+  <li routerLinkActive="am-active">
+    <a [routerLink]="['./zhaopin']">
+      <span class="nav-icon nav-icon2"></span>
+      <span class="nav-t">招聘</span>
+    </a>
+  </li>
+  <li routerLinkActive="am-active">
+    <a href="javascript:;">
+      <span class="nav-icon nav-icon3"></span>
+      <span class="nav-t">最新职位</span>
+    </a>
+  </li>
+  <li routerLinkActive="am-active">
+    <a href="javascript:;">
+      <span class="nav-icon nav-icon4"></span>
+      <span class="nav-t">工作搜索</span>
+    </a>
+  </li>
+  <li routerLinkActive="am-active">
+    <a href="javascript:;">
+      <span class="nav-icon nav-icon5"></span>
+      <span class="nav-t">创业培训</span>
+    </a>
+  </li>
+  <li routerLinkActive="am-active">
+    <a href="javascript:;">
+      <span class="nav-icon nav-icon6"></span>
+      <span class="nav-t">就业咨询</span>
+    </a>
+  </li>
+  <li routerLinkActive="am-active">
+    <a href="javascript:;">
+      <span class="nav-icon nav-icon7"></span>
+      <span class="nav-t">在线办公</span>
+    </a>
+  </li>
 </ul>

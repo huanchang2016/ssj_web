@@ -15,7 +15,7 @@ import { HeaderComponent } from './modules/header/header.component';
 import { SidebarComponent } from './modules/sidebar/sidebar.component';
 import { BannerComponent } from './modules/banner/banner.component';
 import { ModelBlockComponent } from './modules/model-block/model-block.component';
-import { ContentComponent } from './modules/content/content.component';
+import { ContentComponent } from './user/index/home/content/content.component';
 import { ZhaopinComponent } from './user/zhaopin/zhaopin.component';
 import { HomeComponent } from './user/index/home/home.component';
 import { SearchMenuComponent } from './user/zhaopin/search-menu/search-menu.component';

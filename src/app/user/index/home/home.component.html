@@ -1,6 +1,28 @@
 <div nz-row>
+  <div class="home-top-image"><a href="javascript:;">
+    <img src="/assets/lib/images/home-top-images.png" alt="关于网上开通办理就业、创业登记等内容">
+  </a></div>
+</div>
+<div nz-row>
   <div nz-col [nzSpan]="18" [nzPush]="6">
     <app-banner></app-banner>
+    <div class="latestJobsNews">
+      <div class="bl-box-title">
+        <h3>最新职位资讯 <a class="fr">更多>></a></h3>
+      </div>
+      <ul class="newsContent">
+          <li>
+            <div class="fl">职位</div>
+            <div class="fl">公司名称</div>
+            <div class="fr">发布时间</div>
+          </li>
+          <li>
+            <div class="fl">职位1</div>
+            <div class="fl">公司名称2</div>
+            <div class="fr">发布时间1</div>
+          </li>
+      </ul>
+    </div>
   </div>
   <div nz-col [nzSpan]="6" [nzPull]="18">
     <app-sidebar></app-sidebar>

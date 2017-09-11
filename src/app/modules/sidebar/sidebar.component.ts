@@ -8,6 +8,10 @@ const jobs = [
   {jobClass:'fsddfsadfsdfafsdfaasd',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
   {jobClass:'fsdafsdfaasd',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
   {jobClass:'dsdfasdfs',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
+  {jobClass:'fsddfsadfsdfafsdfaasd',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
+  {jobClass:'dsdfasdfs',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
+  {jobClass:'fsddfsadfsdfafsdfaasd',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
+  {jobClass:'fsdafsdfaasd',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
   {jobClass:'fsddfsadfsdfafsdfaasd',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]}
 ]
 @Component({

@@ -1,9 +1,13 @@
-    <div nz-col [nzSpan]="12">
-      <h1 class="logo"><a href="#">
-          <img src="./../../assets/lib/images/logoin_logo.png" alt="首页logo">
-        </a></h1>
+<div class="header-search-con">
+  <div nz-col [nzSpan]="12">
+    <h1 class="logo"><a href="#">
+        <img src="./../../assets/lib/images/logoin_logo.png" alt="首页logo">
+      </a></h1>
+  </div>
+  <div nz-col [nzSpan]="12">
+    <div class="searchTxt fr">
+      <input type="text" #searchTxt placeholder="请输入关键字" style="width: 400px;" >
+      <span (click)="_search(searchTxt.value)">站内搜索</span>
     </div>
-    <div nz-col [nzSpan]="12" class='tx-right'>
-      <nz-input [nzType]="'search'" [nzPlaceHolder]="'input search text'" [(ngModel)]="_value" style="width: 200px;">
-      </nz-input>
-    </div>
+  </div>
+</div>

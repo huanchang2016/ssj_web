@@ -1,1 +1,13 @@
 .row{width:1200px; margin: 0 auto;padding: 0;}
+.home-top-image{height: 80px; margin: 20px 0;}
+.home-top-image img{ width: 1200px;height:80px;border: 0;}
+
+/* 最新职位资讯 */
+.bl-box-title{ border-bottom: 2px solid #1875B9;padding: 10px 0;}
+.bl-box-title h3{ text-indent: 10px;line-height: 20px; border-left: 10px solid #1976b9; font-size: 18px;color:#000;}
+.bl-box-title h3 a { margin-right: 10px; text-indent: 0px; font-size: 12px; padding: 3px 10px; background: #1976b9; color:#fff;}
+.newsContent{ padding: 10px 20px;}
+.newsContent li:after{
+    content: ".";display: block;height: 0; visibility: hidden;clear:both;
+}
+.newsContent li div, .newsContent a{font-size: 14px;line-height: 30px;}

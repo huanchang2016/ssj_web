@@ -1,5 +1,4 @@
 import { Router } from '@angular/router';
-import { HEROES } from './../../../../../my-hero/src/app/mock-heroes/mock-heroes';
 import { Injectable } from '@angular/core';
 import { CompanyRecruit } from './job-list/jobs-list';
 

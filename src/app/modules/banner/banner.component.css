@@ -2,15 +2,12 @@
 :host ::ng-deep .ant-carousel .slick-slide {
     text-align: center;
     height: 320px;
-    line-height: 160px;
-    background: #364d79;
     color: #fff;
     overflow: hidden;
-}
-h3 {
-    color: #fff;
 }
 div.nz-overlay-pane{
     left: 458px!important;
 }
 /*幻灯片*/
+.banner-list {width: 100%;height:100%;}
+.banner-list img{ width: 100%;height:100%;}

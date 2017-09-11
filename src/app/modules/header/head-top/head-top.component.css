@@ -1,11 +1,12 @@
 :host ::ng-deep .vertical-center-modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  :host ::ng-deep .vertical-center-modal .ant-modal {
-    top: 0;
-  }
+:host ::ng-deep .vertical-center-modal .ant-modal {
+  top: 0;
+}
 
-  .login-r a{ padding: 0 10px; cursor: pointer;color:#fff;}
+.login-r a{ padding: 0 10px; cursor: pointer;color:#fff;}
+span, a{ font-size:16px;}

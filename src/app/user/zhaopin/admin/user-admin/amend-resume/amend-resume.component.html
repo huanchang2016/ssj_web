@@ -3,12 +3,21 @@
     <h2>完善简历有助于更好的求职！</h2>
     <div class="info">
       <div class="title">工作经历 <span class="editor fr mr50" (click)="showModal()">编辑工作经历</span></div>
-      <div class="content">
-        <div class="con_row" *ngFor="let deWork of workExp">
-          <div class="con_left fl">{{deWork._date}}</div>
+      <div class="content" *ngIf="!isWorkExp">
+        <div class="con_row">
+          <div class="con_left fl">{{deWorkExp._date}}</div>
           <div class="con_right fl">
-            <h3>{{deWork.companyName}} <span style="margin-left:20px;">{{deWork.jobName}}</span></h3>
-            <p *ngFor="let work of deWork.works;let i=index;"> {{i}}、{{work}}</p>
+            <h3>{{deWorkExp.companyName}} <span style="margin-left:20px;">{{deWorkExp.position}}</span></h3>
+            <p *ngFor="let work of deWorkExp.content;let i=index;"> {{i}}、{{work}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="content" *ngIf="isWorkExp">
+        <div class="con_row" *ngFor="let deWork of workExp">
+          <div class="con_left fl">{{deWork.startDate}}-{{deWork.endDate}}</div>
+          <div class="con_right fl">
+            <h3>{{deWork.companyName}} <span style="margin-left:20px;">{{deWork.position}}</span></h3>
+            <p *ngFor="let work of deWork.content;let i=index;"> {{i}}、{{work}}</p>
           </div>
         </div>
       </div>
@@ -35,7 +44,7 @@
                   </div>
                   <div>
                     <span class="content-title">工作内容</span>
-                    <textarea class="content-textarea" formControlName="content" name="content" cols="30" rows="6"></textarea>
+                    <textarea id="content-textarea" class="content-textarea" formControlName="content" name="content" cols="30" rows="6"></textarea>
                   </div>
               </div>
             </form>

@@ -13,4 +13,8 @@ export class HeadMiddleComponent implements OnInit {
   ngOnInit() {
   }
 
+  _search(value){
+    console.log(value);
+  }
+
 }

@@ -9,23 +9,9 @@ declare var $;
 })
 export class HeadNavComponent implements OnInit {
 
-  @Input()
-  public headerNav:any;
-  // 设置导航菜单数组
-  public navBox;
-  public cssEditor;
-  public activeLinkClass;
+
   constructor() { }
 
-  ngOnInit() {
-    this.navBox = this.headerNav[0]['menu'];
-    this.cssEditor = this.headerNav[0]['css'];
-    this.activeLinkClass = this.headerNav[0]['routerActiveClass'];
-    for(let i=0,l=this.cssEditor.length;i<l;i++){
-      let _css = this.cssEditor[i];
-      $("." + _css['_selector']).css(_css['_attr'], _css['_value']);
-    }
-    
-  }
+  ngOnInit() { }
 
 }
