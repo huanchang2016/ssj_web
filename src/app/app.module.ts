@@ -12,8 +12,11 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './user/index/index.component';
 import { HeaderComponent } from './modules/header/header.component';
+import { FooterComponent } from './modules/footer/footer.component';
 import { SidebarComponent } from './modules/sidebar/sidebar.component';
 import { BannerComponent } from './modules/banner/banner.component';
+import { ChoeseMenuComponent } from './user/zhaopin/choese-menu/choese-menu.component';
+import { ZphComponent } from './user/zhaopin/zph/zph.component';
 import { ModelBlockComponent } from './modules/model-block/model-block.component';
 import { ContentComponent } from './user/index/home/content/content.component';
 import { ZhaopinComponent } from './user/zhaopin/zhaopin.component';
@@ -54,6 +57,8 @@ import { UserPwdManagerComponent } from './user/zhaopin/admin/user-admin/user-pw
 import { CreateResumeComponent } from './user/zhaopin/admin/user-admin/create-resume/create-resume.component';
 import { AmendResumeComponent } from './user/zhaopin/admin/user-admin/amend-resume/amend-resume.component';
 import { DatePickerComponent } from './modules/date-picker/date-picker.component';
+import { JobsSearchComponent } from './user/zhaopin/admin/user-admin/jobs-search/jobs-search.component';
+import { SearchZphComponent } from './user/zhaopin/admin/user-admin/search-zph/search-zph.component';
 
 @NgModule({
   declarations: [
@@ -98,7 +103,12 @@ import { DatePickerComponent } from './modules/date-picker/date-picker.component
     UserPwdManagerComponent,
     CreateResumeComponent,
     AmendResumeComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    FooterComponent,
+    JobsSearchComponent,
+    ChoeseMenuComponent,
+    ZphComponent,
+    SearchZphComponent
   ],
   imports: [
     BrowserModule,

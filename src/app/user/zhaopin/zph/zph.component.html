@@ -1,0 +1,24 @@
+<div class="job-fair">
+    <div class="job-fair-search">
+      <div class="fl job-theme">
+        <nz-input [(ngModel)]="jobTheme" [nzPlaceHolder]="'招聘会主题'"></nz-input>
+      </div>
+      <div class="fl dateTime">
+        <nz-datepicker style="width: 45%;" (ngModelChange)="_startDate=$event;_startValueChange()" [ngModel]="_startDate" [nzDisabledDate]="_disabledStartDate" [nzShowTime]="true" [nzFormat]="'YYYY-MM-DD HH:mm:ss'" [nzPlaceHolder]="'开始时间'"></nz-datepicker>
+        <nz-datepicker style="width: 45%;" (ngModelChange)="_endDate=$event;_endValueChange()" [ngModel]="_endDate" [nzDisabledDate]="_disabledEndDate" [nzShowTime]="_endTime" [nzFormat]="'YYYY-MM-DD HH:mm:ss'" [nzPlaceHolder]="'结束时间'"></nz-datepicker>  
+      </div>
+      <div class="fl fair-btn">
+        <button nz-button [nzType]="'primary'" (click)="jobFairSearch();">
+          <i class="anticon anticon-search"></i><span>查询</span>
+        </button>
+      </div>
+    </div>
+    <div class="job-fair-show">
+      <div class="fair-l">
+        招聘会主题图片
+      </div>
+      <div class="fair-r">
+        <p>招聘会说明简介</p>
+      </div>
+    </div>
+  </div>

@@ -5,7 +5,7 @@
     line-height: 80px;
     position: relative;
     left:0;top:0;
-    background: url('/assets/lib/images/header-md-bg.jpg') left top;
+    background: url('/assets/lib/images/header-md-bg.jpg')  center -45px;
     background-size: cover;
 }
 .header-search-con { height: 245px;}

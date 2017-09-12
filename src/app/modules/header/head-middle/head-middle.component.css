@@ -1,8 +1,8 @@
 .header-search-con{ height: 100%; width: 100%;overflow: hidden;}
 .header-search-con>div{margin-top: 30px;}
 .logo a{display: flex;height:80px;width: 250px;align-items: center;}
-.logo img{border: 0;}
-.searchTxt{height:80px;margin-top: 40px;}
+.logo img{ height:70%; border: 0;}
+.searchTxt{height:80px;margin-top: 26px;}
 .searchTxt input, .searchTxt span{ display: block;float:left; height: 40px;border: 1px solid #1975b8;}
 .searchTxt input{ text-indent: 10px; font-size: 16px;}
 .searchTxt span{ 

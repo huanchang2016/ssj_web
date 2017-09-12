@@ -1,0 +1,5 @@
+.job-fair{ width: 100%;}
+.job-fair-search:after{ content: "."; display: block; height: 0; visibility: hidden; overflow: hidden; clear: both;}
+.job-theme{ width: 30%;padding-right:20px;}
+.dateTime{ width: 50%;}
+.fair-btn{width: 20%;}

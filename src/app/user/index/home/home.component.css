@@ -6,10 +6,11 @@
 .bl-box-title{ border-bottom: 2px solid #1875B9;padding: 10px 0;}
 .bl-box-title h3{ text-indent: 10px;line-height: 20px; border-left: 10px solid #1976b9; font-size: 18px;color:#000;}
 .bl-box-title h3 a { margin-right: 10px; text-indent: 0px; font-size: 12px; padding: 3px 10px; background: #1976b9; color:#fff;}
-.newsContent{ padding: 10px 20px;}
+.newsContent{ padding: 10px 20px; border:1px solid #f1f1f1;border-top: 0;}
 .newsContent li:after{
     content: ".";display: block;height: 0; visibility: hidden;clear:both;
 }
-.newsContent li div, .newsContent a{font-size: 14px;line-height: 30px;text-align: center;}
+.newsContent li div, .newsContent a{font-size: 14px;line-height: 30px;text-align: center; color: #333;}
 .newsContent li div:nth-child(1){ width: 150px;}
 .newsContent li div:nth-child(2){ width: 600px;}
+.newsContent .newsList:hover a { color: red;}

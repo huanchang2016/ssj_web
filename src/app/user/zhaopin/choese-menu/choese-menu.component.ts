@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 export const Address: any[] = ["不限", "成都", "天府新区","高新区","天府新区","高新区", "天府新区","高新区", "天府新区","高新区", "天府新区","高新区", "111", "222", "333"];
 export const Experience:any[] = ["不限", "应届毕业生", "3年以下", "3-5年", "5-10年", "10年以上", "不要求"];
 export const Collages:any[] = ["不限", "大专", "本科", "硕士", "博士", "不要求"];
@@ -24,17 +25,14 @@ export const JobCategory:any[] = [
 ];
 
 
-
 @Component({
-  selector: 'zp-search-menu',
-  templateUrl: './search-menu.component.html',
-  styleUrls: ['./search-menu.component.css']
+  selector: 'choese-menu',
+  templateUrl: './choese-menu.component.html',
+  styleUrls: ['./choese-menu.component.css']
 })
-export class SearchMenuComponent implements OnInit {
 
-  // 输入框
-  public searchTxt = '输入搜索内容';
 
+export class ChoeseMenuComponent implements OnInit {
   public address = Address;
   public experience = Experience;
   public collages = Collages;
@@ -58,11 +56,9 @@ export class SearchMenuComponent implements OnInit {
   public sortRadioValue = '0';
 
   public jobsListDetails;
-  constructor(
-  ) { }
+  constructor() { }
 
   ngOnInit() {
-    
   }
 
 }

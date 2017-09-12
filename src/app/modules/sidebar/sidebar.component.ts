@@ -3,17 +3,18 @@ import { Component, OnInit } from '@angular/core';
 declare var $;
 
 const jobs = [
-  {jobClass:'fsdafsdfaasd',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
-  {jobClass:'dsdfasdfs',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
+  {jobClass:'度假/旅游/出入境服务',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
+  {jobClass:'生产管理/营运 ',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
+  {jobClass:'烹饪/料理/食品研发',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
+  {jobClass:'度假/旅游/出入境服务',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
+  {jobClass:'电子/电器/半导体/仪器仪表',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
+  {jobClass:'烹饪/料理/食品研发',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
+  {jobClass:'度假/旅游/出入境服务',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
   {jobClass:'fsddfsadfsdfafsdfaasd',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
-  {jobClass:'fsdafsdfaasd',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
-  {jobClass:'dsdfasdfs',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
-  {jobClass:'fsddfsadfsdfafsdfaasd',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
-  {jobClass:'dsdfasdfs',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
-  {jobClass:'fsddfsadfsdfafsdfaasd',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
-  {jobClass:'fsdafsdfaasd',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
-  {jobClass:'fsddfsadfsdfafsdfaasd',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]}
-]
+  {jobClass:'度假/旅游/出入境服务',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]},
+  {jobClass:'生产管理/营运 ',jobList: ["职位1", "职位2","职位1", "职位2","职位1", "职位2","职位1", "职位2"]}
+];
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',

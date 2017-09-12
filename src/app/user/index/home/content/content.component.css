@@ -1,6 +1,11 @@
 /*内容列表  */
-.list{margin-top: 30px;background: #fff;border:1px solid #d1d1d1;}
+/* .list{margin-top: 30px;background: #fff;border:1px solid #d1d1d1;}
 .content_title{font-size: 16px;line-height: 30px;border-bottom: 1px solid #009cff;}
 .content_title span{padding-left: 20px;border-left: 5px solid #364d79;}
-.content_list { height: 200px;} 
+.content_list { height: 200px;}  */
 /*内容列表  */
+
+.home-page{ width: 100%;}
+.content{ background: #fff;}
+.con-list{ width: 100%;height: auto; margin-top: 30px;}
+.con-list img{ width:1200px; border: 0;}

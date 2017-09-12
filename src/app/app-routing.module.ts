@@ -32,6 +32,8 @@ import { UserInfoComponent } from './user/zhaopin/admin/user-admin/user-info/use
 import { UserPwdManagerComponent } from './user/zhaopin/admin/user-admin/user-pwd-manager/user-pwd-manager.component';
 import { CreateResumeComponent } from './user/zhaopin/admin/user-admin/create-resume/create-resume.component';
 import { AmendResumeComponent } from './user/zhaopin/admin/user-admin/amend-resume/amend-resume.component';
+import { JobsSearchComponent } from './user/zhaopin/admin/user-admin/jobs-search/jobs-search.component';
+import { SearchZphComponent } from './user/zhaopin/admin/user-admin/search-zph/search-zph.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'userAdmin', pathMatch: 'full' },
@@ -65,14 +67,14 @@ const routes: Routes = [
       { path: 'complete-resume', component: AmendResumeComponent},// 完善简历 AmendResumeComponent
       // { path: 'recruit', component: InRecruitComponent },//招聘中的职位
       // { path: 'user-map', component: CompanyMapComponent },//地图搜索职位
-      // { path: 'jobFair', component: JobFairComponent },//招聘会
-      // { path: 'seekers', component: JobSeekersComponent }//搜索人才
+      { path: 'zph', component: SearchZphComponent },//招聘会
+      { path: 'jobsearch', component: JobsSearchComponent }//搜索职位
     ]
   },
   {
     path: 'user_index', component: IndexComponent,
     children: [
-      { path: '', component: HomeComponent },
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'zhaopin', component: ZhaopinComponent },
       { path: "jobsDetails/:jobId", component: JobsDetailComponent },

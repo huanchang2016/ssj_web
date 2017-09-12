@@ -1,0 +1,12 @@
+.search-list{ padding: 10px 20px; border:1px solid #f1f1f1;background: #fff;}
+.search-list li:after{
+    content: ".";display: block;height: 0; visibility: hidden;clear:both;
+}
+.jobsListTitle{ font-size: 16px; font-weight: 600; color: #fff;margin: 0 -20px; background: #456dab;}
+.jobsListTitle div:nth-child(1){ margin-left: 20px;}
+.jobsListTitle div:nth-last-child(1){margin-right: 20px;}
+.jobsList, .jobsListTitle{ font-size: 14px;line-height: 30px;text-align: center;}
+.jobsList, .search-list a{ color: #333;}
+.search-list li div:nth-child(1){ width: 150px;}
+.search-list li div:nth-child(2){ width: 600px;}
+.search-list .jobsList:hover a { color: red;}
