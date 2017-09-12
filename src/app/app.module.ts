@@ -49,6 +49,8 @@ import { HomePageComponent } from './user/zhaopin/admin/company-admin/home-page/
 //密码修改
 import { ChangePwdComponent } from './modules/change-pwd/change-pwd.component';
 import { PwdManagerComponent } from './user/zhaopin/admin/company-admin/pwd-manager/pwd-manager.component';
+import { ResumeManageComponent } from './user/zhaopin/admin/company-admin/resume-manage/resume-manage.component';
+
 //个人用户个人管理中心
 import { UserAdminComponent } from './user/zhaopin/admin/user-admin/user-admin.component';
 import { UserHomePageComponent} from './user/zhaopin/admin/user-admin/home-page/home-page.component';
@@ -59,6 +61,7 @@ import { AmendResumeComponent } from './user/zhaopin/admin/user-admin/amend-resu
 import { DatePickerComponent } from './modules/date-picker/date-picker.component';
 import { JobsSearchComponent } from './user/zhaopin/admin/user-admin/jobs-search/jobs-search.component';
 import { SearchZphComponent } from './user/zhaopin/admin/user-admin/search-zph/search-zph.component';
+import { AppliedJobsComponent } from './user/zhaopin/admin/user-admin/applied-jobs/applied-jobs.component';
 
 @NgModule({
   declarations: [
@@ -108,7 +111,9 @@ import { SearchZphComponent } from './user/zhaopin/admin/user-admin/search-zph/s
     JobsSearchComponent,
     ChoeseMenuComponent,
     ZphComponent,
-    SearchZphComponent
+    SearchZphComponent,
+    ResumeManageComponent,
+    AppliedJobsComponent
   ],
   imports: [
     BrowserModule,

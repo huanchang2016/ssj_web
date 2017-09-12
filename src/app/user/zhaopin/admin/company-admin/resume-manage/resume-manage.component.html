@@ -1,0 +1,193 @@
+<div class="resume">
+  <div class="resume-menu">
+      <form nz-form [formGroup]="seekersForm" (ngSubmit)="searchSeekers()">
+          <div nz-form-item class="w250 fl mr20">
+            <div nz-form-label class="fl">
+              <label>职位名称</label>
+            </div>
+            <div nz-form-control class="fr w150">
+              <nz-select formControlName="jobName" [nzSize]="'large'">
+                <nz-option [nzLabel]="'计算机/互联网'" [nzValue]="'computer'"></nz-option>
+                <nz-option [nzLabel]="'机械/设备/技工'" [nzValue]="'tech'"></nz-option>
+              </nz-select>
+            </div>
+          </div>
+          <div nz-form-item class="w250 fl mr20">
+            <div nz-form-label class="fl">
+              <label for="jobPosted">简历投递时间</label>
+            </div>
+            <div nz-form-control class="fr w150">
+              <nz-datepicker formControlName="jobPosted" [nzPlaceHolder]="'选择简历投递时间'" [nzDisabledDate]="_disabledDate"></nz-datepicker>
+            </div>
+          </div>
+          <div class="clear"></div>
+          <div nz-form-item class="w250 fl mr20">
+            <div nz-form-label class="fl">
+              <label>姓名搜索</label>
+            </div>
+            <div nz-form-control class="fr w150">
+                <nz-input formControlName="jobSeekerName" nzPlaceHolder="请输入姓名"></nz-input>
+            </div>
+          </div>
+    
+          <div nz-form-item class="w250 fl" style="margin-bottom:8px;">
+            <div nz-form-control>
+              <button nz-button [nzSize]="'large'" [nzType]="'primary'">搜索</button>
+            </div>
+          </div>
+
+          <div nz-form-item class="resume-status clear">
+            <div class="fl">简历状态：</div>
+            <nz-radio-group class="fl define-radio-group" formControlName="finaceRadioValue" [nzSize]="'large'">
+                <div class="fl">
+                  <label nz-radio-button nzValue="不限">
+                    <span>不限</span>
+                  </label>
+                </div>
+                <div class="fl">
+                  <label nz-radio-button nzValue="未查看">
+                    <span>未查看</span>
+                  </label>
+                </div>
+                <div class="fl">
+                  <label nz-radio-button nzValue="已查看">
+                    <span>已查看</span>
+                  </label>
+                </div>
+                <div class="fl">
+                  <label nz-radio-button nzValue="等待通知">
+                    <span>等待通知</span>
+                  </label>
+                </div>
+                <div class="fl">
+                  <label nz-radio-button nzValue="条件不符">
+                    <span>条件不符</span>
+                  </label>
+                </div>
+                <div class="fl">
+                  <label nz-radio-button nzValue="无法联系">
+                    <span>无法联系</span>
+                  </label>
+                </div>
+            </nz-radio-group>
+            <div class="pageCount fr w250">
+              每页显示<input type="text" value="10">条
+            </div>
+          </div>
+        </form>
+  </div>
+  <div class="resume-list">
+    <ul class="list-box">
+        <li>
+           <div class="detail-l fl w400">
+              <div class="detail-lt">
+                <label class="fl" [(ngModel)]="_checked" nz-checkbox (ngModelChange)="addCheckedJobs($event)"></label>
+                <a href="javascript:;">张三</a>
+                <span>3年以上经验 / 本科学历</span>
+              </div>
+              <div class="intention">求职意向：<span class="red">物业管理专员/助理、行政专员/助理、后勤人员</span></div>
+           </div>
+           <div class="detail-r fl">
+              <div class="job-position"> 申请的职位：<span>（客服部）客服主管</span></div>
+              <div class="job-date"> 申请的时间：<span> 2017-07-11</span></div>
+           </div>
+           <div class="clear"></div>
+           <div class="status">
+             <span class="title fl">状态：</span>
+             <span class="job-status fl">等待通知</span>
+             <div class="fr oper">
+               <span (click)="_delResume()">删除</span>
+               <span (click)="_inviteView()">邀请面试</span>
+               <span (click)="_reject()">拒绝面试</span>
+             </div>
+           </div>
+        </li>
+        <li>
+           <div class="detail-l fl w400">
+              <div class="detail-lt">
+                <label class="fl" [(ngModel)]="_checked" nz-checkbox (ngModelChange)="addCheckedJobs($event)"></label>
+                <a href="javascript:;">张三</a>
+                <span>3年以上经验 / 本科学历</span>
+              </div>
+              <div class="intention">求职意向：<span class="red">物业管理专员/助理、行政专员/助理、后勤人员</span></div>
+           </div>
+           <div class="detail-r fl">
+              <div class="job-position"> 申请的职位：<span>（客服部）客服主管</span></div>
+              <div class="job-date"> 申请的时间：<span> 2017-07-11</span></div>
+           </div>
+           <div class="clear"></div>
+           <div class="status">
+             <span class="title fl">状态：</span>
+             <span class="job-status fl">等待通知</span>
+             <div class="fr oper">
+               <span (click)="_delResume()">删除</span>
+               <span (click)="_inviteView()">邀请面试</span>
+               <span (click)="_reject()">拒绝面试</span>
+             </div>
+           </div>
+        </li>
+        <li>
+           <div class="detail-l fl w400">
+              <div class="detail-lt">
+                <label class="fl" [(ngModel)]="_checked" nz-checkbox (ngModelChange)="addCheckedJobs($event)"></label>
+                <a href="javascript:;">张三</a>
+                <span>3年以上经验 / 本科学历</span>
+              </div>
+              <div class="intention">求职意向：<span class="red">物业管理专员/助理、行政专员/助理、后勤人员</span></div>
+           </div>
+           <div class="detail-r fl">
+              <div class="job-position"> 申请的职位：<span>（客服部）客服主管</span></div>
+              <div class="job-date"> 申请的时间：<span> 2017-07-11</span></div>
+           </div>
+           <div class="clear"></div>
+           <div class="status">
+             <span class="title fl">状态：</span>
+             <span class="job-status fl">等待通知</span>
+             <div class="fr oper">
+               <span (click)="_delResume()">删除</span>
+               <span (click)="_inviteView()">邀请面试</span>
+               <span (click)="_reject()">拒绝面试</span>
+             </div>
+           </div>
+        </li>
+        <li>
+           <div class="detail-l fl w400">
+              <div class="detail-lt">
+                <label class="fl" [(ngModel)]="_checked" nz-checkbox (ngModelChange)="addCheckedJobs($event)"></label>
+                <a href="javascript:;">张三</a>
+                <span>3年以上经验 / 本科学历</span>
+              </div>
+              <div class="intention">求职意向：<span class="red">物业管理专员/助理、行政专员/助理、后勤人员</span></div>
+           </div>
+           <div class="detail-r fl">
+              <div class="job-position"> 申请的职位：<span>（客服部）客服主管</span></div>
+              <div class="job-date"> 申请的时间：<span> 2017-07-11</span></div>
+           </div>
+           <div class="clear"></div>
+           <div class="status">
+             <span class="title fl">状态：</span>
+             <span class="job-status fl">等待通知</span>
+             <div class="fr oper">
+               <span (click)="_delResume()">删除</span>
+               <span (click)="_inviteView()">邀请面试</span>
+               <span (click)="_reject()">拒绝面试</span>
+             </div>
+           </div>
+        </li>
+      <li class="clear">
+          <div class="fl">
+            <label nz-checkbox [(ngModel)]="_checkedAll" (ngModelChange)="checkedAllJobs($event)"></label>
+          </div>
+          <div class="oper-together fl">
+            <span (click)="_allRead()">批量阅读</span>
+            <span (click)="_allDelete()">批量删除</span>
+            <span (click)="_allDownload()">批量下载</span>
+          </div>
+      </li>
+    </ul>
+
+    <div class="page">
+        <nz-pagination [nzPageIndex]="2" [nzTotal]="500" [nzPageSize]="10" nzShowQuickJumper></nz-pagination>
+      </div>
+  </div>
+</div>

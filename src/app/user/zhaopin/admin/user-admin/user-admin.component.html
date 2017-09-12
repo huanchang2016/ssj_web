@@ -45,10 +45,10 @@
             <li nz-submenu>
               <span title class="subMenu-title"> 求职管理</span>
               <ul>
+                <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['./appliedJobs']">已申请的职位</a></li>
                 <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['./jobsearch']">搜索职位</a></li>
                 <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['./zph']">搜索招聘会</a></li>
-                <!-- <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">收到的简历</a></li>
-                <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">已下载的简历</a></li>
+                <!-- <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">已下载的简历</a></li>
                 <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">已通知面试</a></li>
                 <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">被浏览的职位</a></li>
                 <li routerLinkActive="handleActive" nz-menu-item><a [routerLink]="['']">我浏览的简历</a></li> -->
@@ -62,5 +62,5 @@
       </div>
     </div>
   </nz-content>
-  <nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>
+  <nz-footer style="text-align: center;"><app-footer></app-footer></nz-footer>
 </nz-layout>

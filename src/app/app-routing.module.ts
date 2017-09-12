@@ -23,6 +23,7 @@ import { JobFairComponent } from './user/zhaopin/admin/company-admin/job-fair/jo
 import { HomePageComponent } from './user/zhaopin/admin/company-admin/home-page/home-page.component';
 //密码管理
 import { PwdManagerComponent } from './user/zhaopin/admin/company-admin/pwd-manager/pwd-manager.component';
+import { ResumeManageComponent } from './user/zhaopin/admin/company-admin/resume-manage/resume-manage.component';
 
 //个人用户个人管理中心
 import { UserAdminComponent } from './user/zhaopin/admin/user-admin/user-admin.component';
@@ -34,6 +35,7 @@ import { CreateResumeComponent } from './user/zhaopin/admin/user-admin/create-re
 import { AmendResumeComponent } from './user/zhaopin/admin/user-admin/amend-resume/amend-resume.component';
 import { JobsSearchComponent } from './user/zhaopin/admin/user-admin/jobs-search/jobs-search.component';
 import { SearchZphComponent } from './user/zhaopin/admin/user-admin/search-zph/search-zph.component';
+import { AppliedJobsComponent } from './user/zhaopin/admin/user-admin/applied-jobs/applied-jobs.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'userAdmin', pathMatch: 'full' },
@@ -51,7 +53,8 @@ const routes: Routes = [
       { path: 'com-jobadd', component: JobAddComponent },//发布职位
       { path: 'recruit', component: InRecruitComponent },//招聘中的职位
       { path: 'jobFair', component: JobFairComponent },//招聘会
-      { path: 'seekers', component: JobSeekersComponent }//搜索人才
+      { path: 'seekers', component: JobSeekersComponent },//搜索人才
+      { path: 'resumeManage', component: ResumeManageComponent }//简历管理 
     ]
   },
   {
@@ -65,7 +68,7 @@ const routes: Routes = [
       { path: 'user-pwd', component: UserPwdManagerComponent },//个人用户密码管理
       { path: 'resume', component: CreateResumeComponent },//创建简历
       { path: 'complete-resume', component: AmendResumeComponent},// 完善简历 AmendResumeComponent
-      // { path: 'recruit', component: InRecruitComponent },//招聘中的职位
+      { path: 'appliedJobs', component: AppliedJobsComponent },//已申请的职位
       // { path: 'user-map', component: CompanyMapComponent },//地图搜索职位
       { path: 'zph', component: SearchZphComponent },//招聘会
       { path: 'jobsearch', component: JobsSearchComponent }//搜索职位

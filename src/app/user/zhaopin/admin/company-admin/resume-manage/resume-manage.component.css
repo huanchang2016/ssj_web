@@ -1,0 +1,35 @@
+.w250{width:250px;}
+.w150{width:150px;}
+.w400{width:400px;}
+.mr20{ margin-right: 20px;}
+/* 清除浮动 */
+form>div:after, form:after, .list-box>li:after, .status:after{content: "."; display: block; height: 0; visibility: hidden;overflow: hidden;clear:both;}
+.resume-status>div{ color: #000; line-height: 30px;}
+.pageCount>input{
+    width: 36px;
+    height: 26px;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+/* 模拟单选框样式 */
+.ant-radio-button-wrapper{padding: 0 10px;}
+.define-radio-group>div{ margin-right: 5px;margin-bottom: 10px;}
+.ant-radio-button-wrapper-checked:first-child {background:#108ee9;color: #fff;}
+/* 模拟单选框样式 */
+
+/* 简历列表 */
+.list-box>li {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #fff;
+    background: #f1f1f1;
+}
+.list-box , .list-box a{ font-size:14px;}
+.detail-l>div, .detail-r>div{ line-height: 30px;}
+.status{ margin-top: 20px;border-top: 1px solid #f1f1f1;}
+.oper>span{ padding: 3px 10px; margin-right:20px;color: #108ee9;}
+.oper-together>span{ padding: 3px 5px; background:#108ee9;color:#fff;margin-left:20px;cursor: pointer;}
+
+/* 分页 */
+.page{ margin: 20px 0;}

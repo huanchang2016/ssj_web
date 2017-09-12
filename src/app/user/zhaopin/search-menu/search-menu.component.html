@@ -8,7 +8,7 @@
         </nz-select>
         <input placeholder="{{searchTxt}}" style="width: 70%;height: 40px;" nz-input>
         <button nz-button [nzType]="'primary'" style="height: 40px;">
-          <i class="anticon anticon-search"></i><span>Search</span>
+          <i class="anticon anticon-search"></i><span>搜索</span>
         </button>
       </nz-input-group>
     </div>
@@ -16,112 +16,7 @@
 </div>
 <div nz-row class="search-box">
   <div nz-col [nzSpan]="24">
-    <div class="search-menu">
-        <ul class="search-list">
-            <li>
-              <div class="sm-title fl">工作地点:</div>
-              <div class="sm-list fr">
-                <!-- <div class="sm-choese fl">
-                  <span>成都</span>&gt;<span>天府新区</span>
-                </div> -->
-                <!-- <div class=" fl" *ngFor="let add of address; let i = index" [class.search-active]="!i">{{add}}</div> -->
-        
-                <nz-radio-group class="fl define-radio-group" [(ngModel)]="addressRadioValue" [nzSize]="'large'">
-                  <div class="fl" *ngFor="let add of address; let i = index">
-                    <label nz-radio-button nzValue="{{i}}">
-                        <span>{{add}}</span>
-                      </label>
-                  </div>
-                </nz-radio-group>
-        
-              </div>
-            </li>
-            <li>
-              <div class="sm-title fl">工作经验:</div>
-              <div class="sm-list fr">
-                <!-- <div class="fl" *ngFor="let exp of experience; let i = index" [class.search-active]="!i">{{exp}}</div> -->
-                <nz-radio-group class="fl define-radio-group" [(ngModel)]="expRadioValue" [nzSize]="'large'">
-                  <div class="fl" *ngFor="let exp of experience; let i = index">
-                    <label nz-radio-button nzValue="{{i}}">
-                        <span>{{exp}}</span>
-                      </label>
-                  </div>
-                </nz-radio-group>
-              </div>
-            </li>
-            <li>
-              <div class="sm-title fl">学历要求:</div>
-              <div class="sm-list fr">
-                <!-- <div class="fl" *ngFor="let collage of collages; let i = index" [class.search-active]="!i">{{collage}}</div> -->
-                <nz-radio-group class="fl define-radio-group" [(ngModel)]="collageRadioValue" [nzSize]="'large'">
-                  <div class="fl" *ngFor="let collage of collages; let i = index">
-                    <label nz-radio-button nzValue="{{i}}">
-                        <span>{{collage}}</span>
-                      </label>
-                  </div>
-                </nz-radio-group>
-              </div>
-            </li>
-            <li>
-              <div class="sm-title fl">融资阶段:</div>
-              <div class="sm-list fr">
-                <!-- <div class="fl" *ngFor="let finace of financing; let i = index" [class.search-active]="!i">{{finace}}</div> -->
-                <nz-radio-group class="fl define-radio-group" [(ngModel)]="finaceRadioValue" [nzSize]="'large'">
-                  <div class="fl" *ngFor="let finace of financing; let i = index">
-                    <label nz-radio-button nzValue="{{i}}">
-                        <span>{{finace}}</span>
-                      </label>
-                  </div>
-                </nz-radio-group>
-              </div>
-            </li>
-            <li>
-              <div class="sm-title fl">行业领域:</div>
-              <div class="sm-list fr">
-                <!-- <div class="fl" *ngFor="let inds of industry; let i = index" [class.search-active]="!i">{{inds}}</div> -->
-                <nz-radio-group class="fl define-radio-group" [(ngModel)]="indsRadioValue" [nzSize]="'large'">
-                  <div class="fl" *ngFor="let inds of industry; let i = index">
-                    <label nz-radio-button nzValue="{{i}}">
-                      <span>{{inds}}</span>
-                    </label>
-                  </div>
-                </nz-radio-group>
-              </div>
-            </li>
-            <li>
-              <div class="sm-title fl">排序方式: </div>
-              <nz-radio-group class="fl define-radio-group" [(ngModel)]="sortRadioValue" [nzSize]="'large'">
-                <div class="fl">
-                  <label nz-radio-button nzValue="0">
-                    <span>最新</span>
-                  </label>
-                </div>
-                <div class="fl">
-                  <label nz-radio-button nzValue="1">
-                    <span>默认</span>
-                  </label>
-                </div>
-              </nz-radio-group>
-              <!-- <div class="fl search-sort search-active">最新</div>
-              <div class="fl search-sort">默认</div> -->
-              <div class="sm-title fl">月薪: </div>
-              <div class="fl">
-                <nz-select style="width: 100px;" [(ngModel)]="monthSalary" [nzSize]="'large'">
-                  <nz-option *ngFor="let sal of salary" [nzLabel]="sal.label" [nzValue]="sal.value">
-                  </nz-option>
-                </nz-select>
-              </div>
-        
-              <div class="sm-title fl">工作性质: </div>
-              <div class="fl">
-                <nz-select style="width: 100px;" [(ngModel)]="jobClass" [nzSize]="'large'">
-                  <nz-option *ngFor="let jobC of jobCategory" [nzLabel]="jobC.label" [nzValue]="jobC.value">
-                  </nz-option>
-                </nz-select>
-              </div>
-            </li>
-          </ul>
-    </div>
+    <choese-menu></choese-menu>
     <div class="jobs">
       <jobs-show></jobs-show>
     </div>
