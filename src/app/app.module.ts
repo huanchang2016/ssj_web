@@ -129,7 +129,7 @@ import { ModalContentComponent } from './user/zhaopin/admin/user-admin/amend-res
     NgZorroAntdModule.forRoot()
   ],
   providers: [ LoginService ],
-  entryComponents: [ LoginComponent ],
+  entryComponents: [ LoginComponent, ModalContentComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

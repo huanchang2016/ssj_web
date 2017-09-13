@@ -116,9 +116,59 @@
     <!-- 教育经历 -->
 
     <div class="info">
-      <div class="title">培训经历</div>
-      <div class="content">工作经历</div>
+      <div class="title">培训经历 <span class="editor fr mr50" (click)="showModal('isAddPxExp')">+编辑培训经历</span></div>
+      <div class="content" *ngIf="!isPxExp">
+        <div class="con_row">
+          <div class="con_left fl">2009年9月10号 - 2019年9月10号</div>
+          <div class="con_right fl">
+            <h3>新东方<span style="margin-left:20px;">挖掘机系统培训</span></h3>
+            <p>1、挖掘机</p>
+            <p>2、前端</p>
+            <p>3、美工培训</p>
+            <p>4、川菜培训</p>
+          </div>
+        </div>
+      </div>
+      <div class="content" *ngIf="isPxExp">
+        <div class="con_row" *ngFor="let el of pxExp">
+          <div class="con_left fl">{{el.startDate}}-{{el.endDate}}</div>
+          <div class="con_right fl">
+            <h3>{{el.companyName}} <span style="margin-left:20px;">{{el.position}}</span></h3>
+            <p *ngFor="let px of el.content;let i=index;"> {{i+1}}、{{px}}</p>
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- 培训经历 -->
+    <nz-modal [nzVisible]="isAddPxExp" [nzTitle]="'培训经历'" [nzContent]="pxExpContent" (nzOnCancel)="handleCancel($event, 'isAddPxExp')" (nzOnOk)="handleOk($event, 'isAddPxExp')">
+      <ng-template #pxExpContent>
+        <div class="box">
+            <form nz-form [formGroup]="pxExpForm">
+              <div class="form-content">
+                  <div>
+                    <span class="content-title">培训机构</span>
+                    <input class="content-input" type="text" formControlName="companyName" />
+                  </div>
+                  <div>
+                    <span class="content-title">培训方向</span>
+                    <input class="content-input" type="text" formControlName="position" />
+                  </div>
+                  <div>
+                    <span class="content-title">培训时间</span>
+                    <div class="datePicker">
+                        <date-picker (workDate)="getPxDate($event)"></date-picker>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="content-title">培训内容</span>
+                    <textarea id="content-textarea" class="content-textarea" formControlName="content" name="content" cols="30" rows="6"></textarea>
+                  </div>
+              </div>
+            </form>
+        </div>
+      </ng-template>
+    </nz-modal>
+    <!-- 培训经历 -->
 
     <div class="info">
       <div class="title">职业技能</div>
