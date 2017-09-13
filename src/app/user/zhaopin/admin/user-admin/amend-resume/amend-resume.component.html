@@ -2,13 +2,16 @@
   <div class="info_list">
     <h2>完善简历有助于更好的求职！</h2>
     <div class="info">
-      <div class="title">工作经历 <span class="editor fr mr50" (click)="showModal()">编辑工作经历</span></div>
+      <div class="title">工作经历 <span class="editor fr mr50" (click)="showModal('isAddWorksExp')">+编辑工作经历</span></div>
       <div class="content" *ngIf="!isWorkExp">
         <div class="con_row">
-          <div class="con_left fl">{{deWorkExp._date}}</div>
+          <div class="con_left fl">2009年9月10号 - 2019年9月10号</div>
           <div class="con_right fl">
-            <h3>{{deWorkExp.companyName}} <span style="margin-left:20px;">{{deWorkExp.position}}</span></h3>
-            <p *ngFor="let work of deWorkExp.content;let i=index;"> {{i}}、{{work}}</p>
+            <h3>XXX有限公司<span style="margin-left:20px;">产品研发</span></h3>
+            <p>1、主导XXX的版本迭代，并负责主要需求，协调开发、设计资源，推动项目进度，保证产品质量，打磨细节体验</p>
+            <p>2、参与讨论及制订XXX的各版本需求，根据行业热点及用户反馈，提出有效的产品方案</p>
+            <p>3、负责版本上线后的推广工作，通过官方网站和论坛等渠道将新功能触达用户</p>
+            <p>4、跟进用户反馈并分析数据，持续优化已有功能</p>
           </div>
         </div>
       </div>
@@ -17,14 +20,14 @@
           <div class="con_left fl">{{deWork.startDate}}-{{deWork.endDate}}</div>
           <div class="con_right fl">
             <h3>{{deWork.companyName}} <span style="margin-left:20px;">{{deWork.position}}</span></h3>
-            <p *ngFor="let work of deWork.content;let i=index;"> {{i}}、{{work}}</p>
+            <p *ngFor="let work of deWork.content;let i=index;"> {{i+1}}、{{work}}</p>
           </div>
         </div>
       </div>
     </div>
     <!-- 工作经历添加 -->
-    <nz-modal [nzVisible]="isAddWorksExp" [nzTitle]="'工作经历'" [nzContent]="modalContent" (nzOnCancel)="handleCancel($event)" (nzOnOk)="handleOk($event)" [nzConfirmLoading]="isConfirmLoading">
-      <ng-template #modalContent>
+    <nz-modal [nzVisible]="isAddWorksExp" [nzTitle]="'工作经历'" [nzContent]="workExpContent" (nzOnCancel)="handleCancel($event, 'isAddWorksExp')" (nzOnOk)="handleOk($event, 'isAddWorksExp')">
+      <ng-template #workExpContent>
         <div class="box">
             <form nz-form [formGroup]="workExpForm">
               <div class="form-content">
@@ -48,21 +51,69 @@
                   </div>
               </div>
             </form>
-            <!-- <div>
-              <button nz-button [nzType]="'dashed'" [nzSize]="'large'" style="width:60%" (click)="addField($event)">
-                <i class="anticon anticon-plus"></i>
-                <span> Add field</span>
-              </button>
-            </div> -->
         </div>
       </ng-template>
     </nz-modal>
     <!-- 工作经历添加 -->
 
     <div class="info">
-      <div class="title">教育经历</div>
-      <div class="content">工作经历</div>
+      <div class="title">教育经历 <span class="editor fr mr50" (click)="showModal('isAddStudyExp')">+编辑教育经历</span></div>
+      <div class="content" *ngIf="!isStudyExp">
+        <div class="con_row">
+          <div class="con_left fl">2010.09-2014.06</div>
+          <div class="con_right fl">
+            <h3>北京大学 <span style="margin-left:20px;">本科</span></h3>
+            <p> 专业、班级职务</p>
+          </div>
+        </div>
+      </div>
+      <div class="content" *ngIf="isStudyExp">
+        <div class="con_row" *ngFor="let study of studyExp">
+          <div class="con_left fl">{{study.startDate}}-{{study.endDate}}</div>
+          <div class="con_right fl">
+            <h3>{{study.schoolName}} <span style="margin-left:20px;">{{study.majors}}</span></h3>
+            <p> {{study.education}}</p>
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- 教育经历 -->
+    <nz-modal [nzVisible]="isAddStudyExp" [nzTitle]="'教育经历'" [nzContent]="studyExpContent" (nzOnCancel)="handleCancel($event, 'isAddStudyExp')" (nzOnOk)="handleOk($event, 'isAddStudyExp')">
+      <ng-template #studyExpContent>
+        <div class="box">
+            <form nz-form [formGroup]="studyExpForm">
+              <div class="form-content">
+                  <div>
+                    <span class="content-title">学校名称</span>
+                    <input class="content-input" type="text" formControlName="schoolName" />
+                  </div>
+                  <div>
+                    <span class="content-title">所学专业</span>
+                    <input class="content-input" type="text" formControlName="majors" />
+                  </div>
+                  <div>
+                    <span class="content-title">在校时间</span>
+                    <div class="datePicker">
+                        <date-picker (workDate)="getStudykDate($event)"></date-picker>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="content-title">学历</span>
+                    <nz-select style="width: 100px;" formControlName="education" [nzSize]="'large'">
+                      <nz-option [nzLabel]="'初中及以下'" [nzValue]="'初中及以下'"></nz-option>
+                      <nz-option [nzLabel]="'高中、中专'" [nzValue]="'高中、中专'"></nz-option>
+                      <nz-option [nzLabel]="'大专'" [nzValue]="'大专'"></nz-option>
+                      <nz-option [nzLabel]="'本科'" [nzValue]="'本科'"></nz-option>
+                      <nz-option [nzLabel]="'硕士'" [nzValue]="'硕士'"></nz-option>
+                      <nz-option [nzLabel]="'博士'" [nzValue]="'博士'"></nz-option>
+                    </nz-select>
+                  </div>
+              </div>
+            </form>
+        </div>
+      </ng-template>
+    </nz-modal>
+    <!-- 教育经历 -->
 
     <div class="info">
       <div class="title">培训经历</div>

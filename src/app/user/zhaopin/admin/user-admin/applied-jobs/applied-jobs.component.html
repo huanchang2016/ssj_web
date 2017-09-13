@@ -1,3 +1,69 @@
-<p>
-  applied-jobs works!
-</p>
+<div class="box">
+  <div class="title">
+    <h3>申请的职位</h3>
+  </div>
+  <!-- 如果有职位则如下显示 -->
+  <!-- <div class="content">
+    <div class="org">您已经申请XX条职位，请耐心等待单位回复！</div>
+    <div class="con-box">
+      <ul class="con-list">
+        <li class="con-title">
+          <div class="fl">申请的职位</div>
+          <div class="fl">简历名称</div>
+          <div class="fl">
+            <nz-select [(ngModel)]="resumeStatus" [nzSize]="'large'" style="width: 70%;">
+              <nz-option [nzLabel]="'全部'" [nzValue]="'全部'"></nz-option>
+              <nz-option [nzLabel]="'未查看'" [nzValue]="'未查看'"></nz-option>
+              <nz-option [nzLabel]="'已查看'" [nzValue]="'已查看'"></nz-option>
+              <nz-option [nzLabel]="'等待通知'" [nzValue]="'等待通知'"></nz-option>
+              <nz-option [nzLabel]="'条件不符'" [nzValue]="'条件不符'"></nz-option>
+              <nz-option [nzLabel]="'无法联系'" [nzValue]="'无法联系'"></nz-option>
+            </nz-select>
+          </div>
+          <div class="fl">
+            <nz-select [(ngModel)]="resumeDate" [nzSize]="'large'" style="width: 70%;">
+              <nz-option [nzLabel]="'全部'" [nzValue]="'全部'"></nz-option>
+              <nz-option [nzLabel]="'今天'" [nzValue]="'今天'"></nz-option>
+              <nz-option [nzLabel]="'最近三天'" [nzValue]="'最近三天'"></nz-option>
+              <nz-option [nzLabel]="'最近七天'" [nzValue]="'最近七天'"></nz-option>
+              <nz-option [nzLabel]="'最近半月'" [nzValue]="'最近半月'"></nz-option>
+              <nz-option [nzLabel]="'最近一个月'" [nzValue]="'最近一个月'"></nz-option>
+            </nz-select>
+          </div>
+        </li>
+        <li>
+          <div class="fl">
+            <div class="_checkbox fl">
+                <label nz-checkbox [(ngModel)]="_checked" (ngModelChange)="_cbValueChange($event)"></label>
+            </div>
+            <div class="_jobDes fl">
+              <p><a href="javascript:;">信息处聘用工作人员信息处聘用工作人员</a></p>
+              <p><a href="javascript:;">中共成都市委办公厅中共成都市委办公厅</a></p>
+            </div>
+          </div>
+          <div class="fl">
+            简历名称
+          </div>
+          <div class="fl">未查看</div>
+          <div class="fl">2017-11-11</div>
+        </li>
+      </ul>
+      <div class="oper">
+        <div class="_checkAll fl">
+          <label nz-checkbox [(ngModel)]="_checkAll" (ngModelChange)="_checkedAll($event)"></label>
+        </div>
+        <div class="delete fl"><span (click)="_delChecked($event)">删除所选职位</span></div>
+      </div>
+    </div>
+  </div> -->
+  <!-- 如果没有申请职位，则另显示 -->
+  <div class="content">
+    <div class="org">您暂时还没有申请职位！</div>
+    <div class="no-jobs">
+      <img src="/assets/lib/images/no_jobs.jpg" alt="">
+      <p>亲爱的用户，您还没有申请过职位，想要获得更多工作机会</p>
+      <p>立即搜索您感兴趣的职位并申请吧</p>
+      <p><a href="javascript:;">立即搜索我感兴趣的职位>></a></p>
+    </div>
+  </div>
+</div>

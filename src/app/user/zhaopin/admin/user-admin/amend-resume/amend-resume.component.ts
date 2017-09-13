@@ -8,30 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AmendResumeComponent implements OnInit {
 
+  // 模态框
+
   public workExpForm: FormGroup;//工作经历表单
+  public isAddWorksExp = false;//如果添加工作经历，则模态框弹出
   public workExp = [];// 工作经历数组
   public isWorkExp:Boolean;
-  
-  controlArray = [];
-  // 设置默认经历预览
-  public deWorkExp = {
-    _date: '2009年9月10号 - 2019年9月10号',
-    companyName: "XXX有限公司",
-    position: '产品研发',
-    content:[
-            "主导XXX的版本迭代，并负责主要需求，协调开发、设计资源，推动项目进度，保证产品质量，打磨细节体验",
-            "参与讨论及制订XXX的各版本需求，根据行业热点及用户反馈，提出有效的产品方案",
-            "负责版本上线后的推广工作，通过官方网站和论坛等渠道将新功能触达用户",
-            "跟进用户反馈并分析数据，持续优化已有功能"
-          ]
-  };
 
+  public studyExpForm: FormGroup;//学习经历表单
+  public isAddStudyExp = false;// 教育经历
+  public studyExp = [];//学习经历数组
+  public isStudyExp: Boolean;
+  
 
   constructor(
     private fb:FormBuilder
   ) { }
 
   ngOnInit() {
+    // 工作经历
     if(this.workExp.length === 0 ){
       this.isWorkExp = false;
     }else{this.isWorkExp = true;}
@@ -43,71 +38,88 @@ export class AmendResumeComponent implements OnInit {
       endDate: [null],
       content: [null]
     });
-  }
-  isAddWorksExp = false;//如果添加工作经历，则模态框弹出
-  isConfirmLoading = false;
 
-  showModal = () => {
-    this.isAddWorksExp = true;
-  }
-
-  handleOk = (e) => {
-    // 确认时提交表单
-    this._submitForm();
-
-    this.isConfirmLoading = true;
-    setTimeout(() => {
-      this.isAddWorksExp = false;
-      this.isConfirmLoading = false;
-    }, 3000);
-  }
-
-  handleCancel = (e) => {
-    this.isAddWorksExp = false;
-  }
-
-
-  addField(e?: MouseEvent) {
-    if (e) {
-      e.preventDefault();
-    }
-    console.log('addForm');
+    // 学习经历
+    if(this.studyExp.length === 0 ){
+      this.isStudyExp = false;
+    }else{this.isStudyExp = true;}
     
+    this.studyExpForm = this.fb.group({
+      schoolName: [null,[Validators.required]],
+      majors: [ null],
+      startDate: [null],
+      endDate: [null],
+      education: [null]
+    });
+
+  }
+  
+  showModal = (res) => {
+    this[res] = true;
   }
 
-  removeField(i, e: MouseEvent) {
-    e.preventDefault();
-    if (this.controlArray.length > 1) {
-      
-    }
+  handleOk = (e, res) => {
+      this[res] = false;
+      if(res == 'isAddWorksExp'){ this.workExpFormAdd();}
+      if(res == 'isAddStudyExp'){ this.studyExpFormAdd();}
+     
   }
+
+  handleCancel = (e, res) => {
+    this[res] = false;
+  }
+
 
   getFormControl(name) {
     return this.workExpForm.controls[name];
   }
 
   //存储时间参数
-  public star_d;
-  public end_d;
-  _submitForm() {
+  public workStar_d;
+  public workEnd_d;
+  public studyStar_d;
+  public studyEnd_d;
+
+  workExpFormAdd() {
     this.isWorkExp = true;
-    this.workExpForm['_value'].startDate = this.star_d;
-    this.workExpForm['_value'].endDate = this.end_d;
+    this.workExpForm['_value'].startDate = this.workStar_d;
+    this.workExpForm['_value'].endDate = this.workEnd_d;
     this.workExpForm['_value'].content =( this.workExpForm['_value'].content).split("\n");
     this.workExp.push(this.workExpForm['_value']);
     console.log(this.workExpForm['_value']);
   }
+  studyExpFormAdd() {
+    this.isStudyExp = true;
+    this.studyExpForm['_value'].startDate = this.studyStar_d;
+    this.studyExpForm['_value'].endDate = this.studyEnd_d;
+    this.studyExp.push(this.studyExpForm['_value']);
+    console.log(this.studyExpForm['_value']);
+  }
+
+  // 当所有的表单都编辑修改后点击保存，统一提交
+  _save(){
+    // 确认时提交表单
+    this.workExpFormAdd();
+  }
 
   // 处理起始时间的处理
   getWorkDate(value){
-    const start_date = new Date(value._startDate);
-    const end_date = new Date(value._endDate);
+    let start_date = new Date(value._startDate);
+    let end_date = new Date(value._endDate);
+    let s_d = start_date.getFullYear()+ "/" + start_date.getMonth() + "/" + start_date.getDate();
+    let e_d = end_date.getFullYear()+ "/" + end_date.getMonth()  + "/" + end_date.getDate();
+    this.workStar_d = s_d;
+    this.workEnd_d = e_d;
+  }
+  getStudykDate(value){
+    let start_date = new Date(value._startDate);
+    let end_date = new Date(value._endDate);
     let s_d = start_date.getFullYear()+ "-" + start_date.getMonth() + "-" + start_date.getDate();
     let e_d = end_date.getFullYear()+ "-" + end_date.getMonth()  + "-" + end_date.getDate();
-    this.star_d = s_d;
-    this.end_d = e_d;
-    this.workExpForm['_value'].startDate = s_d;
-    this.workExpForm['_value'].endDate = e_d;
+    this.studyStar_d = s_d;
+    this.studyEnd_d = e_d;
+    this.studyExpForm['_value'].startDate = s_d;
+    this.studyExpForm['_value'].endDate = e_d;
   }
 
 }

@@ -62,6 +62,7 @@ import { DatePickerComponent } from './modules/date-picker/date-picker.component
 import { JobsSearchComponent } from './user/zhaopin/admin/user-admin/jobs-search/jobs-search.component';
 import { SearchZphComponent } from './user/zhaopin/admin/user-admin/search-zph/search-zph.component';
 import { AppliedJobsComponent } from './user/zhaopin/admin/user-admin/applied-jobs/applied-jobs.component';
+import { ModalContentComponent } from './user/zhaopin/admin/user-admin/amend-resume/modal-content/modal-content.component';
 
 @NgModule({
   declarations: [
@@ -113,7 +114,8 @@ import { AppliedJobsComponent } from './user/zhaopin/admin/user-admin/applied-jo
     ZphComponent,
     SearchZphComponent,
     ResumeManageComponent,
-    AppliedJobsComponent
+    AppliedJobsComponent,
+    ModalContentComponent
   ],
   imports: [
     BrowserModule,
