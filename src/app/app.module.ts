@@ -62,7 +62,7 @@ import { DatePickerComponent } from './modules/date-picker/date-picker.component
 import { JobsSearchComponent } from './user/zhaopin/admin/user-admin/jobs-search/jobs-search.component';
 import { SearchZphComponent } from './user/zhaopin/admin/user-admin/search-zph/search-zph.component';
 import { AppliedJobsComponent } from './user/zhaopin/admin/user-admin/applied-jobs/applied-jobs.component';
-import { ModalContentComponent } from './user/zhaopin/admin/user-admin/amend-resume/modal-content/modal-content.component';
+
 
 @NgModule({
   declarations: [
@@ -114,8 +114,7 @@ import { ModalContentComponent } from './user/zhaopin/admin/user-admin/amend-res
     ZphComponent,
     SearchZphComponent,
     ResumeManageComponent,
-    AppliedJobsComponent,
-    ModalContentComponent
+    AppliedJobsComponent
   ],
   imports: [
     BrowserModule,
@@ -129,7 +128,7 @@ import { ModalContentComponent } from './user/zhaopin/admin/user-admin/amend-res
     NgZorroAntdModule.forRoot()
   ],
   providers: [ LoginService ],
-  entryComponents: [ LoginComponent, ModalContentComponent ],
+  entryComponents: [ LoginComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

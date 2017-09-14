@@ -29,3 +29,16 @@
 .content-input{ float: left;width: 200px; }
 .datePicker{ float: left; width: 300px;}
 .content-textarea{ float:left; width: 350px;resize: none;}
+
+/* 职业技能 */
+.skill_name>p{ width: 200px; text-indent: 20px;}
+.skill_zs, .skill_zs img{ height: 80px; overflow: hidden;border:0;}
+.skill_zs{text-indent: 20px;display: flex;align-items: center;}
+/* 职业技能 */
+
+/* 其他信息 */
+.other_title, .other_con{text-indent: 20px; line-height: 30px;}
+.other_title{ font-weight: 600;}
+/* 其他信息 */
+/* 自我评价 */
+.self_evaluate{ text-indent: 20px; line-height: 30px;}
