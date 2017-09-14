@@ -37,9 +37,29 @@ import { JobsSearchComponent } from './user/zhaopin/admin/user-admin/jobs-search
 import { SearchZphComponent } from './user/zhaopin/admin/user-admin/search-zph/search-zph.component';
 import { AppliedJobsComponent } from './user/zhaopin/admin/user-admin/applied-jobs/applied-jobs.component';
 
+// 后台管理系统页面
+import { AdministratorComponent } from './administrator/administrator.component';
+import { AdminLoginComponent } from './administrator/login/login.component';
+import { AdminDashComponent } from './administrator/dash/dash.component';
+import { ArticleCategoriesComponent } from './administrator/admin/article-categories/article-categories.component';
+import { ArticleComponent } from './administrator/admin/article/article.component';
+
+
 const routes: Routes = [
   { path: '', redirectTo: 'userAdmin', pathMatch: 'full' },
   { path: 'register', component: RegisterComponent, data: { title: '天府菁英网' } },
+  { path: 'administrator', component: AdministratorComponent, data: { title: '后台管理系统' },
+    children: [
+      // 管理员后台管理控制台
+      { path: 'login', component: AdminLoginComponent, data: {title: '管理员登录-后台管理系统'} },
+      { path: 'dash', component: AdminDashComponent, data: {title: '管理员登录-后台管理系统'},
+          children: [
+            { path: 'article_categories', component: ArticleCategoriesComponent, data: {title: '新闻分类管理-后台管理系统'} },
+            { path: 'article', component: ArticleComponent, data: {title: '新闻管理-后台管理系统'} }
+          ]
+      },
+    ]
+  },
   {
     path: "companyAdmin", component: CompanyAdminComponent, data: { title: '单位主页'},
     children: [

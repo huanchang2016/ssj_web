@@ -5,9 +5,10 @@
 
 .recreate{ margin-left: -20px;border:1px solid #768eb2;}
 .info_list h2{ text-align: center; line-height: 40px;font-size:24px;color:orange;}
-.info{ margin-bottom: 30px;font-size: 14px;}
+.info{ margin-bottom: 30px;}
 .title{ text-indent: 20px; line-height: 30px; font-size: 16px; color: #fff; background: #768eb2;}
 .content{ margin-top:10px;}
+.content>div{ font-size: 16px;}
 .con_row:after{ content:'.'; height: 0;display: block;visibility: hidden;overflow: hidden;clear:both;}
 .con_left{ width: 150px;text-align: center;}
 .con_right{width: calc(100% - 150px); padding: 0 20px;}
@@ -31,7 +32,7 @@
 .content-textarea{ float:left; width: 350px;resize: none;}
 
 /* 职业技能 */
-.skill_name>p{ width: 200px; text-indent: 20px;}
+.skill_name>p{text-indent: 20px; margin-right: 20px;}
 .skill_zs, .skill_zs img{ height: 80px; overflow: hidden;border:0;}
 .skill_zs{text-indent: 20px;display: flex;align-items: center;}
 /* 职业技能 */

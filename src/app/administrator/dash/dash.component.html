@@ -1,0 +1,171 @@
+<div class="app layout-fixed-header">
+  <div class="sidebar-panel offscreen-left">
+    <div class=brand>
+      <div class=brand-logo><img src="/assets/administrator/images/logo.c5cdf202.png" height=15 alt=""></div>
+      <a href=javascript:; class="toggle-sidebar hidden-xs hamburger-icon v3" data-toggle=layout-small-menu>
+              <span></span> <span></span> <span></span> <span></span> </a></div>
+    <nav role=navigation>
+      <ul class=nav>
+        <li><a href="http://localhost:4200/administrator/dash"> <i class="fa fa-flask"></i> <span>控制台</span> </a></li>
+        <li><a href=javascript:;> <i class="fa fa-toggle-on"></i> <span>企业</span> </a>
+          <ul class=sub-menu>
+            <li><a href=ui-buttons.html> <span>Buttons</span> </a></li>
+            <li><a href=ui-general.html> <span>General</span> </a></li>
+            <li><a href=ui-tabs-accordion.html> <span>Tabs &amp; Accordions</span> </a></li>
+            <li><a href=ui-progressbars.html> <span>Progress Bars</span> </a></li>
+            <li><a href=ui-pagination.html> <span>Pagination</span> </a></li>
+            <li><a href=ui-sliders.html> <span>Sliders</span> </a></li>
+            <li><a href=ui-portlets.html> <span>Portlets</span> </a></li>
+            <li><a href=ui-notifications.html> <span>Notifications</span> </a></li>
+            <li><a href=ui-alert.html> <span>Alerts</span> </a></li>
+            <li><a href=javascript:;> <i class=toggle-accordion></i> <span>Icons</span> </a>
+              <ul class=sub-menu>
+                <li><a href=ui-fontawesome.html> <span>Fontawesome</span> </a></li>
+                <li><a href=ui-feather.html> <span>Feather</span> </a></li>
+                <li><a href=ui-climacon.html> <span>Climacon</span> </a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href=javascript:;> <i class="fa fa-tint"></i> <span>个人</span> </a>
+          <ul class=sub-menu>
+            <li><a href=form-basic.html> <span>Basic Forms</span> </a></li>
+            <li><a href=form-advanced.html> <span>Advanced Components</span> </a></li>
+            <li><a href=form-wizard.html> <span>Wizard</span> </a></li>
+            <li><a href=form-editors.html> <span>Editors</span> </a></li>
+            <li><a href=form-validation.html> <span>Validation</span> </a></li>
+            <li><a href=form-masks.html> <span>Input Masks</span> </a></li>
+          </ul>
+        </li>
+        <li class="">
+          <a href=javascript:;>
+              <i class="fa fa-tag"></i> <span>新闻</span>
+          </a>
+          <ul class=sub-menu>
+            <li class="">
+              <a [routerLink]="['./article_categories']" >
+                  <span>类别管理</span>
+              </a>
+            </li>
+            <li class="">
+              <a [routerLink]="['./article']">
+                  <span>新闻管理</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class=""><a href=javascript:;> <i class="fa fa-pie-chart"></i> <span>系统设置</span> </a>
+          <ul class=sub-menu>
+            <li class="">
+              <a href="http://localhost:4200/administrator/admin_setting_industry"> <span>行业类别</span> </a>
+            </li>
+            <li class="">
+              <a href="http://localhost:4200/administrator/admin_setting_area"> <span>城市类别</span> </a>
+            </li>
+            <li class="">
+              <a href="http://localhost:4200/administrator/admin_setting_job"> <span>职位类别</span> </a>
+            </li>
+            <li class="">
+              <a href="http://localhost:4200/administrator/admin_setting_member"> <span>会员类别</span> </a>
+            </li>
+          </ul>
+        </li>
+        <li class="">
+          <a href=javascript:;><i class="fa fa-tint"></i> <span>管理员</span> </a>
+          <ul class=sub-menu>
+            <li class="">
+              <a href="http://localhost:4200/administrator/admin_user"> <span>用户列表</span> </a>
+            </li>
+            <li class="">
+              <a href="http://localhost:4200/administrator/admin_user_role"> <span>用户组</span> </a>
+            </li>
+            <li class="">
+              <a href="http://localhost:4200/administrator/admin_user_permission"> <span>权限</span> </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class=main-panel>
+    <header class="header navbar">
+      <div class="brand visible-xs">
+        <div class=toggle-offscreen><a href=# class="hamburger-icon visible-xs" data-toggle=offscreen data-move=ltr> <span></span> <span></span> <span></span> </a></div>
+        <div class=brand-logo><img src=images/logo-dark.5ba260bb.png height=15 alt=""></div>
+        <div class=toggle-chat><a href=javascript:; class="hamburger-icon v2 visible-xs" data-toggle=layout-chat-open> <span></span> <span></span> <span></span> </a>
+        </div>
+      </div>
+      <ul class="nav navbar-nav hidden-xs">
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right hidden-xs">
+        <li>
+          <a href=javascript:; data-toggle=dropdown> <i class="fa fa-bell-o"></i>
+                      <div class="status bg-danger border-danger animated bounce"></div>
+                  </a>
+          <ul class="dropdown-menu notifications">
+            <li class=notifications-header>
+              <p class="text-muted small">You have 3 new messages</p>
+            </li>
+            <li>
+              <ul class=notifications-list>
+                <li><a href=javascript:;> <span class="pull-left mt2 mr15"> <img
+                                                  src=images/avatar.21d1cc35.jpg class="avatar avatar-xs img-circle"
+                                                  alt=""> </span>
+                                      <div class=overflow-hidden><span>Sean launched a new application</span> <span
+                                                  class=time>2 seconds ago</span></div>
+                                  </a></li>
+                <li>
+                  <a href=javascript:;>
+                    <div class="pull-left mt2 mr15">
+                      <div class="circle-icon bg-danger"><i class="fa fa-chain-broken"></i></div>
+                    </div>
+                    <div class=overflow-hidden><span>Removed chrome from app list</span> <span class=time>4 Hours ago</span></div>
+                  </a>
+                </li>
+                <li><a href=javascript:;> <span class="pull-left mt2 mr15"> <img
+                                                  src=images/face3.0306ffff.jpg class="avatar avatar-xs img-circle"
+                                                  alt=""> </span>
+                                      <div class=overflow-hidden><span
+                                                  class=text-muted>Jack Hunt has registered</span>
+                                          <span class=time>9 hours ago</span></div>
+                                  </a></li>
+              </ul>
+            </li>
+            <li class=notifications-footer><a href=javascript:;>See all messages</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href=javascript:; data-toggle=dropdown>
+                      <img src="http://localhost/ssj/public/Urban/images/avatar.21d1cc35.jpg" class="header-avatar img-circle ml10"
+                           alt=user title=user>
+                      <span class=pull-left>admin</span>
+                  </a>
+          <ul class=dropdown-menu>
+            <li><a href=javascript:;>Settings</a></li>
+            <li><a href=javascript:;>Upgrade</a></li>
+            <li>
+              <a href=javascript:;>
+                              <span class="label bg-danger pull-right">34</span>
+                              <span>Notifications</span>
+                          </a>
+            </li>
+            <li><a href=javascript:;>Help</a></li>
+            <li>
+              <a onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                              Logout
+                          </a>
+            </li>
+            <form id="logout-form" action="http://localhost:4200/administrator/logout" method="POST" style="display: none;">
+              <input type="hidden" name="_token" value="0ohStRixQUGio8c0aETYObifeQ7CoyGkmX84ndDC">
+            </form>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <div class=main-content>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>

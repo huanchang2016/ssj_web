@@ -2,6 +2,8 @@ import { NzModalSubject } from 'ng-zorro-antd';
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder , Validators} from '@angular/forms';
 
+import { LoginService }   from '../../service/login.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +15,8 @@ export class LoginComponent implements OnInit {
   
     constructor(
       private fb: FormBuilder,
-      private subject: NzModalSubject
+      private subject: NzModalSubject,
+      private loginService : LoginService
     ) {
       this.subject.on('onDestory', () => {
         console.log('destroy');
@@ -42,6 +45,9 @@ export class LoginComponent implements OnInit {
         this.validateForm.controls[ i ].markAsDirty();
         // console.log(this.validateForm.controls[ i ].value);//各个表单内容的值
       }
+      var option = this.validateForm['value'];
+      console.log(option);
+      this.loginService.test(option);
     }
 
 

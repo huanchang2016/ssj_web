@@ -292,7 +292,7 @@
         <p class="self_evaluate">热爱原子弹制造行业、关注核武器行业动态、学习能力强，对新事物充满好奇心！</p>
       </div>
       <div class="content" *ngIf="isSelfExp">
-          <p class="self_evaluate" *ngFor="let _self of selfExp">{{_self}}</p>
+          <p class="self_evaluate" *ngFor="let _self of selfExp">{{_self.content}}</p>
         </div>
     </div>
     <nz-modal [nzVisible]="isAddSelfExp" [nzTitle]="'其他信息'" [nzContent]="selfExpContent" (nzOnCancel)="handleCancel($event, 'isAddSelfExp')" (nzOnOk)="handleOk($event, 'isAddSelfExp')">

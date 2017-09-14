@@ -62,7 +62,14 @@ import { DatePickerComponent } from './modules/date-picker/date-picker.component
 import { JobsSearchComponent } from './user/zhaopin/admin/user-admin/jobs-search/jobs-search.component';
 import { SearchZphComponent } from './user/zhaopin/admin/user-admin/search-zph/search-zph.component';
 import { AppliedJobsComponent } from './user/zhaopin/admin/user-admin/applied-jobs/applied-jobs.component';
+import { TopComponent } from './modules/top/top.component';
 
+// 后台管理系统页面
+import { AdministratorComponent } from './administrator/administrator.component';
+import { AdminLoginComponent } from './administrator/login/login.component';
+import { AdminDashComponent } from './administrator/dash/dash.component';
+import { ArticleComponent } from './administrator/admin/article/article.component';
+import { ArticleCategoriesComponent } from './administrator/admin/article-categories/article-categories.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +96,7 @@ import { AppliedJobsComponent } from './user/zhaopin/admin/user-admin/applied-jo
     GmapComponent,
     LoginComponent,
     RegisterComponent,
-    CompanyAdminComponent,
+    CompanyAdminComponent,//单位后台
     BaseInfoComponent,
     CompanyLogoComponent,
     CompanyMapComponent,
@@ -99,7 +106,7 @@ import { AppliedJobsComponent } from './user/zhaopin/admin/user-admin/applied-jo
     JobSeekersComponent,
     JobFairComponent,
     HomePageComponent,
-    UserAdminComponent,
+    UserAdminComponent,//个人后台
     ChangePwdComponent,
     PwdManagerComponent,
     UserHomePageComponent,
@@ -114,7 +121,10 @@ import { AppliedJobsComponent } from './user/zhaopin/admin/user-admin/applied-jo
     ZphComponent,
     SearchZphComponent,
     ResumeManageComponent,
-    AppliedJobsComponent
+    AppliedJobsComponent,
+    TopComponent,
+    AdministratorComponent,//后台管理系统
+    AdminLoginComponent, AdminDashComponent, ArticleComponent, ArticleCategoriesComponent
   ],
   imports: [
     BrowserModule,

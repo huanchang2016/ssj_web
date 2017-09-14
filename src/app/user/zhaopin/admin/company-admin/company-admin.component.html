@@ -1,21 +1,14 @@
 
 <nz-layout>
   <nz-header>
-    <div class="head-top row">
-      <div class="fl"><a [routerLink]="['/user_index']">欢迎来到天府菁英网</a></div>
-      <div class="fr user-info">
-        <span>您好：用户名</span>
-        <a href="javascript:;">[安全退出]</a>
-        <a [routerLink]="['/user_index']" style="color: #FC0;">回到网站首页</a>
-      </div>
-    </div>
+    <app-top></app-top>
   </nz-header>
   <nz-content>
     <div class="row">
         <div nz-row>
             <div nz-col [nzSpan]="24" style="height: 100px;background:#fff;border-bottom:1px solid #f1f1f1;">
               <div class="fl company-admin-logo"><a [routerLink]="['/user_index']">
-                  <img src="../../../../assets/lib/images/company-admin-logo.png" alt="">
+                  <img src="/assets/lib/images/company-admin-logo.png" alt="">
               </a></div>
             </div>
             <div nz-col [nzSpan]="6">
