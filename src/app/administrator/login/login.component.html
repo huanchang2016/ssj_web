@@ -4,14 +4,14 @@
       <div class=center-content>
         <div class="row no-margin">
           <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-            <form role=form method="POST" action="http://localhost/ssj/public/index.php/admin/login" class=form-layout>
-              <div class="text-center mb15"><img src="http://localhost/ssj/public/Urban/images/logo-dark.5ba260bb.png"></div>
+            <form role=form method="POST" class=form-layout>
+              <div class="text-center mb15"><img src="/assets/administrator/images/logo-dark.5ba260bb.png"></div>
               <p class="text-center mb30">Welcome to Urban. Please sign in to your account</p>
               <div class=form-inputs>
-                <input type=email name="email" value="" class="form-control input-lg" placeholder="账号">
-                <input type=password name="password" class="form-control input-lg" placeholder="密码">
+                <input type=email name="email" #userName class="form-control input-lg" placeholder="账号">
+                <input type=password name="password" #passWord class="form-control input-lg" placeholder="密码">
               </div>
-              <button class="btn btn-success btn-block btn-lg mb15" type=submit>
+              <button class="btn btn-success btn-block btn-lg mb15" type=submit (click)="loginIn(userName.value, passWord.value)">
                   <span>登 录</span>
               </button>
               <p>

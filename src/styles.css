@@ -10,3 +10,19 @@ a{ text-decoration: none;}
 /* 招聘下的搜索框样式调整 */
 .searchClass .ant-select-selection--single{height: 40px;}
 .searchClass .ant-select-selection__rendered{line-height: 40px;}
+
+
+/* 修改后台管理系统中日期插件的样式 */
+.error {
+    color: #d96557
+}
+
+.left{float:left;}
+.right{float:right;}
+.daterangepicker>div{ margin: 10px;border: 1px solid #eee7e7;}
+.daterangepicker .ranges{clear:both;}
+.daterangepicker .range_inputs>div, .daterangepicker .range_inputs>button{ margin-top:10px;}
+.daterangepicker .range_inputs{position: relative;left:0; top: 0;}
+.daterangepicker .range_inputs>button{position: absolute; top: 0px;}
+.range_inputs>.applyBtn{right: 80px;}
+.range_inputs>.cancelBtn{ right: 10px;}

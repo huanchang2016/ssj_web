@@ -68,63 +68,27 @@ import { TopComponent } from './modules/top/top.component';
 import { AdministratorComponent } from './administrator/administrator.component';
 import { AdminLoginComponent } from './administrator/login/login.component';
 import { AdminDashComponent } from './administrator/dash/dash.component';
-import { ArticleComponent } from './administrator/admin/article/article.component';
-import { ArticleCategoriesComponent } from './administrator/admin/article-categories/article-categories.component';
+import { ArticleComponent } from './administrator/admin/news/article/article.component';
+import { ArticleCategoriesComponent } from './administrator/admin/news/article-categories/article-categories.component';
+import { ArticleClassEditComponent } from './administrator/admin/news/article-categories/article-class-edit/article-edit.component';
+import { ArticleEditComponent } from './administrator/admin/news/article/article-edit/article-edit.component';
+import { AdminNavbarComponent } from './administrator/admin/admin-navbar/admin-navbar.component';
+import { AdminHeaderComponent } from './administrator/admin/admin-header/admin-header.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    IndexComponent,
-    HeaderComponent,
-    SidebarComponent,
-    BannerComponent,
-    ModelBlockComponent,
-    ContentComponent,
-    ZhaopinComponent,
-    HomeComponent,
-    SearchMenuComponent,
-    JobsShowComponent,
-    HeadTopComponent,
-    HeadMiddleComponent,
-    HeadNavComponent,
-    JobsDetailComponent,
-    CompanyComponent,
-    CompanyHomeComponent,
-    CompanyJobsComponent,
-    SchoolRecruitComponent,
-    CompanyAskComponent,
-    GmapComponent,
-    LoginComponent,
-    RegisterComponent,
+    AppComponent,IndexComponent,HeaderComponent,SidebarComponent,BannerComponent,ModelBlockComponent,ContentComponent,
+    ZhaopinComponent,HomeComponent,SearchMenuComponent,JobsShowComponent,HeadTopComponent,HeadMiddleComponent,HeadNavComponent,JobsDetailComponent,CompanyComponent,CompanyHomeComponent,CompanyJobsComponent,SchoolRecruitComponent,CompanyAskComponent,GmapComponent,LoginComponent,RegisterComponent,
     CompanyAdminComponent,//单位后台
-    BaseInfoComponent,
-    CompanyLogoComponent,
-    CompanyMapComponent,
-    CascaderComponent,
-    JobAddComponent,
-    InRecruitComponent,
-    JobSeekersComponent,
-    JobFairComponent,
-    HomePageComponent,
+    BaseInfoComponent,CompanyLogoComponent,CompanyMapComponent,CascaderComponent,JobAddComponent,InRecruitComponent,JobSeekersComponent,JobFairComponent,HomePageComponent,
     UserAdminComponent,//个人后台
-    ChangePwdComponent,
-    PwdManagerComponent,
-    UserHomePageComponent,
-    UserInfoComponent,
-    UserPwdManagerComponent,
-    CreateResumeComponent,
-    AmendResumeComponent,
-    DatePickerComponent,
-    FooterComponent,
-    JobsSearchComponent,
-    ChoeseMenuComponent,
-    ZphComponent,
-    SearchZphComponent,
-    ResumeManageComponent,
-    AppliedJobsComponent,
-    TopComponent,
+    ChangePwdComponent,PwdManagerComponent,UserHomePageComponent,UserInfoComponent,UserPwdManagerComponent,CreateResumeComponent,AmendResumeComponent,DatePickerComponent,FooterComponent,JobsSearchComponent,
+    ChoeseMenuComponent,ZphComponent,SearchZphComponent,ResumeManageComponent,AppliedJobsComponent,TopComponent,
     AdministratorComponent,//后台管理系统
-    AdminLoginComponent, AdminDashComponent, ArticleComponent, ArticleCategoriesComponent
+    AdminLoginComponent, AdminDashComponent, ArticleComponent, ArticleCategoriesComponent, ArticleClassEditComponent,
+    ArticleEditComponent,
+    AdminNavbarComponent,
+    AdminHeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -41,21 +41,25 @@ import { AppliedJobsComponent } from './user/zhaopin/admin/user-admin/applied-jo
 import { AdministratorComponent } from './administrator/administrator.component';
 import { AdminLoginComponent } from './administrator/login/login.component';
 import { AdminDashComponent } from './administrator/dash/dash.component';
-import { ArticleCategoriesComponent } from './administrator/admin/article-categories/article-categories.component';
-import { ArticleComponent } from './administrator/admin/article/article.component';
-
+import { ArticleCategoriesComponent } from './administrator/admin/news/article-categories/article-categories.component';
+import { ArticleComponent } from './administrator/admin/news/article/article.component';
+import { ArticleClassEditComponent } from './administrator/admin/news/article-categories/article-class-edit/article-edit.component';//文章分类编辑
+import { ArticleEditComponent } from './administrator/admin/news/article/article-edit/article-edit.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'userAdmin', pathMatch: 'full' },
+  { path: '', redirectTo: 'administrator', pathMatch: 'full' },
   { path: 'register', component: RegisterComponent, data: { title: '天府菁英网' } },
   { path: 'administrator', component: AdministratorComponent, data: { title: '后台管理系统' },
     children: [
       // 管理员后台管理控制台
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'login', component: AdminLoginComponent, data: {title: '管理员登录-后台管理系统'} },
       { path: 'dash', component: AdminDashComponent, data: {title: '管理员登录-后台管理系统'},
           children: [
             { path: 'article_categories', component: ArticleCategoriesComponent, data: {title: '新闻分类管理-后台管理系统'} },
-            { path: 'article', component: ArticleComponent, data: {title: '新闻管理-后台管理系统'} }
+            { path: 'article_categories/:id', component: ArticleClassEditComponent, data: {title: '新闻分类编辑-后台管理系统'} },
+            { path: 'article', component: ArticleComponent, data: {title: '新闻管理-后台管理系统'} },
+            { path: 'article/:id', component: ArticleEditComponent, data: {title: '新闻编辑-后台管理系统'} }
           ]
       },
     ]

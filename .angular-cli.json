@@ -22,7 +22,11 @@
         "styles.css"
       ],
       "scripts": [
-        "./../node_modules/jquery/dist/jquery.min.js"
+        "./../node_modules/jquery/dist/jquery.min.js",
+        "./assets/administrator/vendor/moment/min/moment.min.js",
+        "./assets/administrator/vendor/bootstrap-daterangepicker/daterangepicker.js",
+        "./assets/administrator/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js",
+        "./assets/administrator/vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

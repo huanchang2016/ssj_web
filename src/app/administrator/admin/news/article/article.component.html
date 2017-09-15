@@ -1,0 +1,120 @@
+<div class=panel>
+  <div class="panel-heading border">
+    <ol class="breadcrumb mb0 no-padding">
+      <li><a href=javascript:;>控制台</a></li>
+      <li><a href=javascript:;>新闻</a></li>
+      <li class=active>新闻列表</li>
+    </ol>
+  </div>
+  <div class=panel-body>
+    <div class="mb10">
+      显示
+      <label for="">
+              <select id="per_page" name="per_page" class="form-control">
+                  <option value="15" >15</option>
+                  <option value="30" >30</option>
+                  <option value="50" >50</option>
+                  <option value="100" >100</option>
+              </select>
+          </label> 条
+      <a id="new" href="http://localhost/ssj/public/index.php/admin/article/create" class="btn btn-info ml5">添 加 新 闻</a>
+    </div>
+    <div class="mb10">
+      <form id="search-form" method="get" action="http://localhost/ssj/public/index.php/admin/article">
+        <label for="">
+            <input type="search" name="name" value="" class="form-control"
+                    placeholder="标题">
+        </label>
+        <label for="">
+            <input type="search" name="author" value="" class="form-control"
+                    placeholder="作者">
+        </label>
+        <label for="">
+          <select name="category_id" class=form-control>
+              <option value="">新闻类别</option>
+              <option value="1" >足球</option>
+              <option value="2" >篮球</option>
+              <option value="3" >排球</option>
+              <option value="5" >ass</option>
+              <option value="6" >ssss</option>
+              <option value="7" >as</option>
+              <option value="9" >aas</option>
+              <option value="10" >ffs</option>
+              <option value="11" >66644</option>
+          </select> 
+        </label>
+        <label style="display: inline-block;width: 200px;" class="input-prepend input-group">
+            <input style="float: none;" name="created_at" class="form-control drp" placeholder="发布日期">
+        </label>
+        <a class="btn btn-info ml5" onclick="event.preventDefault(); document.getElementById('search-form').submit();">
+          <i class="fa fa-search"></i> 搜 索
+        </a>
+      </form>
+    </div>
+    <table class="table table-bordered bordered table-striped table-condensed datatable">
+      <thead>
+        <tr>
+          <th>编号</th>
+          <th>标题</th>
+          <th>类别</th>
+          <th>作者</th>
+          <th>排序</th>
+          <th>发布时间</th>
+          <th>浏览量</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>22</td>
+        <td>成都天府新区人力资源开发服务有限公司</td>
+        <td>篮球</td>
+        <td>是</td>
+        <td>1</td>
+        <td>2017-12-31 23:59:59</td>
+        <td>2</td>
+        <td>
+          <a [routerLink]="['./', 2]">编 辑</a> |
+          <a onclick="del(22);">删 除</a>
+          <form id="delete-form-22" action="http://localhost/ssj/public/index.php/admin/article/22" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="VbYjsF6MnhEmgsdZYg6YVVg0d4QEyUgCXqIJfMQ3">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td>sdfsdfsdf</td>
+        <td>足球</td>
+        <td>fsdf</td>
+        <td>1</td>
+        <td>2017-09-01 09:32:13</td>
+        <td>0</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/article/23/edit">编 辑</a> |
+          <a onclick="del(23);">删 除</a>
+          <form id="delete-form-23" action="http://localhost/ssj/public/index.php/admin/article/23" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="VbYjsF6MnhEmgsdZYg6YVVg0d4QEyUgCXqIJfMQ3">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td>aaa</td>
+        <td>篮球</td>
+        <td>d</td>
+        <td>2</td>
+        <td>2017-08-29 14:48:05</td>
+        <td>0</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/article/20/edit">编 辑</a> |
+          <a onclick="del(20);">删 除</a>
+          <form id="delete-form-20" action="http://localhost/ssj/public/index.php/admin/article/20" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="VbYjsF6MnhEmgsdZYg6YVVg0d4QEyUgCXqIJfMQ3">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,136 @@
+<div class=panel>
+  <div class="panel-heading border">
+    <ol class="breadcrumb mb0 no-padding">
+      <li><a href=javascript:;>控制台</a></li>
+      <li><a href=javascript:;>新闻</a></li>
+      <li class=active>类别</li>
+    </ol>
+  </div>
+  <div class=panel-body>
+    <div class="mb10">
+      显示
+      <label for="">
+              <select id="per_page" name="per_page" class="form-control">
+                  <option value="15" >15</option>
+                  <option value="30" >30</option>
+                  <option value="50" >50</option>
+                  <option value="100" >100</option>
+              </select>
+          </label> 条
+      <a id="new" [routerLink]="['./','add']" class="btn btn-info ml5">添 加 类 别</a>
+    </div>
+    <table class="table table-bordered bordered table-striped table-condensed datatable">
+      <tr>
+        <th>编号</th>
+        <th>名称</th>
+        <th>描述</th>
+        <th>排序</th>
+        <th>创建时间</th>
+        <th>操作</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>足球</td>
+        <td>是</td>
+        <td>1</td>
+        <td>2017-08-17 06:01:39</td>
+        <td>
+          <a [routerLink]="['./', 1]">编 辑</a> |
+          <a href="">删 除</a>
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>ass</td>
+        <td>fs</td>
+        <td>1</td>
+        <td>2017-08-23 13:51:43</td>
+        <td>
+          <a [routerLink]="['./',2]">编 辑</a> |
+          <a href="">删 除</a>
+        </td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>ssss</td>
+        <td>f</td>
+        <td>1</td>
+        <td>2017-08-23 13:53:15</td>
+        <td>
+          <a [routerLink]="['./',3]">编 辑</a> |
+          <a href="">删 除</a>
+        </td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>as</td>
+        <td>fff</td>
+        <td>1</td>
+        <td>2017-08-23 13:53:46</td>
+        <td>
+          <a [routerLink]="['./',4]">编 辑</a> |
+          <a href="">删 除</a>
+        </td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>aas</td>
+        <td>fds</td>
+        <td>1</td>
+        <td>2017-08-23 15:59:08</td>
+        <td>
+          <a [routerLink]="['./',5]">编 辑</a> |
+          <a href="">删 除</a>
+        </td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>ffs</td>
+        <td>s</td>
+        <td>1</td>
+        <td>2017-08-23 16:31:37</td>
+        <td>
+          <a [routerLink]="['./',6]">编 辑</a> |
+          <a href="">删 除</a>
+        </td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>66644</td>
+        <td>sssss</td>
+        <td>1</td>
+        <td>2017-08-23 16:31:57</td>
+        <td>
+          <a [routerLink]="['./',7]">编 辑</a> |
+          <a href="">删 除</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>篮球</td>
+        <td>发</td>
+        <td>2</td>
+        <td>2017-08-17 06:01:39</td>
+        <td>
+          <a [routerLink]="['./',8]">编 辑</a> |
+          <a href="">删 除</a>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>排球</td>
+        <td>的</td>
+        <td>3</td>
+        <td>2017-08-17 06:01:39</td>
+        <td>
+          <a [routerLink]="['./',9]">编 辑</a> |
+          <a href="">删 除</a>
+        </td>
+      </tr>
+    </table>
+    <div>
+
+    </div>
+
+  </div>
+</div>
