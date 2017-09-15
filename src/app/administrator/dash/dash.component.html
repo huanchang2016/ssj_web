@@ -45,12 +45,12 @@
           </a>
           <ul class=sub-menu>
             <li class="">
-              <a [routerLink]="['/administrator/dash/article_categories']">
+              <a [routerLink]="['./article_categories']">
                   <span>类别管理</span>
               </a>
             </li>
             <li class="">
-              <a [routerLink]="['/administrator/dash/article']">
+              <a [routerLink]="['./article']">
                   <span>新闻管理</span>
               </a>
             </li>
@@ -59,16 +59,16 @@
         <li class=""><a href=javascript:;> <i class="fa fa-pie-chart"></i> <span>系统设置</span> </a>
           <ul class=sub-menu>
             <li class="">
-              <a href="http://localhost:4200/administrator/admin_setting_industry"> <span>行业类别</span> </a>
+              <a [routerLink]="['./industry']"> <span>行业类别</span> </a>
             </li>
             <li class="">
-              <a href="http://localhost:4200/administrator/admin_setting_area"> <span>城市类别</span> </a>
+              <a [routerLink]="['./area']"> <span>城市类别</span> </a>
             </li>
             <li class="">
-              <a href="http://localhost:4200/administrator/admin_setting_job"> <span>职位类别</span> </a>
+              <a [routerLink]="['./job']"> <span>职位类别</span> </a>
             </li>
             <li class="">
-              <a href="http://localhost:4200/administrator/admin_setting_member"> <span>会员类别</span> </a>
+              <a [routerLink]="['./member']"> <span>会员类别</span> </a>
             </li>
           </ul>
         </li>
@@ -76,13 +76,13 @@
           <a href=javascript:;><i class="fa fa-tint"></i> <span>管理员</span> </a>
           <ul class=sub-menu>
             <li class="">
-              <a href="http://localhost:4200/administrator/admin_user"> <span>用户列表</span> </a>
+              <a [routerLink]="['./user']"> <span>用户列表</span> </a>
             </li>
             <li class="">
-              <a href="http://localhost:4200/administrator/admin_user_role"> <span>用户组</span> </a>
+              <a [routerLink]="['./user_role']"> <span>用户组</span> </a>
             </li>
             <li class="">
-              <a href="http://localhost:4200/administrator/admin_user_permission"> <span>权限</span> </a>
+              <a [routerLink]="['./user_permission']"> <span>权限</span> </a>
             </li>
           </ul>
         </li>

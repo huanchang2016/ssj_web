@@ -1,0 +1,288 @@
+<div class=panel>
+  <div class="panel-heading border">
+    <ol class="breadcrumb mb0 no-padding">
+      <li><a href=javascript:;>控制台</a></li>
+      <li><a href=javascript:;>系统设置</a></li>
+      <li class=active>城市类别</li>
+    </ol>
+  </div>
+  <div class=panel-body>
+    <div class="mb10">
+      显示
+      <label for="">
+              <select id="per_page" name="per_page" class="form-control">
+                  <option value="15" >15</option>
+                  <option value="30" >30</option>
+                  <option value="50" >50</option>
+                  <option value="100" >100</option>
+              </select>
+          </label> 条
+      <a id="new" href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create" class="btn btn-info ml5">添加一级分类</a>
+    </div>
+    <table class="table table-bordered bordered table-striped table-condensed datatable">
+      <thead>
+        <tr>
+          <th>编号</th>
+          <th>名称</th>
+          <th>排序</th>
+          <th>创建时间</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>北京</td>
+        <td>1</td>
+        <td>2017-09-04 09:32:09</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/1">分类管理</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/1">添加子类</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/1/edit">编 辑</a> |
+          <a onclick="del(1);">删 除</a>
+          <form id="delete-form-1" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/1" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>天津</td>
+        <td>1</td>
+        <td>2017-09-04 09:32:09</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/21">分类管理</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/21">添加子类</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/21/edit">编 辑</a> |
+          <a onclick="del(21);">删 除</a>
+          <form id="delete-form-21" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/21" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td>河北</td>
+        <td>1</td>
+        <td>2017-09-04 09:32:09</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/41">分类管理</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/41">添加子类</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/41/edit">编 辑</a> |
+          <a onclick="del(41);">删 除</a>
+          <form id="delete-form-41" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/41" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>225</td>
+        <td>山西</td>
+        <td>1</td>
+        <td>2017-09-04 09:32:09</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/225">分类管理</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/225">添加子类</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/225/edit">编 辑</a> |
+          <a onclick="del(225);">删 除</a>
+          <form id="delete-form-225" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/225" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>356</td>
+        <td>内蒙古</td>
+        <td>1</td>
+        <td>2017-09-04 09:32:09</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/356">分类管理</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/356">添加子类</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/356/edit">编 辑</a> |
+          <a onclick="del(356);">删 除</a>
+          <form id="delete-form-356" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/356" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>470</td>
+        <td>辽宁</td>
+        <td>1</td>
+        <td>2017-09-04 09:32:09</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/470">分类管理</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/470">添加子类</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/470/edit">编 辑</a> |
+          <a onclick="del(470);">删 除</a>
+          <form id="delete-form-470" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/470" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>601</td>
+        <td>吉林</td>
+        <td>1</td>
+        <td>2017-09-04 09:32:09</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/601">分类管理</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/601">添加子类</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/601/edit">编 辑</a> |
+          <a onclick="del(601);">删 除</a>
+          <form id="delete-form-601" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/601" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>682</td>
+        <td>黑龙江</td>
+        <td>1</td>
+        <td>2017-09-04 09:32:09</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/682">分类管理</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/682">添加子类</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/682/edit">编 辑</a> |
+          <a onclick="del(682);">删 除</a>
+          <form id="delete-form-682" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/682" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>840</td>
+        <td>上海</td>
+        <td>1</td>
+        <td>2017-09-04 09:32:10</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/840">分类管理</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/840">添加子类</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/840/edit">编 辑</a> |
+          <a onclick="del(840);">删 除</a>
+          <form id="delete-form-840" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/840" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>862</td>
+        <td>江苏</td>
+        <td>1</td>
+        <td>2017-09-04 09:32:10</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/862">分类管理</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/862">添加子类</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/862/edit">编 辑</a> |
+          <a onclick="del(862);">删 除</a>
+          <form id="delete-form-862" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/862" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>997</td>
+        <td>浙江</td>
+        <td>1</td>
+        <td>2017-09-04 09:32:10</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/997">分类管理</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/997">添加子类</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/997/edit">编 辑</a> |
+          <a onclick="del(997);">删 除</a>
+          <form id="delete-form-997" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/997" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>1112</td>
+        <td>安徽</td>
+        <td>1</td>
+        <td>2017-09-04 09:32:10</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/1112">分类管理</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/1112">添加子类</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/1112/edit">编 辑</a> |
+          <a onclick="del(1112);">删 除</a>
+          <form id="delete-form-1112" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/1112" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>1254</td>
+        <td>福建</td>
+        <td>1</td>
+        <td>2017-09-04 09:32:10</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/1254">分类管理</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/1254">添加子类</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/1254/edit">编 辑</a> |
+          <a onclick="del(1254);">删 除</a>
+          <form id="delete-form-1254" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/1254" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>1360</td>
+        <td>江西</td>
+        <td>1</td>
+        <td>2017-09-04 09:32:10</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/1360">分类管理</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/1360">添加子类</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/1360/edit">编 辑</a> |
+          <a onclick="del(1360);">删 除</a>
+          <form id="delete-form-1360" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/1360" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>1484</td>
+        <td>山东</td>
+        <td>1</td>
+        <td>2017-09-04 09:32:10</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/1484">分类管理</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/1484">添加子类</a> |
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/1484/edit">编 辑</a> |
+          <a onclick="del(1484);">删 除</a>
+          <form id="delete-form-1484" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/1484" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+    </table>
+    <div>
+
+    </div>
+    <ul class="pagination clearfix block">
+
+      <li class="disabled"><span>←</span></li>
+      <li class="active"><span>1</span></li>
+      <li><a href="http://localhost/ssj/public/index.php/admin/admin_setting_area?page=2">2</a></li>
+      <li><a href="http://localhost/ssj/public/index.php/admin/admin_setting_area?page=3">3</a></li>
+
+
+      <li><a href="http://localhost/ssj/public/index.php/admin/admin_setting_area?page=2" rel="next">→</a></li>
+    </ul>
+
+  </div>
+</div>

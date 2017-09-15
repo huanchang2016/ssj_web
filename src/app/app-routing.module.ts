@@ -45,6 +45,16 @@ import { ArticleCategoriesComponent } from './administrator/admin/news/article-c
 import { ArticleComponent } from './administrator/admin/news/article/article.component';
 import { ArticleClassEditComponent } from './administrator/admin/news/article-categories/article-class-edit/article-edit.component';//文章分类编辑
 import { ArticleEditComponent } from './administrator/admin/news/article/article-edit/article-edit.component';
+import { SettingIndustryComponent } from './administrator/admin/setting/setting-industry/setting-industry.component';
+import { SettingAreaComponent } from './administrator/admin/setting/setting-area/setting-area.component';
+import { SettingJobComponent } from './administrator/admin/setting/setting-job/setting-job.component';
+import { SettingMemberComponent } from './administrator/admin/setting/setting-member/setting-member.component';
+import { AdminUserComponent } from './administrator/admin/manage/admin-user/admin-user.component';
+import { AdminUserRoleComponent } from './administrator/admin/manage/admin-user-role/admin-user-role.component';
+import { AdminUserPermissionComponent } from './administrator/admin/manage/admin-user-permission/admin-user-permission.component';
+
+
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'administrator', pathMatch: 'full' },
@@ -57,9 +67,16 @@ const routes: Routes = [
       { path: 'dash', component: AdminDashComponent, data: {title: '管理员登录-后台管理系统'},
           children: [
             { path: 'article_categories', component: ArticleCategoriesComponent, data: {title: '新闻分类管理-后台管理系统'} },
-            { path: 'article_categories/:id', component: ArticleClassEditComponent, data: {title: '新闻分类编辑-后台管理系统'} },
+            { path: 'article_categories/edit/:id', component: ArticleClassEditComponent, data: {title: '新闻分类编辑-后台管理系统'} },
             { path: 'article', component: ArticleComponent, data: {title: '新闻管理-后台管理系统'} },
-            { path: 'article/:id', component: ArticleEditComponent, data: {title: '新闻编辑-后台管理系统'} }
+            { path: 'article/edit/:id', component: ArticleEditComponent, data: {title: '新闻编辑-后台管理系统'} },
+            { path: 'industry', component: SettingIndustryComponent, data: {title: '行业设置-系统设置-后台管理系统'} },
+            { path: 'area', component: SettingAreaComponent, data: {title: '城市类别-系统设置-后台管理系统'} },
+            { path: 'job', component: SettingJobComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member', component: SettingMemberComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'user', component: AdminUserComponent, data: {title: '用户列表-系统设置-后台管理系统'} },
+            { path: 'user_role', component: AdminUserRoleComponent, data: {title: '用户组-系统设置-后台管理系统'} },
+            { path: 'user_permission', component: AdminUserPermissionComponent, data: {title: '权限-系统设置-后台管理系统'} }
           ]
       },
     ]

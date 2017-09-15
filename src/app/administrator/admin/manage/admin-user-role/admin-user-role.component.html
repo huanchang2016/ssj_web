@@ -1,0 +1,69 @@
+<div class=panel>
+  <div class="panel-heading border">
+    <ol class="breadcrumb mb0 no-padding">
+      <li><a href=javascript:;>控制台</a></li>
+      <li><a href=javascript:;>管理员</a></li>
+      <li class=active>用户组</li>
+    </ol>
+  </div>
+  <div class=panel-body>
+    <div class="mb10">
+      显示
+      <label for="">
+              <select id="per_page" name="per_page" class="form-control">
+                  <option value="15" >15</option>
+                  <option value="30" >30</option>
+                  <option value="50" >50</option>
+                  <option value="100" >100</option>
+              </select>
+          </label> 条
+      <a id="new" href="http://localhost/ssj/public/index.php/admin/admin_user_role/create" class="btn btn-info ml5">添加用户组</a>
+    </div>
+    <table class="table table-bordered bordered table-striped table-condensed datatable">
+      <thead>
+        <tr>
+          <th>编号</th>
+          <th>标识</th>
+          <th>名称</th>
+          <th>描述</th>
+          <th>创建时间</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>14</td>
+        <td>admin</td>
+        <td>超级管理员</td>
+        <td>超级管理员</td>
+        <td>2017-09-08 15:48:31</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_user_role/14/edit">编 辑</a> |
+          <a onclick="del(14);">删 除</a>
+          <form id="delete-form-14" action="http://localhost/ssj/public/index.php/admin/admin_user_role/14" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>test</td>
+        <td>测试</td>
+        <td>测试</td>
+        <td>2017-09-08 15:54:08</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_user_role/16/edit">编 辑</a> |
+          <a onclick="del(16);">删 除</a>
+          <form id="delete-form-16" action="http://localhost/ssj/public/index.php/admin/admin_user_role/16" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+    </table>
+    <div>
+
+    </div>
+
+  </div>
+</div>

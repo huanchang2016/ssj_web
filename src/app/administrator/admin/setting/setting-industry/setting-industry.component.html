@@ -1,0 +1,66 @@
+<div class=panel>
+  <div class="panel-heading border">
+    <ol class="breadcrumb mb0 no-padding">
+      <li><a href=javascript:;>控制台</a></li>
+      <li><a href=javascript:;>系统设置</a></li>
+      <li class=active>行业类别</li>
+    </ol>
+  </div>
+  <div class=panel-body>
+    <div class="mb10">
+      显示
+      <label for="">
+              <select id="per_page" name="per_page" class="form-control">
+                  <option value="15" >15</option>
+                  <option value="30" >30</option>
+                  <option value="50" >50</option>
+                  <option value="100" >100</option>
+              </select>
+          </label> 条
+      <a id="new" href="http://localhost/ssj/public/index.php/admin/admin_setting_industry/create" class="btn btn-info ml5">添加行业类别</a>
+    </div>
+    <table class="table table-bordered bordered table-striped table-condensed datatable">
+      <thead>
+        <tr>
+          <th>编号</th>
+          <th>名称</th>
+          <th>排序</th>
+          <th>创建时间</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>4</td>
+        <td>sdff</td>
+        <td>1</td>
+        <td>2017-09-01 14:02:14</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_industry/4/edit">编 辑</a> |
+          <a onclick="del(4);">删 除</a>
+          <form id="delete-form-4" action="http://localhost/ssj/public/index.php/admin/admin_setting_industry/4" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>方法</td>
+        <td>10</td>
+        <td>2017-09-01 14:00:56</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_industry/2/edit">编 辑</a> |
+          <a onclick="del(2);">删 除</a>
+          <form id="delete-form-2" action="http://localhost/ssj/public/index.php/admin/admin_setting_industry/2" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+    </table>
+    <div>
+
+    </div>
+
+  </div>
+</div>

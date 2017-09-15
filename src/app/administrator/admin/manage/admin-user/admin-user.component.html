@@ -1,0 +1,90 @@
+<div class=panel>
+  <div class="panel-heading border">
+    <ol class="breadcrumb mb0 no-padding">
+      <li><a href=javascript:;>控制台</a></li>
+      <li><a href=javascript:;>管理员</a></li>
+      <li class=active>管理员列表</li>
+    </ol>
+  </div>
+  <div class=panel-body>
+    <div class="mb10">
+      显示
+      <label for="">
+              <select id="per_page" name="per_page" class="form-control">
+                  <option value="15" >15</option>
+                  <option value="30" >30</option>
+                  <option value="50" >50</option>
+                  <option value="100" >100</option>
+              </select>
+          </label> 条
+      <a id="new" href="http://localhost/ssj/public/index.php/admin/admin_user/create" class="btn btn-info ml5">添加管理员</a>
+    </div>
+    <div class="mb10">
+      <form id="search-form" method="get" action="http://localhost/ssj/public/index.php/admin/admin_user">
+        <label for="">
+                  <input type="search" name="name" value="" class="form-control"
+                         placeholder="用户名">
+              </label>
+        <label for="">
+                  <input type="search" name="email" value="" class="form-control"
+                         placeholder="邮箱">
+              </label>
+        <label for="">
+                  <select name="role_id" class=form-control>
+                      <option value="">角色类别</option>
+                                                      <option value="14" >admin</option>
+                                                      <option value="16" >test</option>
+                                              </select>
+              </label>
+        <a class="btn btn-info ml5" onclick="event.preventDefault(); document.getElementById('search-form').submit();"><i
+                          class="fa fa-search"></i> 搜 索</a>
+      </form>
+    </div>
+    <table class="table table-bordered bordered table-striped table-condensed datatable">
+      <thead>
+        <tr>
+          <th>编号</th>
+          <th>用户名</th>
+          <th>邮箱</th>
+          <th>角色</th>
+          <th>添加时间</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>admin</td>
+        <td>ww@qq.com</td>
+        <td>
+          超级管理员
+        </td>
+        <td>2017-08-17 06:01:39</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_user/1/edit">编 辑</a> |
+          <a onclick="del(1);">删 除</a>
+          <form id="delete-form-1" action="http://localhost/ssj/public/index.php/admin/admin_user/1" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>owner</td>
+        <td>aa@qq.com</td>
+        <td>
+          测试
+        </td>
+        <td>2017-08-17 06:01:39</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_user/2/edit">编 辑</a> |
+          <a onclick="del(2);">删 除</a>
+          <form id="delete-form-2" action="http://localhost/ssj/public/index.php/admin/admin_user/2" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

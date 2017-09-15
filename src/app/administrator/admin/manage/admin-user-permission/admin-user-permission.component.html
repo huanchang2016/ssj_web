@@ -1,0 +1,129 @@
+<div class=panel>
+  <div class="panel-heading border">
+    <ol class="breadcrumb mb0 no-padding">
+      <li><a href=javascript:;>控制台</a></li>
+      <li><a href=javascript:;>管理员</a></li>
+      <li class=active>权限</li>
+    </ol>
+  </div>
+  <div class=panel-body>
+    <div class="mb10">
+      显示
+      <label for="">
+              <select id="per_page" name="per_page" class="form-control">
+                  <option value="15" >15</option>
+                  <option value="30" >30</option>
+                  <option value="50" >50</option>
+                  <option value="100" >100</option>
+              </select>
+          </label> 条
+      <a id="new" href="http://localhost/ssj/public/index.php/admin/admin_user_permission/create" class="btn btn-info ml5">添 加 权 限</a>
+    </div>
+    <table class="table table-bordered bordered table-striped table-condensed datatable">
+      <thead>
+        <tr>
+          <th>编号</th>
+          <th>路由</th>
+          <th>名称</th>
+          <th>描述</th>
+          <th>创建时间</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>article_categories.index</td>
+        <td>分类列表</td>
+        <td>文章分类</td>
+        <td>2017-08-17 06:01:39</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_user_permission/1/edit">编 辑</a> |
+          <a onclick="del(1);">删 除</a>
+          <form id="delete-form-1" action="http://localhost/ssj/public/index.php/admin/admin_user_permission/1" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>article_categories.create</td>
+        <td>article_categories.create</td>
+        <td>文章分类</td>
+        <td>2017-08-17 06:01:39</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_user_permission/3/edit">编 辑</a> |
+          <a onclick="del(3);">删 除</a>
+          <form id="delete-form-3" action="http://localhost/ssj/public/index.php/admin/admin_user_permission/3" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>article_categories.edit</td>
+        <td>article_categories.edit</td>
+        <td>文章分类</td>
+        <td>2017-08-17 06:01:39</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_user_permission/4/edit">编 辑</a> |
+          <a onclick="del(4);">删 除</a>
+          <form id="delete-form-4" action="http://localhost/ssj/public/index.php/admin/admin_user_permission/4" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>sdf</td>
+        <td>sdf</td>
+        <td>测试</td>
+        <td>2017-09-08 11:34:11</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_user_permission/5/edit">编 辑</a> |
+          <a onclick="del(5);">删 除</a>
+          <form id="delete-form-5" action="http://localhost/ssj/public/index.php/admin/admin_user_permission/5" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>sdfs</td>
+        <td>sd1f</td>
+        <td>测试</td>
+        <td>2017-09-08 11:34:58</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_user_permission/6/edit">编 辑</a> |
+          <a onclick="del(6);">删 除</a>
+          <form id="delete-form-6" action="http://localhost/ssj/public/index.php/admin/admin_user_permission/6" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>fd</td>
+        <td>ffsdf</td>
+        <td>发</td>
+        <td>2017-09-08 11:34:58</td>
+        <td>
+          <a href="http://localhost/ssj/public/index.php/admin/admin_user_permission/9/edit">编 辑</a> |
+          <a onclick="del(9);">删 除</a>
+          <form id="delete-form-9" action="http://localhost/ssj/public/index.php/admin/admin_user_permission/9" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+    </table>
+    <div>
+
+    </div>
+
+  </div>
+</div>

@@ -74,6 +74,13 @@ import { ArticleClassEditComponent } from './administrator/admin/news/article-ca
 import { ArticleEditComponent } from './administrator/admin/news/article/article-edit/article-edit.component';
 import { AdminNavbarComponent } from './administrator/admin/admin-navbar/admin-navbar.component';
 import { AdminHeaderComponent } from './administrator/admin/admin-header/admin-header.component';
+import { SettingIndustryComponent } from './administrator/admin/setting/setting-industry/setting-industry.component';
+import { SettingAreaComponent } from './administrator/admin/setting/setting-area/setting-area.component';
+import { SettingJobComponent } from './administrator/admin/setting/setting-job/setting-job.component';
+import { SettingMemberComponent } from './administrator/admin/setting/setting-member/setting-member.component';
+import { AdminUserComponent } from './administrator/admin/manage/admin-user/admin-user.component';
+import { AdminUserRoleComponent } from './administrator/admin/manage/admin-user-role/admin-user-role.component';
+import { AdminUserPermissionComponent } from './administrator/admin/manage/admin-user-permission/admin-user-permission.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +95,14 @@ import { AdminHeaderComponent } from './administrator/admin/admin-header/admin-h
     AdminLoginComponent, AdminDashComponent, ArticleComponent, ArticleCategoriesComponent, ArticleClassEditComponent,
     ArticleEditComponent,
     AdminNavbarComponent,
-    AdminHeaderComponent
+    AdminHeaderComponent,
+    SettingIndustryComponent,
+    SettingAreaComponent,
+    SettingJobComponent,
+    SettingMemberComponent,
+    AdminUserComponent,
+    AdminUserRoleComponent,
+    AdminUserPermissionComponent
   ],
   imports: [
     BrowserModule,

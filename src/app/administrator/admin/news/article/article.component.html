@@ -17,7 +17,7 @@
                   <option value="100" >100</option>
               </select>
           </label> 条
-      <a id="new" href="http://localhost/ssj/public/index.php/admin/article/create" class="btn btn-info ml5">添 加 新 闻</a>
+      <a id="new"  [routerLink]="['./edit', 'add']"class="btn btn-info ml5">添 加 新 闻</a>
     </div>
     <div class="mb10">
       <form id="search-form" method="get" action="http://localhost/ssj/public/index.php/admin/article">
@@ -73,7 +73,7 @@
         <td>2017-12-31 23:59:59</td>
         <td>2</td>
         <td>
-          <a [routerLink]="['./', 2]">编 辑</a> |
+          <a [routerLink]="['./edit', 3]">编 辑</a> |
           <a onclick="del(22);">删 除</a>
           <form id="delete-form-22" action="http://localhost/ssj/public/index.php/admin/article/22" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="VbYjsF6MnhEmgsdZYg6YVVg0d4QEyUgCXqIJfMQ3">
@@ -90,7 +90,7 @@
         <td>2017-09-01 09:32:13</td>
         <td>0</td>
         <td>
-          <a href="http://localhost/ssj/public/index.php/admin/article/23/edit">编 辑</a> |
+          <a [routerLink]="['./edit', 4]">编 辑</a> |
           <a onclick="del(23);">删 除</a>
           <form id="delete-form-23" action="http://localhost/ssj/public/index.php/admin/article/23" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="VbYjsF6MnhEmgsdZYg6YVVg0d4QEyUgCXqIJfMQ3">
@@ -107,7 +107,7 @@
         <td>2017-08-29 14:48:05</td>
         <td>0</td>
         <td>
-          <a href="http://localhost/ssj/public/index.php/admin/article/20/edit">编 辑</a> |
+          <a  [routerLink]="['./edit', 5]">编 辑</a> |
           <a onclick="del(20);">删 除</a>
           <form id="delete-form-20" action="http://localhost/ssj/public/index.php/admin/article/20" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="VbYjsF6MnhEmgsdZYg6YVVg0d4QEyUgCXqIJfMQ3">
