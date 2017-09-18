@@ -1,12 +1,12 @@
 
 <div nz-col [nzSpan]="8">
-    <span>客服：{{phoneNumber}}</span>
-  </div>
-  <div nz-col [nzSpan]="8" [nzPush]="8" class='tx-right login-r'>
-    <a [routerLink]="['/companyAdmin']">个人中心</a>
-    <a (click)="showModalForLoginComponent()" href="javascript:;">
-      <span>登录</span>
-    </a>
-    |
-    <a (click)="showModalForRegistComponent()" href="javascript:;">注册</a>
-  </div>
+  <span>客服：{{phoneNumber}}</span>
+</div>
+<div nz-col [nzSpan]="8" [nzPush]="8" class='tx-right login-r'>
+  <a [routerLink]="['/companyAdmin']">个人中心</a>
+  <a (click)="showModalForLoginComponent()" href="javascript:;">
+    <span>登录</span>
+  </a>
+  |
+  <a (click)="showModalForRegistComponent()" href="javascript:;">注册</a>
+</div>

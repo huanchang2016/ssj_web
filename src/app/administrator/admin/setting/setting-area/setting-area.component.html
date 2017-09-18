@@ -10,14 +10,14 @@
     <div class="mb10">
       显示
       <label for="">
-              <select id="per_page" name="per_page" class="form-control">
-                  <option value="15" >15</option>
-                  <option value="30" >30</option>
-                  <option value="50" >50</option>
-                  <option value="100" >100</option>
-              </select>
-          </label> 条
-      <a id="new" href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create" class="btn btn-info ml5">添加一级分类</a>
+          <select id="per_page" name="per_page" class="form-control">
+              <option value="15" >15</option>
+              <option value="30" >30</option>
+              <option value="50" >50</option>
+              <option value="100" >100</option>
+          </select>
+      </label> 条
+      <a id="new" [routerLink]="['./edit', 'create']" class="btn btn-info ml5">添加一级分类</a>
     </div>
     <table class="table table-bordered bordered table-striped table-condensed datatable">
       <thead>
@@ -35,9 +35,9 @@
         <td>1</td>
         <td>2017-09-04 09:32:09</td>
         <td>
-          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/1">分类管理</a> |
+          <a href="javascript:;">分类管理</a> |
           <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/1">添加子类</a> |
-          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/1/edit">编 辑</a> |
+          <a [routerLink]="['./edit', 20]">编 辑</a> |
           <a onclick="del(1);">删 除</a>
           <form id="delete-form-1" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/1" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
@@ -51,9 +51,9 @@
         <td>1</td>
         <td>2017-09-04 09:32:09</td>
         <td>
-          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/21">分类管理</a> |
-          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/21">添加子类</a> |
-          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/21/edit">编 辑</a> |
+          <a href="javascript:;">分类管理</a> |
+          <a href="javascript:;">添加子类</a> |
+          <a [routerLink]="['./edit', 21]">编 辑</a> |
           <a onclick="del(21);">删 除</a>
           <form id="delete-form-21" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/21" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
@@ -69,7 +69,7 @@
         <td>
           <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/41">分类管理</a> |
           <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/41">添加子类</a> |
-          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/41/edit">编 辑</a> |
+          <a [routerLink]="['./edit', 41]">编 辑</a> |
           <a onclick="del(41);">删 除</a>
           <form id="delete-form-41" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/41" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
@@ -85,7 +85,7 @@
         <td>
           <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/225">分类管理</a> |
           <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/225">添加子类</a> |
-          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/225/edit">编 辑</a> |
+          <a [routerLink]="['./edit', 225]">编 辑</a> |
           <a onclick="del(225);">删 除</a>
           <form id="delete-form-225" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/225" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
@@ -101,7 +101,7 @@
         <td>
           <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/356">分类管理</a> |
           <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/356">添加子类</a> |
-          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/356/edit">编 辑</a> |
+          <a [routerLink]="['./edit', 356]">编 辑</a> |
           <a onclick="del(356);">删 除</a>
           <form id="delete-form-356" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/356" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
@@ -117,7 +117,7 @@
         <td>
           <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/470">分类管理</a> |
           <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/470">添加子类</a> |
-          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/470/edit">编 辑</a> |
+          <a [routerLink]="['./edit', 470]">编 辑</a> |
           <a onclick="del(470);">删 除</a>
           <form id="delete-form-470" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/470" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
@@ -133,7 +133,7 @@
         <td>
           <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/601">分类管理</a> |
           <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/601">添加子类</a> |
-          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/601/edit">编 辑</a> |
+          <a [routerLink]="['./edit', 601]">编 辑</a> |
           <a onclick="del(601);">删 除</a>
           <form id="delete-form-601" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/601" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
@@ -179,9 +179,9 @@
         <td>1</td>
         <td>2017-09-04 09:32:10</td>
         <td>
-          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/862">分类管理</a> |
-          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/create_child/862">添加子类</a> |
-          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_area/862/edit">编 辑</a> |
+          <a href="javascript:;">分类管理</a> |
+          <a href="javascript:;">添加子类</a> |
+          <a [routerLink]="['./edit', 10]">编 辑</a> |
           <a onclick="del(862);">删 除</a>
           <form id="delete-form-862" action="http://localhost/ssj/public/index.php/admin/admin_setting_area/862" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">

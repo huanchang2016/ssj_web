@@ -1,0 +1,90 @@
+<div class=panel>
+  <div class="panel-heading border">
+    <ol class="breadcrumb mb0 no-padding">
+      <li><a href=javascript:;>控制台</a></li>
+      <li><a href=javascript:;>系统设置</a></li>
+      <li><a href="http://localhost/ssj/public/index.php/admin/admin_setting_member">会员类别</a></li>
+      <li class=active>教育程度</li>
+    </ol>
+  </div>
+  <div class=panel-body>
+    <div class="mb10">
+      <a id="new" [routerLink]="['./edit', 'add']" class="btn btn-info ml5">添加教育程度类别</a>
+    </div>
+    <table class="table table-bordered bordered table-striped table-condensed datatable">
+      <thead>
+        <tr>
+          <th>编号</th>
+          <th>名称</th>
+          <th>排序</th>
+          <th>创建时间</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>3</td>
+        <td>大专</td>
+        <td>1</td>
+        <td>2017-09-04 14:20:28</td>
+        <td>
+          <a [routerLink]="['./edit', 1]">编 辑</a> |
+          <a onclick="del(3);">删 除</a>
+          <form id="delete-form-3" action="http://localhost/ssj/public/index.php/admin/admin_setting_member_education/3" method="POST"
+            style="display: none;">
+            <input type="hidden" name="_token" value="lLEK3cIjkIFnBuR1skoBSW4rkzZjOlYyLJiHTXYL">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>本科</td>
+        <td>2</td>
+        <td>2017-09-04 14:20:22</td>
+        <td>
+          <a [routerLink]="['./edit', 2]">编 辑</a> |
+          <a onclick="del(2);">删 除</a>
+          <form id="delete-form-2" action="http://localhost/ssj/public/index.php/admin/admin_setting_member_education/2" method="POST"
+            style="display: none;">
+            <input type="hidden" name="_token" value="lLEK3cIjkIFnBuR1skoBSW4rkzZjOlYyLJiHTXYL">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>博士</td>
+        <td>3</td>
+        <td>2017-09-04 14:20:15</td>
+        <td>
+          <a [routerLink]="['./edit', 3]">编 辑</a> |
+          <a onclick="del(1);">删 除</a>
+          <form id="delete-form-1" action="http://localhost/ssj/public/index.php/admin/admin_setting_member_education/1" method="POST"
+            style="display: none;">
+            <input type="hidden" name="_token" value="lLEK3cIjkIFnBuR1skoBSW4rkzZjOlYyLJiHTXYL">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>硕士</td>
+        <td>4</td>
+        <td>2017-09-04 14:20:35</td>
+        <td>
+          <a [routerLink]="['./edit', 4]">编 辑</a> |
+          <a onclick="del(4);">删 除</a>
+          <form id="delete-form-4" action="http://localhost/ssj/public/index.php/admin/admin_setting_member_education/4" method="POST"
+            style="display: none;">
+            <input type="hidden" name="_token" value="lLEK3cIjkIFnBuR1skoBSW4rkzZjOlYyLJiHTXYL">
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </td>
+      </tr>
+    </table>
+    <div>
+
+    </div>
+
+  </div>
+</div>

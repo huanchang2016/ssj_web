@@ -68,10 +68,10 @@ import { TopComponent } from './modules/top/top.component';
 import { AdministratorComponent } from './administrator/administrator.component';
 import { AdminLoginComponent } from './administrator/login/login.component';
 import { AdminDashComponent } from './administrator/dash/dash.component';
-import { ArticleComponent } from './administrator/admin/news/article/article.component';
 import { ArticleCategoriesComponent } from './administrator/admin/news/article-categories/article-categories.component';
-import { ArticleClassEditComponent } from './administrator/admin/news/article-categories/article-class-edit/article-edit.component';
-import { ArticleEditComponent } from './administrator/admin/news/article/article-edit/article-edit.component';
+import { ArticleCategoriesEditComponent } from './administrator/admin/news/article-categories/article-categories-edit/article-categories-edit.component';
+import { ArticleComponent } from './administrator/admin/news/article/article.component';
+import { AritcleEditComponent } from './administrator/admin/news/article/aritcle-edit/aritcle-edit.component';
 import { AdminNavbarComponent } from './administrator/admin/admin-navbar/admin-navbar.component';
 import { AdminHeaderComponent } from './administrator/admin/admin-header/admin-header.component';
 import { SettingIndustryComponent } from './administrator/admin/setting/setting-industry/setting-industry.component';
@@ -81,6 +81,35 @@ import { SettingMemberComponent } from './administrator/admin/setting/setting-me
 import { AdminUserComponent } from './administrator/admin/manage/admin-user/admin-user.component';
 import { AdminUserRoleComponent } from './administrator/admin/manage/admin-user-role/admin-user-role.component';
 import { AdminUserPermissionComponent } from './administrator/admin/manage/admin-user-permission/admin-user-permission.component';
+import { SettingIndustryEditComponent } from './administrator/admin/setting/setting-industry/setting-industry-edit/setting-industry-edit.component';
+import { SettingAreaEditComponent } from './administrator/admin/setting/setting-area/setting-area-edit/setting-area-edit.component';
+import { SettingJobEditComponent } from './administrator/admin/setting/setting-job/setting-job-edit/setting-job-edit.component';
+import { MemberSexEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-sex-edit/member-sex-edit.component';
+import { MemberSexAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-sex-edit/member-sex-add/member-sex-add.component';
+import { MemberMarriageEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-marriage-edit/member-marriage-edit.component';
+import { MemberMarriageAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-marriage-edit/member-marriage-add/member-marriage-add.component';
+import { MemberEduEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-edu-edit/member-edu-edit.component';
+import { MemberEduAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-edu-edit/member-edu-add/member-edu-add.component';
+import { MemberExpEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-exp-edit/member-exp-edit.component';
+import { MemberExpAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-exp-edit/member-exp-add/member-exp-add.component';
+import { MemberSalaryEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-salary-edit/member-salary-edit.component';
+import { MemberSalaryAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-salary-edit/member-salary-add/member-salary-add.component';
+import { MemberJobNatureEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-job-nature-edit/member-job-nature-edit.component';
+import { MemberJobNatureAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-job-nature-edit/member-job-nature-add/member-job-nature-add.component';
+import { MemberJobstatusEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-jobstatus-edit/member-jobstatus-edit.component';
+import { MemberJobstatusAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-jobstatus-edit/member-jobstatus-add/member-jobstatus-add.component';
+import { MemberArrivalEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-arrival-edit/member-arrival-edit.component';
+import { MemberArrivalAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-arrival-edit/member-arrival-add/member-arrival-add.component';
+import { MemberComstatusEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-comstatus-edit/member-comstatus-edit.component';
+import { MemberComstatusAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-comstatus-edit/member-comstatus-add/member-comstatus-add.component';
+import { MemberComscaleEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-comscale-edit/member-comscale-edit.component';
+import { MemberComscaleAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-comscale-edit/member-comscale-add/member-comscale-add.component';
+import { MemberJobnumberEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-jobnumber-edit/member-jobnumber-edit.component';
+import { MemberJobnumberAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-jobnumber-edit/member-jobnumber-add/member-jobnumber-add.component';
+import { MemberLangEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-lang-edit/member-lang-edit.component';
+import { MemberLangAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-lang-edit/member-lang-add/member-lang-add.component';
+import { MemberWelfareEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-welfare-edit/member-welfare-edit.component';
+import { MemberWelfareAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-welfare-edit/member-welfare-add/member-welfare-add.component';
 
 @NgModule({
   declarations: [
@@ -92,8 +121,7 @@ import { AdminUserPermissionComponent } from './administrator/admin/manage/admin
     ChangePwdComponent,PwdManagerComponent,UserHomePageComponent,UserInfoComponent,UserPwdManagerComponent,CreateResumeComponent,AmendResumeComponent,DatePickerComponent,FooterComponent,JobsSearchComponent,
     ChoeseMenuComponent,ZphComponent,SearchZphComponent,ResumeManageComponent,AppliedJobsComponent,TopComponent,
     AdministratorComponent,//后台管理系统
-    AdminLoginComponent, AdminDashComponent, ArticleComponent, ArticleCategoriesComponent, ArticleClassEditComponent,
-    ArticleEditComponent,
+    AdminLoginComponent, AdminDashComponent,
     AdminNavbarComponent,
     AdminHeaderComponent,
     SettingIndustryComponent,
@@ -102,7 +130,40 @@ import { AdminUserPermissionComponent } from './administrator/admin/manage/admin
     SettingMemberComponent,
     AdminUserComponent,
     AdminUserRoleComponent,
-    AdminUserPermissionComponent
+    AdminUserPermissionComponent,
+    ArticleCategoriesComponent,
+    ArticleCategoriesEditComponent,
+    ArticleComponent,
+    AritcleEditComponent,
+    SettingIndustryEditComponent,
+    SettingAreaEditComponent,
+    SettingJobEditComponent,
+    MemberSexEditComponent,
+    MemberSexAddComponent,
+    MemberMarriageEditComponent,
+    MemberMarriageAddComponent,
+    MemberEduEditComponent,
+    MemberEduAddComponent,
+    MemberExpEditComponent,
+    MemberExpAddComponent,
+    MemberSalaryEditComponent,
+    MemberSalaryAddComponent,
+    MemberJobNatureEditComponent,
+    MemberJobNatureAddComponent,
+    MemberJobstatusEditComponent,
+    MemberJobstatusAddComponent,
+    MemberArrivalEditComponent,
+    MemberArrivalAddComponent,
+    MemberComstatusEditComponent,
+    MemberComstatusAddComponent,
+    MemberComscaleEditComponent,
+    MemberComscaleAddComponent,
+    MemberJobnumberEditComponent,
+    MemberJobnumberAddComponent,
+    MemberLangEditComponent,
+    MemberLangAddComponent,
+    MemberWelfareEditComponent,
+    MemberWelfareAddComponent
   ],
   imports: [
     BrowserModule,

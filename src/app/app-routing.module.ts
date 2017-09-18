@@ -42,9 +42,10 @@ import { AdministratorComponent } from './administrator/administrator.component'
 import { AdminLoginComponent } from './administrator/login/login.component';
 import { AdminDashComponent } from './administrator/dash/dash.component';
 import { ArticleCategoriesComponent } from './administrator/admin/news/article-categories/article-categories.component';
+import { ArticleCategoriesEditComponent } from './administrator/admin/news/article-categories/article-categories-edit/article-categories-edit.component';
 import { ArticleComponent } from './administrator/admin/news/article/article.component';
-import { ArticleClassEditComponent } from './administrator/admin/news/article-categories/article-class-edit/article-edit.component';//文章分类编辑
-import { ArticleEditComponent } from './administrator/admin/news/article/article-edit/article-edit.component';
+import { AritcleEditComponent } from './administrator/admin/news/article/aritcle-edit/aritcle-edit.component';
+
 import { SettingIndustryComponent } from './administrator/admin/setting/setting-industry/setting-industry.component';
 import { SettingAreaComponent } from './administrator/admin/setting/setting-area/setting-area.component';
 import { SettingJobComponent } from './administrator/admin/setting/setting-job/setting-job.component';
@@ -52,6 +53,36 @@ import { SettingMemberComponent } from './administrator/admin/setting/setting-me
 import { AdminUserComponent } from './administrator/admin/manage/admin-user/admin-user.component';
 import { AdminUserRoleComponent } from './administrator/admin/manage/admin-user-role/admin-user-role.component';
 import { AdminUserPermissionComponent } from './administrator/admin/manage/admin-user-permission/admin-user-permission.component';
+import { SettingIndustryEditComponent } from './administrator/admin/setting/setting-industry/setting-industry-edit/setting-industry-edit.component';
+import { SettingAreaEditComponent } from './administrator/admin/setting/setting-area/setting-area-edit/setting-area-edit.component';
+import { SettingJobEditComponent } from './administrator/admin/setting/setting-job/setting-job-edit/setting-job-edit.component';
+// 会员类别管理
+import { MemberSexEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-sex-edit/member-sex-edit.component';
+import { MemberSexAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-sex-edit/member-sex-add/member-sex-add.component';
+import { MemberMarriageEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-marriage-edit/member-marriage-edit.component';
+import { MemberMarriageAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-marriage-edit/member-marriage-add/member-marriage-add.component';
+import { MemberEduEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-edu-edit/member-edu-edit.component';
+import { MemberEduAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-edu-edit/member-edu-add/member-edu-add.component';
+import { MemberExpEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-exp-edit/member-exp-edit.component';
+import { MemberExpAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-exp-edit/member-exp-add/member-exp-add.component';
+import { MemberSalaryEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-salary-edit/member-salary-edit.component';
+import { MemberSalaryAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-salary-edit/member-salary-add/member-salary-add.component';
+import { MemberJobNatureEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-job-nature-edit/member-job-nature-edit.component';
+import { MemberJobNatureAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-job-nature-edit/member-job-nature-add/member-job-nature-add.component';
+import { MemberJobstatusEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-jobstatus-edit/member-jobstatus-edit.component';
+import { MemberJobstatusAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-jobstatus-edit/member-jobstatus-add/member-jobstatus-add.component';
+import { MemberArrivalEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-arrival-edit/member-arrival-edit.component';
+import { MemberArrivalAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-arrival-edit/member-arrival-add/member-arrival-add.component';
+import { MemberComstatusEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-comstatus-edit/member-comstatus-edit.component';
+import { MemberComstatusAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-comstatus-edit/member-comstatus-add/member-comstatus-add.component';
+import { MemberComscaleEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-comscale-edit/member-comscale-edit.component';
+import { MemberComscaleAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-comscale-edit/member-comscale-add/member-comscale-add.component';
+import { MemberJobnumberEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-jobnumber-edit/member-jobnumber-edit.component';
+import { MemberJobnumberAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-jobnumber-edit/member-jobnumber-add/member-jobnumber-add.component';
+import { MemberLangEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-lang-edit/member-lang-edit.component';
+import { MemberLangAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-lang-edit/member-lang-add/member-lang-add.component';
+import { MemberWelfareEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-welfare-edit/member-welfare-edit.component';
+import { MemberWelfareAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-welfare-edit/member-welfare-add/member-welfare-add.component';
 
 
 
@@ -66,14 +97,47 @@ const routes: Routes = [
       { path: 'login', component: AdminLoginComponent, data: {title: '管理员登录-后台管理系统'} },
       { path: 'dash', component: AdminDashComponent, data: {title: '管理员登录-后台管理系统'},
           children: [
-            { path: 'article_categories', component: ArticleCategoriesComponent, data: {title: '新闻分类管理-后台管理系统'} },
-            { path: 'article_categories/edit/:id', component: ArticleClassEditComponent, data: {title: '新闻分类编辑-后台管理系统'} },
+            { path: 'categories', component: ArticleCategoriesComponent, data: {title: '新闻分类管理-后台管理系统'} },
+            { path: 'categories/edit/:id', component: ArticleCategoriesEditComponent, data: {title: '新闻分类编辑-后台管理系统'} },
             { path: 'article', component: ArticleComponent, data: {title: '新闻管理-后台管理系统'} },
-            { path: 'article/edit/:id', component: ArticleEditComponent, data: {title: '新闻编辑-后台管理系统'} },
+            { path: 'article/edit/:id', component: AritcleEditComponent, data: {title: '新闻编辑-后台管理系统'} },
+            // 系统设置
             { path: 'industry', component: SettingIndustryComponent, data: {title: '行业设置-系统设置-后台管理系统'} },
             { path: 'area', component: SettingAreaComponent, data: {title: '城市类别-系统设置-后台管理系统'} },
             { path: 'job', component: SettingJobComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
             { path: 'member', component: SettingMemberComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'industry/edit/:id', component: SettingIndustryEditComponent, data: {title: '行业设置-系统设置-后台管理系统'} },
+            { path: 'area/edit/:id', component: SettingAreaEditComponent, data: {title: '城市类别-系统设置-后台管理系统'} },
+            { path: 'job/edit/:id', component: SettingJobEditComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            // 系统设置-类别管理
+            { path: 'member_sex', component: MemberSexEditComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_sex/edit/:id', component: MemberSexAddComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_married', component: MemberMarriageEditComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_married/edit/:id', component: MemberMarriageAddComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_edu', component: MemberEduEditComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_edu/edit/:id', component: MemberEduAddComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_exp', component: MemberExpEditComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_exp/edit/:id', component: MemberExpAddComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_salary', component: MemberSalaryEditComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_salary/edit/:id', component: MemberSalaryAddComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_job_nature', component: MemberJobNatureEditComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_job_nature/edit/:id', component: MemberJobNatureAddComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_job_status', component: MemberJobstatusEditComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_job_status/edit/:id', component: MemberJobstatusAddComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_arrival', component: MemberArrivalEditComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_arrival', component: MemberArrivalAddComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_com_status', component: MemberComstatusEditComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_com_status/edit/:id', component: MemberComstatusAddComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_com_scale', component: MemberComscaleEditComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_com_scale/edit/:id', component: MemberComscaleAddComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_job_number', component: MemberJobnumberEditComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_job_number/edit/:id', component: MemberJobnumberAddComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_lang', component: MemberLangEditComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_lang/edit/:id', component: MemberLangAddComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_welfare', component: MemberWelfareEditComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            { path: 'member_welfare/edit/:id', component: MemberWelfareAddComponent, data: {title: '职位类别-系统设置-后台管理系统'} },
+            //系统设置===》类别设置
+            // 管理员
             { path: 'user', component: AdminUserComponent, data: {title: '用户列表-系统设置-后台管理系统'} },
             { path: 'user_role', component: AdminUserRoleComponent, data: {title: '用户组-系统设置-后台管理系统'} },
             { path: 'user_permission', component: AdminUserPermissionComponent, data: {title: '权限-系统设置-后台管理系统'} }

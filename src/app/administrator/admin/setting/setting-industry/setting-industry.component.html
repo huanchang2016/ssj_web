@@ -17,7 +17,7 @@
                   <option value="100" >100</option>
               </select>
           </label> 条
-      <a id="new" href="http://localhost/ssj/public/index.php/admin/admin_setting_industry/create" class="btn btn-info ml5">添加行业类别</a>
+      <a id="new" [routerLink]="['./edit', 'create']" class="btn btn-info ml5">添加行业类别</a>
     </div>
     <table class="table table-bordered bordered table-striped table-condensed datatable">
       <thead>
@@ -35,7 +35,7 @@
         <td>1</td>
         <td>2017-09-01 14:02:14</td>
         <td>
-          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_industry/4/edit">编 辑</a> |
+          <a [routerLink]="['./edit', 1]">编 辑</a> |
           <a onclick="del(4);">删 除</a>
           <form id="delete-form-4" action="http://localhost/ssj/public/index.php/admin/admin_setting_industry/4" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
@@ -49,7 +49,7 @@
         <td>10</td>
         <td>2017-09-01 14:00:56</td>
         <td>
-          <a href="http://localhost/ssj/public/index.php/admin/admin_setting_industry/2/edit">编 辑</a> |
+          <a [routerLink]="['./edit', 2]">编 辑</a> |
           <a onclick="del(2);">删 除</a>
           <form id="delete-form-2" action="http://localhost/ssj/public/index.php/admin/admin_setting_industry/2" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
