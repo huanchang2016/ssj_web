@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import { CommonModule }     from '@angular/common';
 // 文件上传
 import { FileUploadModule } from 'ng2-file-upload';
+//富文本编辑器
+import { CKEditorModule } from 'ng2-ckeditor';
 // 文件上传
 import { AppRoutingModule } from './app-routing.module';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
@@ -110,6 +112,9 @@ import { MemberLangEditComponent } from './administrator/admin/setting/setting-m
 import { MemberLangAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-lang-edit/member-lang-add/member-lang-add.component';
 import { MemberWelfareEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-welfare-edit/member-welfare-edit.component';
 import { MemberWelfareAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-welfare-edit/member-welfare-add/member-welfare-add.component';
+import { AdminUserAddComponent } from './administrator/admin/manage/admin-user/admin-user-add/admin-user-add.component';
+import { AdminPermissionAddComponent } from './administrator/admin/manage/admin-user-permission/admin-permission-add/admin-permission-add.component';
+import { AdminRoleAddComponent } from './administrator/admin/manage/admin-user-role/admin-role-add/admin-role-add.component';
 
 @NgModule({
   declarations: [
@@ -163,7 +168,10 @@ import { MemberWelfareAddComponent } from './administrator/admin/setting/setting
     MemberLangEditComponent,
     MemberLangAddComponent,
     MemberWelfareEditComponent,
-    MemberWelfareAddComponent
+    MemberWelfareAddComponent,
+    AdminUserAddComponent,
+    AdminPermissionAddComponent,
+    AdminRoleAddComponent
   ],
   imports: [
     BrowserModule,
@@ -172,6 +180,7 @@ import { MemberWelfareAddComponent } from './administrator/admin/setting/setting
     HttpModule,
     CommonModule,
     FileUploadModule,
+    CKEditorModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     NgZorroAntdModule.forRoot()

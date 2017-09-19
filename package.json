@@ -25,6 +25,7 @@
     "css-loader": "^0.28.7",
     "jquery": "^3.2.1",
     "ng-zorro-antd": "^0.5.0-rc.0",
+    "ng2-ckeditor": "^1.1.9",
     "ng2-file-upload": "^1.2.1",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"

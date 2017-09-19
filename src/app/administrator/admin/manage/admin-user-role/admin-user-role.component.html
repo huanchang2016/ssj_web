@@ -17,7 +17,7 @@
                   <option value="100" >100</option>
               </select>
           </label> 条
-      <a id="new" href="http://localhost/ssj/public/index.php/admin/admin_user_role/create" class="btn btn-info ml5">添加用户组</a>
+      <a id="new"  [routerLink]="['./create', 'add']" class="btn btn-info ml5">添加用户组</a>
     </div>
     <table class="table table-bordered bordered table-striped table-condensed datatable">
       <thead>
@@ -37,7 +37,7 @@
         <td>超级管理员</td>
         <td>2017-09-08 15:48:31</td>
         <td>
-          <a href="http://localhost/ssj/public/index.php/admin/admin_user_role/14/edit">编 辑</a> |
+          <a  [routerLink]="['./create', 1]" >编 辑</a> |
           <a onclick="del(14);">删 除</a>
           <form id="delete-form-14" action="http://localhost/ssj/public/index.php/admin/admin_user_role/14" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
@@ -52,7 +52,7 @@
         <td>测试</td>
         <td>2017-09-08 15:54:08</td>
         <td>
-          <a href="http://localhost/ssj/public/index.php/admin/admin_user_role/16/edit">编 辑</a> |
+          <a  [routerLink]="['./create', 2]" >编 辑</a> |
           <a onclick="del(16);">删 除</a>
           <form id="delete-form-16" action="http://localhost/ssj/public/index.php/admin/admin_user_role/16" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">

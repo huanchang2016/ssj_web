@@ -1,0 +1,71 @@
+<div class="panel mb25">
+  <div class="panel-heading border"> 创建用户组</div>
+  <div class=panel-body>
+    <div class="row no-margin">
+      <div class=col-lg-12>
+        <form method="post" [formGroup]="permissionAddForm" (submit)="_submitPerAddForm()" class="form-horizontal bordered-group"
+          role=form>
+          <div class=form-group><label class="col-sm-2 control-label">标识</label>
+            <div class=col-sm-10>
+              <input name="name" formControlName="name" value="" placeholder="请输入用户组标识" class=form-control>
+            </div>
+          </div>
+          <div class=form-group><label class="col-sm-2 control-label">名称</label>
+            <div class=col-sm-10>
+              <input name="display_name" formControlName="display_name" value="" placeholder="请输入用户组名称" class=form-control>
+            </div>
+          </div>
+          <div class=form-group><label class="col-sm-2 control-label">描述</label>
+            <div class=col-sm-10>
+              <input name="description" formControlName="description" value="" placeholder="请输入用户组描述" class=form-control>
+            </div>
+          </div>
+          <div class=form-group><label class="col-sm-2 control-label">权限</label>
+            <div class=col-sm-10>
+              <label style="margin-left: 10px;">
+                    <input  formControlName="permission1"
+                            name="permission[]" type="checkbox" value="1">
+                    分类列表
+                </label>
+              <label style="margin-left: 10px;">
+                  <input  formControlName="permission2"
+                          name="permission[]" type="checkbox" value="3">
+                  article_categories.create
+              </label>
+              <label style="margin-left: 10px;">
+                  <input  formControlName="permission3"
+                          name="permission[]" type="checkbox" value="4">
+                  article_categories.edit
+              </label>
+              <hr>
+              <label style="margin-left: 10px;">
+                  <input  formControlName="permission4"
+                          name="permission[]" type="checkbox" value="5">
+                  sdf
+              </label>
+              <label style="margin-left: 10px;">
+                  <input  formControlName="permission5"
+                          name="permission[]" type="checkbox" value="6">
+                  sd1f
+              </label>
+              <hr>
+              <label style="margin-left: 10px;">
+                  <input  formControlName="permission6"
+                          name="permission[]" type="checkbox" value="9">
+                  ffsdf
+              </label>
+            </div>
+          </div>
+          <div class=form-group><label></label>
+            <div>
+              <input type="submit" class="btn btn-primary mr10" value="提交">
+              <input type="reset" class="btn btn-default" value="重置">
+            </div>
+          </div>
+
+          <input type="hidden" name="_token" value="Eq8fHdLHmIccmRBjL0BJATe0KzgKxlpIp3rjEBNr">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

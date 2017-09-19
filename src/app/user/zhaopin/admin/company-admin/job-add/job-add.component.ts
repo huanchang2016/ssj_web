@@ -35,7 +35,11 @@ export class JobAddComponent implements OnInit {
     { label: '休假制度', value: '休假制度' },
     { label: '法定节假日', value: '法定节假日' }
   ];
-
+  // 编辑器
+  config = {
+    filebrowserBrowseUrl: '&&&&&',  
+    filebrowserUploadUrl: '&&&'
+  };
 
   constructor(
     private fb: FormBuilder

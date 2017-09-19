@@ -83,6 +83,10 @@ import { MemberLangEditComponent } from './administrator/admin/setting/setting-m
 import { MemberLangAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-lang-edit/member-lang-add/member-lang-add.component';
 import { MemberWelfareEditComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-welfare-edit/member-welfare-edit.component';
 import { MemberWelfareAddComponent } from './administrator/admin/setting/setting-member/setting-member-edit/member-welfare-edit/member-welfare-add/member-welfare-add.component';
+// 用户权限管理
+import { AdminUserAddComponent } from './administrator/admin/manage/admin-user/admin-user-add/admin-user-add.component';
+import { AdminPermissionAddComponent } from './administrator/admin/manage/admin-user-permission/admin-permission-add/admin-permission-add.component';
+import { AdminRoleAddComponent } from './administrator/admin/manage/admin-user-role/admin-role-add/admin-role-add.component';
 
 
 
@@ -139,8 +143,11 @@ const routes: Routes = [
             //系统设置===》类别设置
             // 管理员
             { path: 'user', component: AdminUserComponent, data: {title: '用户列表-系统设置-后台管理系统'} },
+            { path: 'user/create/:id', component: AdminUserAddComponent, data: {title: '用户列表-系统设置-后台管理系统'} },
             { path: 'user_role', component: AdminUserRoleComponent, data: {title: '用户组-系统设置-后台管理系统'} },
-            { path: 'user_permission', component: AdminUserPermissionComponent, data: {title: '权限-系统设置-后台管理系统'} }
+            { path: 'user_role/create/:id', component: AdminRoleAddComponent, data: {title: '用户组-系统设置-后台管理系统'} },
+            { path: 'user_permission', component: AdminUserPermissionComponent, data: {title: '权限-系统设置-后台管理系统'} },
+            { path: 'user_permission/create/:id', component: AdminPermissionAddComponent, data: {title: '权限-系统设置-后台管理系统'} }
           ]
       },
     ]

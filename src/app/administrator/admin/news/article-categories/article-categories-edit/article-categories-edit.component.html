@@ -3,27 +3,27 @@
   <div class=panel-body>
     <div class="row no-margin">
       <div class=col-lg-12>
-        <form method="post" method="post" action="http://localhost/ssj/public/index.php/admin/article_categories/1" class="form-horizontal bordered-group"
+        <form method="post" [formGroup]="articleCateForm" (submit)="_submitForm()" class="form-horizontal bordered-group"
           role=form>
           <div class=form-group><label class="col-sm-2 control-label">名称</label>
             <div class=col-sm-10>
-              <input name="name" value="足球" placeholder="请输入分类名称" class=form-control>
+              <input name="name" formControlName="name" value="足球" placeholder="请输入分类名称" class=form-control>
             </div>
           </div>
           <div class=form-group><label class="col-sm-2 control-label">描述</label>
             <div class=col-sm-10>
-              <input name="describe" value="是" placeholder="请输入分类描述" class=form-control>
+              <input name="describe" formControlName="describe" value="是" placeholder="请输入分类描述" class=form-control>
             </div>
           </div>
           <div class=form-group><label class="col-sm-2 control-label">上级分类</label>
             <div class=col-sm-10>
-              <select name="parent_id" class=form-control>
+              <select name="parent_id" formControlName="parent_id" class=form-control>
                 <option value="0" selected>顶级分类</option>
                 <option value="1" >足球</option>
                 <option value="2" >篮球</option>
                 <option value="3" >排球</option>
                 <option value="5" >ass</option>
-                <option value="6" >ssss</option>
+                <option value="6" >ssss</option> 
                 <option value="7" >as</option>
                 <option value="9" >aas</option>
                 <option value="10" >ffs</option>
@@ -33,7 +33,7 @@
           </div>
           <div class=form-group><label class="col-sm-2 control-label">排序</label>
             <div class=col-sm-10>
-              <input name="order" class="form-control input-rounded" value="1">
+              <input name="order" formControlName="order" class="form-control input-rounded" value="1">
               <p class=help-block>数字越小越靠前</p>
             </div>
           </div>

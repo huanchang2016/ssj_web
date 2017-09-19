@@ -1,17 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.css']
+  styleUrls: [
+    './article.component.css',
+    './../../../../../assets/administrator/vendor/bootstrap-daterangepicker/daterangepicker-bs3.css',
+    './../../../../../assets/administrator/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css',
+    './../../../../../assets/administrator/vendor/bootstrap-timepicker/css/bootstrap-timepicker.min.css'
+  ]
 })
 export class ArticleComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
-   
-    // 日历插件不可用， 不然路由会出现暂时不能解决的bug
+    // 有不可修复的bug存在。
     // $('#drp').daterangepicker({
     //     format: 'YYYY-MM-DD',
     //     startDate: '2017-01-01',
@@ -26,22 +31,12 @@ export class ArticleComponent implements OnInit {
     //         monthNames: ['一月', '二月', '三月', '四月', '五月', '六月',
     //             '七月', '八月', '九月', '十月', '十一月', '十二月'],
     //         firstDay: 1
-    //     }
+    //     },
+    //     opens: 'left'
     // });
-    // var createAt = "";
+    
 
-    // if (createAt != '') {
-    //     $('#drp').data('daterangepicker').setStartDate(createAt.substring(0, 10));
-    //     $('#drp').data('daterangepicker').setEndDate(createAt.substring(13));
-    // }
-
+  }
   
-  }
-  del(id) {
-      var msg = "您真的确定要删除吗？";
-      if (confirm(msg) == true) {
-          // document.getElementById('delete-form-' + id).submit();
-      }
-  }
 
 }

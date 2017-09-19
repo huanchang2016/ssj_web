@@ -17,7 +17,7 @@
                   <option value="100" >100</option>
               </select>
           </label> 条
-      <a id="new" href="http://localhost/ssj/public/index.php/admin/admin_user_permission/create" class="btn btn-info ml5">添 加 权 限</a>
+      <a id="new"  [routerLink]="['./create', 'add']" class="btn btn-info ml5">添 加 权 限</a>
     </div>
     <table class="table table-bordered bordered table-striped table-condensed datatable">
       <thead>
@@ -37,7 +37,7 @@
         <td>文章分类</td>
         <td>2017-08-17 06:01:39</td>
         <td>
-          <a href="http://localhost/ssj/public/index.php/admin/admin_user_permission/1/edit">编 辑</a> |
+          <a  [routerLink]="['./create', 3]">编 辑</a> |
           <a onclick="del(1);">删 除</a>
           <form id="delete-form-1" action="http://localhost/ssj/public/index.php/admin/admin_user_permission/1" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
@@ -52,7 +52,7 @@
         <td>文章分类</td>
         <td>2017-08-17 06:01:39</td>
         <td>
-          <a href="http://localhost/ssj/public/index.php/admin/admin_user_permission/3/edit">编 辑</a> |
+          <a  [routerLink]="['./create', 4]">编 辑</a> |
           <a onclick="del(3);">删 除</a>
           <form id="delete-form-3" action="http://localhost/ssj/public/index.php/admin/admin_user_permission/3" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
@@ -67,7 +67,7 @@
         <td>文章分类</td>
         <td>2017-08-17 06:01:39</td>
         <td>
-          <a href="http://localhost/ssj/public/index.php/admin/admin_user_permission/4/edit">编 辑</a> |
+          <a  [routerLink]="['./create', 5]">编 辑</a> |
           <a onclick="del(4);">删 除</a>
           <form id="delete-form-4" action="http://localhost/ssj/public/index.php/admin/admin_user_permission/4" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
@@ -82,7 +82,7 @@
         <td>测试</td>
         <td>2017-09-08 11:34:11</td>
         <td>
-          <a href="http://localhost/ssj/public/index.php/admin/admin_user_permission/5/edit">编 辑</a> |
+          <a  [routerLink]="['./create', 1]">编 辑</a> |
           <a onclick="del(5);">删 除</a>
           <form id="delete-form-5" action="http://localhost/ssj/public/index.php/admin/admin_user_permission/5" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
@@ -97,7 +97,7 @@
         <td>测试</td>
         <td>2017-09-08 11:34:58</td>
         <td>
-          <a href="http://localhost/ssj/public/index.php/admin/admin_user_permission/6/edit">编 辑</a> |
+          <a  [routerLink]="['./create', 2]">编 辑</a> |
           <a onclick="del(6);">删 除</a>
           <form id="delete-form-6" action="http://localhost/ssj/public/index.php/admin/admin_user_permission/6" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
@@ -112,7 +112,7 @@
         <td>发</td>
         <td>2017-09-08 11:34:58</td>
         <td>
-          <a href="http://localhost/ssj/public/index.php/admin/admin_user_permission/9/edit">编 辑</a> |
+          <a  [routerLink]="['./create', 6]">编 辑</a> |
           <a onclick="del(9);">删 除</a>
           <form id="delete-form-9" action="http://localhost/ssj/public/index.php/admin/admin_user_permission/9" method="POST" style="display: none;">
             <input type="hidden" name="_token" value="ORGvRE7ZgjvVBInlwY6JKbS3deSvPbn1YpmX1nax">
