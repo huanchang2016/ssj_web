@@ -23,7 +23,7 @@
     background: #f1f1f1;
 }
 .list-content:after{ content: "."; display: block; height: 0; visibility: hidden; clear:both;}
-.list-con-box{ width: 33.3%;text-align: center; border-right: 1px solid #efeded;}
+.list-con-box{ width: 33.3%;text-align: center; border-right: 1px solid #efeded;padding-top:20px;}
 .list-con-box:nth-last-child(1){border:0;}
 .list-con-box h4{ font-size: 16px; color:#000;}
 .list-con-box p{ line-height: 50px;line-height: 50px;font-size: 14px;}

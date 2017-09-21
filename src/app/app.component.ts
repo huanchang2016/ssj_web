@@ -3,7 +3,8 @@ import { Router, NavigationEnd, ActivatedRoute } from "@angular/router";
 import { Title }  from '@angular/platform-browser';
 
 // 服务
-import { JobListService } from './user/zhaopin/job-list.service';
+import { JobListService } from './user/zhaopin/service/job-list.service';
+import { InRecruitJoblistService } from './user/zhaopin/service/in-recruit-joblist.service';
 
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
@@ -13,7 +14,7 @@ import 'rxjs/add/operator/mergeMap';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [JobListService]
+  providers: [JobListService, InRecruitJoblistService]
 })
 export class AppComponent implements OnInit {
   constructor(

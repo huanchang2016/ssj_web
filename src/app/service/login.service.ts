@@ -1,5 +1,6 @@
 import { Http, RequestOptions, Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
+import { Router } from "@angular/router";
 import 'rxjs';
 
 @Injectable()
@@ -8,7 +9,8 @@ export class LoginService {
   public headers = new Headers({ 'Content-Type': "application/x-www-form-urlencoded" });
 
   constructor(
-    private http: Http
+    private http: Http,
+    private route: Router
   ) { }
 
   test(opt){
@@ -22,6 +24,10 @@ export class LoginService {
     
     })
 
+  }
+
+  navTo(url){
+    this.route.navigateByUrl(url);
   }
 
 }

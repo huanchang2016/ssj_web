@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
-import { CompanyRecruit } from './job-list/jobs-list';
+import { CompanyRecruit } from './../job-list/jobs-list';
 
 
 @Injectable()

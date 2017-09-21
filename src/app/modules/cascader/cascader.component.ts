@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 
 const options = [{
@@ -36,10 +36,10 @@ const options = [{
   value: '江苏',
   label: '江苏',
   children: [{
-    value: 'Nanjing',
+    value: '南京',
     label: '南京',
     children: [{
-      value: 'Zhong Hua Men',
+      value: '中华门',
       label: '中华门',
       isLeaf: true
     }],
@@ -58,7 +58,9 @@ export class CascaderComponent implements OnInit {
 
   // 省市级联
   _options = options;
-  _value: any[] = null;
+  @Input()
+  DefaultValue: any[];
+  // _value: any[] = ['四川', '成都', '天府新区'];
 
   constructor() { }
 

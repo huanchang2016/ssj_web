@@ -50,5 +50,10 @@ export class LoginComponent implements OnInit {
       this.loginService.test(option);
     }
 
+    navToRegister(){
+      $('nz-modal').hide();
+      this.loginService.navTo('/register');
+    }
+
 
 }

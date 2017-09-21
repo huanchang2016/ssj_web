@@ -1,0 +1,255 @@
+<form nz-form [formGroup]="jobAddForm" (ngSubmit)="setNewJob()">
+  <div nz-form-item nz-row>
+    <div nz-form-label nz-col class="w100 fl">
+      <label for="jobName" nz-form-item-required>职位名称</label>
+    </div>
+    <div class="w260 fl" nz-form-control nz-col nzHasFeedback [nzValidateStatus]="getFormControl('jobName')">
+      <nz-input [nzSize]="'large'" formControlName="jobName" [nzPlaceHolder]="'职位名称'" [nzId]="'jobName'"></nz-input>
+      <div nz-form-explain *ngIf="getFormControl('jobName').dirty&&getFormControl('jobName').hasError('required')">请填写招聘职位</div>
+    </div>
+  </div>
+  <div nz-form-item nz-row>
+    <div nz-form-label nz-col class="w100 fl">
+      <label nz-form-item-required>职位类别</label>
+    </div>
+    <div class="w260 fl" nz-form-control nz-col nzHasFeedback [nzValidateStatus]="getFormControl('jobClass')">
+      <nz-select formControlName="jobClass" [nzSize]="'large'">
+        <nz-option
+            *ngFor="let jobC of jobClassArr"
+            [nzLabel]="jobC.label"
+            [nzValue]="jobC.value">
+        </nz-option>
+      </nz-select>
+      <div nz-form-explain *ngIf="getFormControl('jobClass').dirty&&getFormControl('jobClass').hasError('required')">请选择职位类别</div>
+    </div>
+  </div>
+  <div nz-form-item nz-row>
+    <div nz-form-label nz-col class="w100 fl">
+      <label for="workAddress" nz-form-item-required>工作地点</label>
+    </div>
+    <div class="w260 fl" nz-form-control nz-col nzHasFeedback [nzValidateStatus]="getFormControl('workAddress')">
+      <cascader [DefaultValue]="dafaultAddress" (companyLocation)="getJobWorkAddress($event)"></cascader>
+      <nz-input [nzSize]="'large'" [(ngModel)]="workAddress" formControlName="workAddress" [nzId]="'workAddress'" style="display:none;"></nz-input>
+      <div nz-form-explain *ngIf="getFormControl('workAddress').dirty&&getFormControl('workAddress').hasError('required')">请选择工作地点</div>
+    </div>
+  </div>
+  <div nz-form-item nz-row>
+    <div nz-form-label nz-col class="w100 fl">
+      <label for="releaseDate" nz-form-item-required>职位过期时间</label>
+    </div>
+    <div class="w260 fl" nz-form-control nz-col nzHasFeedback [nzValidateStatus]="getFormControl('releaseDate')">
+      <nz-datepicker formControlName="releaseDate" [nzPlaceHolder]="'选择职位过期时间'" [nzDisabledDate]="_disabledDate"></nz-datepicker>
+      <div nz-form-explain *ngIf="getFormControl('releaseDate').dirty&&getFormControl('releaseDate').hasError('required')">请选择职位过期时间</div>
+    </div>
+  </div>
+  <div nz-form-item nz-row>
+    <div nz-form-label nz-col class="w100 fl">
+      <label nz-form-item-required>薪资待遇</label>
+    </div>
+    <div class="w260 fl" nz-form-control nz-col nzHasFeedback [nzValidateStatus]="getFormControl('jobSalary')">
+      <nz-select formControlName="jobSalary" [nzSize]="'large'">
+        <nz-option
+          *ngFor="let salary of jobSalaryArr"
+          [nzLabel]="salary.label"
+          [nzValue]="salary.value">
+      </nz-option>
+      </nz-select>
+      <div nz-form-explain *ngIf="getFormControl('jobSalary').dirty&&getFormControl('jobSalary').hasError('required')">薪资待遇</div>
+    </div>
+  </div>
+  <div nz-form-item nz-row>
+    <div nz-form-label nz-col class="w100 fl">
+      <label for="jobDescribe" nz-form-item-required>职位描述</label>
+    </div>
+    <div class="fl ckeditor" nz-form-control nz-col>
+        <ckeditor
+          formControlName="jobDescribe"
+          [config]="config"
+          [readonly]="false"
+          debounce="500">
+      </ckeditor>
+    </div>
+  </div>
+
+  <div nz-form-item nz-row>
+    <div nz-form-label nz-col class="w100 fl">
+      <label nz-form-item-required>从事行业</label>
+    </div>
+    <div class="w200 fl" nz-form-control nz-col nzHasFeedback [nzValidateStatus]="getFormControl('jobIndustry')">
+      <nz-select formControlName="jobIndustry" [nzSize]="'large'">
+        <nz-option
+          *ngFor="let jobI of jobIndustryArr"
+          [nzLabel]="jobI.label" [nzValue]="jobI.value">
+        </nz-option>
+      </nz-select>
+      <div nz-form-explain *ngIf="getFormControl('jobIndustry').dirty&&getFormControl('jobIndustry').hasError('required')">从事行业</div>
+    </div>
+    <!-- 工作性质 -->
+    <div nz-form-label nz-col class="w100 fl ml50">
+      <label nz-form-item-required>工作性质</label>
+    </div>
+    <div class="w200 fl" nz-form-control nz-col nzHasFeedback [nzValidateStatus]="getFormControl('workType')">
+      <nz-select formControlName="workType" [nzSize]="'large'">
+        <nz-option
+            *ngFor="let workT of workTypeArr"
+            [nzLabel]="workT.label"
+            [nzValue]="workT.value">
+        </nz-option>
+      </nz-select>
+      <div nz-form-explain *ngIf="getFormControl('workType').dirty&&getFormControl('workType').hasError('required')">工作性质</div>
+    </div>
+    <!-- 工作性质 -->
+  </div>
+  <div nz-form-item nz-row>
+    <div nz-form-label nz-col class="w100 fl">
+      <label for="personNumber" nz-form-item-required>招聘人数</label>
+    </div>
+    <div class="w200 fl" nz-form-control nz-col nzHasFeedback [nzValidateStatus]="getFormControl('personNumber')">
+      <nz-input [nzSize]="'large'" formControlName="personNumber" [nzPlaceHolder]="'招聘人数'" [nzId]="'personNumber'"></nz-input>
+      <div nz-form-explain *ngIf="getFormControl('personNumber').dirty&&getFormControl('personNumber').hasError('required')">请填写招聘人数</div>
+    </div>
+    <!-- 到岗时间 -->
+    <div nz-form-label nz-col class="w100 fl ml50">
+      <label nz-form-item-required>到岗时间</label>
+    </div>
+    <div class="w200 fl" nz-form-control nz-col nzHasFeedback [nzValidateStatus]="getFormControl('arrivalTime')">
+      <nz-select formControlName="arrivalTime" [nzSize]="'large'">
+        <nz-option
+           *ngFor="let arrivalT of arrivalTimeArr"
+           [nzLabel]="arrivalT.label" [nzValue]="arrivalT.value">
+        </nz-option>
+      </nz-select>
+      <div nz-form-explain *ngIf="getFormControl('arrivalTime').dirty&&getFormControl('arrivalTime').hasError('required')">到岗时间</div>
+    </div>
+    <!-- 到岗时间 -->
+  </div>
+  <div nz-form-item nz-row>
+    <div nz-form-label nz-col class="w100 fl">
+      <label nz-form-item-required>工作经验</label>
+    </div>
+    <div class="w200 fl" nz-form-control nz-col nzHasFeedback [nzValidateStatus]="getFormControl('workExp')">
+      <nz-select formControlName="workExp" [nzSize]="'large'">
+        <nz-option 
+            *ngFor="let workE of workExpArr"
+            [nzLabel]="workE.label" [nzValue]="workE.value">
+        </nz-option>
+      </nz-select>
+      <div nz-form-explain *ngIf="getFormControl('workExp').dirty&&getFormControl('workExp').hasError('required')">单位行业</div>
+    </div>
+    <!-- 性别要求 -->
+    <div nz-form-label nz-col class="w100 fl ml50">
+        <label nz-form-item-required>性别要求</label>
+      </div>
+      <div class="w200 fl" nz-form-control nz-col nzHasFeedback [nzValidateStatus]="getFormControl('sexGender')">
+        <nz-select formControlName="sexGender" [nzSize]="'large'">
+          <nz-option
+              *ngFor="let sexG of sexGenderArr"
+              [nzLabel]="sexG.label" [nzValue]="sexG.value">
+          </nz-option>
+        </nz-select>
+        <div nz-form-explain *ngIf="getFormControl('sexGender').dirty&&getFormControl('sexGender').hasError('required')">性别要求</div>
+      </div>
+  </div>
+  <!-- 性别要求 -->
+  <div nz-form-item nz-row>
+    <div nz-form-label nz-col class="w100 fl">
+      <label for="ageRange" nz-form-item-required>年龄要求</label>
+    </div>
+    <div class="w200 fl" nz-form-control nz-col nzHasFeedback [nzValidateStatus]="getFormControl('ageRange')">
+      <nz-select formControlName="ageRange" [nzSize]="'large'">
+        <nz-option
+            *ngFor="let ageR of ageRangeArr"
+            [nzLabel]="ageR.label" [nzValue]="ageR.value"></nz-option>
+      </nz-select>
+      <div nz-form-explain *ngIf="getFormControl('ageRange').dirty&&getFormControl('ageRange').hasError('required')">请选择职位年龄要求</div>
+    </div>
+
+    <!-- 婚姻状况 -->
+    <div nz-form-label nz-col class="w100 fl ml50">
+        <label nz-form-item-required>婚姻状况</label>
+      </div>
+      <div class="w200 fl" nz-form-control nz-col nzHasFeedback [nzValidateStatus]="getFormControl('maritalStatus')">
+        <nz-select formControlName="maritalStatus" [nzSize]="'large'">
+          <nz-option
+              *ngFor="let maritalS of maritalStatusArr"
+              [nzLabel]="maritalS.label" [nzValue]="maritalS.value"></nz-option>
+        </nz-select>
+        <div nz-form-explain *ngIf="getFormControl('maritalStatus').dirty&&getFormControl('maritalStatus').hasError('required')">婚姻状况</div>
+      </div>
+      <!-- 婚姻状况 -->
+  </div>
+  <div nz-form-item nz-row>
+    <div nz-form-label nz-col class="w100 fl">
+      <label for="minDegree" nz-form-item-required>学历要求</label>
+    </div>
+    <div class="w200 fl" nz-form-control nz-col nzHasFeedback [nzValidateStatus]="getFormControl('minDegree')">
+      <nz-select formControlName="minDegree" [nzSize]="'large'">
+        <nz-option
+            *ngFor="let minDegree of minDegreeArr"
+            [nzLabel]="minDegree.label" [nzValue]="minDegree.value"></nz-option>
+      </nz-select>
+      <div nz-form-explain *ngIf="getFormControl('minDegree').dirty&&getFormControl('minDegree').hasError('required')">请选择最低学历</div>
+    </div>
+  </div>
+  <div nz-form-item nz-row>
+    <div nz-form-label nz-col class="w100 fl">
+      <label for="language">语言要求</label>
+    </div>
+    <div class="fl" nz-form-control nz-col>
+      <nz-checkbox-group [(ngModel)]="checkOptionslanguage" formControlName="language" (ngModelChange)="_logCheckbox(checkOptionslanguage)"></nz-checkbox-group>
+    </div>
+  </div>
+  <!-- 福利待遇 -->
+  <div nz-form-item nz-row>
+    <div nz-form-label nz-col class="w100 fl">
+      <label for="language">福利待遇</label>
+    </div>
+    <div class="fl" nz-form-control nz-col>
+      <nz-checkbox-group [(ngModel)]="checkOptionsWelfare" formControlName="workWelfare" (ngModelChange)="_logWorkWelfareBox(checkOptionsWelfare)"></nz-checkbox-group>
+    </div>
+  </div>
+
+  <div nz-form-item nz-row>
+    <div nz-form-label nz-col class="w100 fl">
+      <label for="linkPhone1">联系方式 </label>
+    </div>
+    <div nz-form-control nz-col nzHasFeedback class="w200 fl" [nzValidateStatus]="getFormControl('linkPhone1')">
+      <nz-input [nzSize]="'large'" formControlName="linkPhone1" [nzId]="'linkPhone1'"></nz-input>
+      <div nz-form-explain *ngIf="getFormControl('linkPhone1').dirty&&getFormControl('linkPhone1').hasError('required')">请正确填写您的手机号码</div>
+    </div>
+    <div nz-form-label nz-col class="w100 ml50 fl">
+      <label for="linkPhone2">固定电话 </label>
+    </div>
+    <div nz-form-control nz-col nzHasFeedback class="w200 fl" [nzValidateStatus]="getFormControl('linkPhone2')">
+      <nz-input [nzSize]="'large'" formControlName="linkPhone2" [nzId]="'linkPhone2'"></nz-input>
+      <div nz-form-explain *ngIf="getFormControl('linkPhone2').dirty&&getFormControl('linkPhone2').hasError('required')">请正确填写您的座机号码</div>
+    </div>
+  </div>
+
+  <div nz-form-item nz-row>
+    <div nz-form-label nz-col class="w100 fl">
+      <label for="acceptResueEmail1">简历接收邮箱</label>
+    </div>
+    <div nz-col nz-form-control class="w200 fl" [nzValidateStatus]="getFormControl('acceptResumeEmail1')" nzHasFeedback>
+      <nz-input formControlName="acceptResumeEmail1" nzDisabled [nzId]="'acceptResumeEmail1'" [nzType]="'acceptResumeEmail1'" [nzSize]="'large'">
+      </nz-input>
+      <div nz-form-explain *ngIf="getFormControl('acceptResumeEmail1').dirty&&getFormControl('acceptResumeEmail1').hasError('required')">请正确填写简历接收邮箱</div>
+    </div>
+    <div nz-form-label nz-col class="w100 ml50 fl">
+      <label for="acceptResumeEmail2">新邮箱</label>
+    </div>
+    <div nz-col nz-form-control class="w200 fl" [nzValidateStatus]="getFormControl('acceptResumeEmail2')" nzHasFeedback>
+      <nz-input formControlName="acceptResumeEmail2" [nzId]="'acceptResumeEmail2'" [nzType]="'acceptResumeEmail2'" [nzSize]="'large'">
+      </nz-input>
+      <div nz-form-explain *ngIf="getFormControl('acceptResumeEmail2').dirty&&getFormControl('acceptResumeEmail2').hasError('required')">请正确填写新的邮箱</div>
+    </div>
+  </div>
+
+
+  <div nz-form-item nz-row style="margin-bottom:8px;">
+    <div nz-form-control nz-col [nzSpan]="14" [nzOffset]="6">
+      <button nz-button [nzSize]="'large'" [nzType]="'primary'">{{isJobAdd}}</button>
+    </div>
+  </div>
+</form>
+

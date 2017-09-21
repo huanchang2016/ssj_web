@@ -85,8 +85,9 @@
     </div>
 
     <div nz-form-item nz-row>
-      <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
-        <label for="businessLicense" nz-form-item-required>上传工商营业执照</label>
+      <div nz-form-label nz-col [nzSm]="4" [nzXs]="20" style="white-space: normal;">
+        <label for="businessLicense" nz-form-item-required>上传工商营业执照&nbsp;&nbsp;&nbsp;
+          <br>(组织机构代码证)&nbsp;&nbsp;&nbsp;</label>
       </div>
       <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('businessLicense')">
         <input type="file" ng2FileSelect [uploader]="uploadLicense" (change)="selectedFileOnChanged($event, 'businessLicense')" />
@@ -96,6 +97,7 @@
       </div>
     </div>
 
+    
     <div nz-form-item nz-row>
       <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
         <label for="LegalIdentityCard" nz-form-item-required>上传法人身份证</label>
@@ -108,20 +110,6 @@
       </div>
     </div>
 
-    <div nz-form-item nz-row>
-        <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">
-          <label for="comOrganization" nz-form-item-required>上传组织机构代码证</label>
-        </div>
-        <div nz-form-control nz-col [nzSm]="14" [nzXs]="20" nzHasFeedback [nzValidateStatus]="getFormControl('comOrganization')">
-          <!-- <input type="file" ng2FileSelect formControlName="comOrganization" id="comOrganization" [uploader]="uploader" (change)="selectedFileOnChanged($event)" />
-          <div *ngIf="isNotUpFile" class="red">上传组织机构代码证</div> -->
-
-          <input type="file" ng2FileSelect [uploader]="uploadOrg" (change)="selectedFileOnChanged($event, 'comOrganization')" />
-          <nz-input [nzSize]="'large'" [nzType]="'file'" formControlName="comOrganization" [nzId]="'comOrganization'" style="display:none;"></nz-input>
-          <div nz-form-explain *ngIf="getFormControl('comOrganization').dirty&&getFormControl('comOrganization').hasError('required')">上传组织机构代码证</div>
-  
-        </div>
-      </div>
 
       <div nz-form-item nz-row>
         <div nz-form-label nz-col [nzSm]="4" [nzXs]="20">

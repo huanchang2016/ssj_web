@@ -28,7 +28,7 @@
           </label>
           <a class="login-form-forgot">忘记密码?</a>
           <button class="login-form-button" nz-button [nzType]="'primary'" [nzSize]="'large'">登录</button>
-          <a class="login-form-register" [routerLink]="['/register']">注册账号</a>
+          <a class="login-form-register" (click)="navToRegister()">注册账号</a>
         </div>
       </div>
     </form>

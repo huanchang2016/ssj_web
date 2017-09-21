@@ -21,6 +21,7 @@ import { InRecruitComponent } from './user/zhaopin/admin/company-admin/in-recrui
 import { JobSeekersComponent } from './user/zhaopin/admin/company-admin/job-seekers/job-seekers.component';
 import { JobFairComponent } from './user/zhaopin/admin/company-admin/job-fair/job-fair.component';
 import { HomePageComponent } from './user/zhaopin/admin/company-admin/home-page/home-page.component';
+import { JobEditComponent } from './user/zhaopin/admin/company-admin/job-add/job-edit/job-edit.component';
 //密码管理
 import { PwdManagerComponent } from './user/zhaopin/admin/company-admin/pwd-manager/pwd-manager.component';
 import { ResumeManageComponent } from './user/zhaopin/admin/company-admin/resume-manage/resume-manage.component';
@@ -92,7 +93,7 @@ import { AdminRoleAddComponent } from './administrator/admin/manage/admin-user-r
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'administrator', pathMatch: 'full' },
+  { path: '', redirectTo: 'user_index', pathMatch: 'full' },
   { path: 'register', component: RegisterComponent, data: { title: '天府菁英网' } },
   { path: 'administrator', component: AdministratorComponent, data: { title: '后台管理系统' },
     children: [
@@ -163,6 +164,7 @@ const routes: Routes = [
       { path: 'com-map', component: CompanyMapComponent },//单位地图
       { path: 'com-pwd', component: PwdManagerComponent }, //密码管理 
       { path: 'com-jobadd', component: JobAddComponent },//发布职位
+      { path: 'com-jobadd/edit/:id', component: JobEditComponent },//编辑职位
       { path: 'recruit', component: InRecruitComponent },//招聘中的职位
       { path: 'jobFair', component: JobFairComponent },//招聘会
       { path: 'seekers', component: JobSeekersComponent },//搜索人才

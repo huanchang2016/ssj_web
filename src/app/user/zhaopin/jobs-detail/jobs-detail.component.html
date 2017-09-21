@@ -14,7 +14,7 @@
         <div class="features">
           <span *ngFor="let features of jobDetail.companyFeatures">{{features}}</span>
         </div>
-        <div class="releaseDate"><span>{{jobDetail.releaseDate}}</span> &nbsp;&nbsp; 发布于拉勾网</div>
+        <div class="releaseDate"><span>{{jobDetail.releaseDate}}</span> &nbsp;&nbsp; 发布于天府新区公共就业创业服务网</div>
       </div>
       <div class="jobDetailR fr">
         <div class="jobDetailR-top">
@@ -48,7 +48,7 @@
     <div class="jobInfo">
       <div class="infoTitle">职位描述:</div>
       <div class="infoConten">
-        <p *ngFor="let jobDes of jobDetail.jobsDescription; let i = index;">（{{i + 1}}）{{jobDes}}</p>
+        {{jobDetail.jobsDescription}}
       </div>
     </div>
     <div class="jobInfo">

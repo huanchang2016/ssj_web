@@ -1,0 +1,18 @@
+<div class="policy">
+  <nz-tabset>
+    <nz-tab *ngFor="let tab of tabs">
+      <ng-template #nzTabHeading>
+       {{tab.title}}
+      </ng-template>
+      <ul class="content">
+        <li *ngFor="let content of tab.content"><a href="javascript:;">
+          <span class="fl">{{content.title}}</span>
+          <span class="fr">{{content.date}}</span>
+        </a></li>
+      </ul>
+    </nz-tab>
+    <ng-template #nzTabBarExtraContent>
+      <button nz-button>更多>></button>
+    </ng-template>
+  </nz-tabset>
+</div> 

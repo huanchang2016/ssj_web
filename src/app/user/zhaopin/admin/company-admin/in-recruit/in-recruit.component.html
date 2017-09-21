@@ -10,29 +10,29 @@
   </div>
   <div class="jobs-list">
     <ul>
-        <li *ngFor="let _check of _checkBox">
+        <li *ngFor="let jobs of jobList">
           <div class="jobsInfo fl">
             <div class="jobsInfo-title">
               <h3 class="fl">
-                <label class="fl" [(ngModel)]="_check.checked" nz-checkbox (ngModelChange)="addCheckedJobs($event)"></label>
-                <a href="javascript:;">（合约管理部）土建造价管理工程师</a>
+                <label class="fl" [(ngModel)]="jobs.checked" nz-checkbox (ngModelChange)="addCheckedJobs($event)"></label>
+                <a [routerLink]="['/user_index/jobsDetails', jobs.jobId]" target="_blank">{{jobs.jobName}}</a>
               </h3>
               <div class="clear"></div>
             </div>
             <div class="jobsInfo-des">
               <span class="jobs-des-list">简历总数： 10</span>
               <span class="jobs-des-list">浏览数：100</span>
-              <span class="jobs-des-list">招聘状态：招聘中 <a href="javascript:;">[暂停]</a></span>
+              <span class="jobs-des-list">招聘状态：{{jobs.jobStatus}} <a href="javascript:;" (click)="changeRecruitStatus()">[暂停]</a></span>
               <br>
-              <span class="jobs-des-list">截止日期: 2017-09-01 <a href="javascript:;">延期</a></span>
-              <span class="jobs-des-list">更新时间：2017-08-31</span>
+              <span class="jobs-des-list">截止日期: {{jobs.releaseDate}} <a href="javascript:;">延期</a></span>
+              <span class="jobs-des-list">更新时间：{{jobs.updateDate}}</span>
             </div>
           </div>
           <div class="jobsOper fr">
-            <span><a href="javascript:;">修改</a></span>
-            <span><a href="javascript:;">预览</a></span>
-            <span><a href="javascript:;">刷新</a></span>
-            <span><a href="javascript:;">删除</a></span>
+            <span><a href="javascript:;" (click)="amendJobInfo(jobs.jobId)">修改</a></span>
+            <span><a [routerLink]="['/user_index/jobsDetails', jobs.jobId]" target="_blank">预览</a></span>
+            <span><a (click)="reloadPage(jobs.jobId)">刷新</a></span>
+            <span><a (click)="deleteJob(jobs.jobId)">删除</a></span>
           </div>
         </li>
        

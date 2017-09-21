@@ -1,5 +1,9 @@
+.jobsInfo-title a:visited{ color:red;}
+
 .jobsInfo{ width: 500px;}
 .jobs-list{ margin-top: 30px; clear:both;}
+.jobsInfo-title a{ font-size: 16px;}
+.jobsInfo-title label{ margin-top: 10px; margin-bottom: 0;}
 .jobs-list ul li{ padding: 5px;border:1px solid #ccc;margin-bottom:10px;}
 /* 解决父容器不能高度自适应 的问题 */
 .jobs-list ul li:after{

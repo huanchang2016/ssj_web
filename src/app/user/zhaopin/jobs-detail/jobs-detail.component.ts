@@ -1,4 +1,4 @@
-import { JobListService } from './../job-list.service';
+import { JobListService } from './../service/job-list.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 

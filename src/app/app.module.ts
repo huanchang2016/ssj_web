@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { CommonModule }     from '@angular/common';
+// 服务
+import { LoginService }   from './service/login.service';
+import { RegisterService } from './service/register.service';
 // 文件上传
 import { FileUploadModule } from 'ng2-file-upload';
 //富文本编辑器
@@ -36,7 +39,6 @@ import { SchoolRecruitComponent } from './user/zhaopin/company/school-recruit/sc
 import { CompanyAskComponent } from './user/zhaopin/company/company-ask/company-ask.component';
 import { GmapComponent } from './modules/gmap/gmap.component';
 import { LoginComponent } from './modules/login/login.component';
-import { LoginService }   from './service/login.service';
 import { RegisterComponent } from './modules/register/register.component';
 import { CompanyAdminComponent } from './user/zhaopin/admin/company-admin/company-admin.component';
 import { BaseInfoComponent } from './user/zhaopin/admin/company-admin/base-info/base-info.component';
@@ -48,6 +50,7 @@ import { InRecruitComponent } from './user/zhaopin/admin/company-admin/in-recrui
 import { JobSeekersComponent } from './user/zhaopin/admin/company-admin/job-seekers/job-seekers.component';
 import { JobFairComponent } from './user/zhaopin/admin/company-admin/job-fair/job-fair.component';
 import { HomePageComponent } from './user/zhaopin/admin/company-admin/home-page/home-page.component';
+import { JobEditComponent } from './user/zhaopin/admin/company-admin/job-add/job-edit/job-edit.component';
 //密码修改
 import { ChangePwdComponent } from './modules/change-pwd/change-pwd.component';
 import { PwdManagerComponent } from './user/zhaopin/admin/company-admin/pwd-manager/pwd-manager.component';
@@ -115,6 +118,8 @@ import { MemberWelfareAddComponent } from './administrator/admin/setting/setting
 import { AdminUserAddComponent } from './administrator/admin/manage/admin-user/admin-user-add/admin-user-add.component';
 import { AdminPermissionAddComponent } from './administrator/admin/manage/admin-user-permission/admin-permission-add/admin-permission-add.component';
 import { AdminRoleAddComponent } from './administrator/admin/manage/admin-user-role/admin-role-add/admin-role-add.component';
+import { PolicyComponent } from './user/index/home/modules/policy/policy.component';
+import { JobFormComponent } from './user/zhaopin/admin/company-admin/job-add/job-form/job-form.component';
 
 @NgModule({
   declarations: [
@@ -126,52 +131,15 @@ import { AdminRoleAddComponent } from './administrator/admin/manage/admin-user-r
     ChangePwdComponent,PwdManagerComponent,UserHomePageComponent,UserInfoComponent,UserPwdManagerComponent,CreateResumeComponent,AmendResumeComponent,DatePickerComponent,FooterComponent,JobsSearchComponent,
     ChoeseMenuComponent,ZphComponent,SearchZphComponent,ResumeManageComponent,AppliedJobsComponent,TopComponent,
     AdministratorComponent,//后台管理系统
-    AdminLoginComponent, AdminDashComponent,
-    AdminNavbarComponent,
-    AdminHeaderComponent,
-    SettingIndustryComponent,
-    SettingAreaComponent,
-    SettingJobComponent,
-    SettingMemberComponent,
-    AdminUserComponent,
-    AdminUserRoleComponent,
-    AdminUserPermissionComponent,
-    ArticleCategoriesComponent,
-    ArticleCategoriesEditComponent,
-    ArticleComponent,
-    AritcleEditComponent,
-    SettingIndustryEditComponent,
-    SettingAreaEditComponent,
-    SettingJobEditComponent,
-    MemberSexEditComponent,
-    MemberSexAddComponent,
-    MemberMarriageEditComponent,
-    MemberMarriageAddComponent,
-    MemberEduEditComponent,
-    MemberEduAddComponent,
-    MemberExpEditComponent,
-    MemberExpAddComponent,
-    MemberSalaryEditComponent,
-    MemberSalaryAddComponent,
-    MemberJobNatureEditComponent,
-    MemberJobNatureAddComponent,
-    MemberJobstatusEditComponent,
-    MemberJobstatusAddComponent,
-    MemberArrivalEditComponent,
-    MemberArrivalAddComponent,
-    MemberComstatusEditComponent,
-    MemberComstatusAddComponent,
-    MemberComscaleEditComponent,
-    MemberComscaleAddComponent,
-    MemberJobnumberEditComponent,
-    MemberJobnumberAddComponent,
-    MemberLangEditComponent,
-    MemberLangAddComponent,
-    MemberWelfareEditComponent,
-    MemberWelfareAddComponent,
-    AdminUserAddComponent,
-    AdminPermissionAddComponent,
-    AdminRoleAddComponent
+    AdminLoginComponent, AdminDashComponent,AdminNavbarComponent,AdminHeaderComponent,SettingIndustryComponent,SettingAreaComponent,SettingJobComponent,SettingMemberComponent,
+    AdminUserComponent,AdminUserRoleComponent,AdminUserPermissionComponent,ArticleCategoriesComponent,ArticleCategoriesEditComponent,ArticleComponent,
+    AritcleEditComponent,SettingIndustryEditComponent,SettingAreaEditComponent,SettingJobEditComponent,MemberSexEditComponent,MemberSexAddComponent,
+    MemberMarriageEditComponent,MemberMarriageAddComponent,MemberEduEditComponent,MemberEduAddComponent,MemberExpEditComponent,
+    MemberExpAddComponent,MemberSalaryEditComponent,MemberSalaryAddComponent,MemberJobNatureEditComponent,MemberJobNatureAddComponent,
+    MemberJobstatusEditComponent,MemberJobstatusAddComponent,MemberArrivalEditComponent,MemberArrivalAddComponent,MemberComstatusEditComponent,
+    MemberComstatusAddComponent,MemberComscaleEditComponent,MemberComscaleAddComponent,MemberJobnumberEditComponent,MemberJobnumberAddComponent,
+    MemberLangEditComponent,MemberLangAddComponent,MemberWelfareEditComponent,MemberWelfareAddComponent,AdminUserAddComponent,
+    AdminPermissionAddComponent,AdminRoleAddComponent,PolicyComponent, JobEditComponent, JobFormComponent
   ],
   imports: [
     BrowserModule,
@@ -185,7 +153,7 @@ import { AdminRoleAddComponent } from './administrator/admin/manage/admin-user-r
     AppRoutingModule,
     NgZorroAntdModule.forRoot()
   ],
-  providers: [ LoginService ],
+  providers: [ LoginService, RegisterService ],
   entryComponents: [ LoginComponent ],
   bootstrap: [AppComponent]
 })

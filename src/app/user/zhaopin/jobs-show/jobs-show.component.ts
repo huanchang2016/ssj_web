@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }   from '@angular/router';
-import { JobListService } from './../job-list.service';
+import { JobListService } from './../service/job-list.service';
 
 @Component({
   selector: 'jobs-show',
